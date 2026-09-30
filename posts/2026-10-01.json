@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-01",
+  "headline": "Google 发布 Gemini 4 Argon",
+  "intro": "Google 推出新一代前沿模型 Gemini 4 Argon，并选择先交给网络安全防御方使用；OpenAI 的 Decisions API 让“小而快的判断模型”成为 Agent 监控的新思路。与此同时，开发者抱怨大模型安全护栏误伤正常工作，DoorDash、Amazon 把 Agent 塞进短信和电视，日本法院首次认定声音受公开权保护。",
+  "excerpt": "Google 发布 Gemini 4 Argon 并先开放给安全防御方，OpenAI 推 Decisions API，开发者吐槽护栏误伤，日本首认声音公开权。",
+  "tags": [
+    "大模型",
+    "Agent",
+    "Google",
+    "OpenAI",
+    "AI 安全",
+    "AI 版权"
+  ],
+  "items": [
+    {
+      "title": "Google 发布 Gemini 4 Argon",
+      "summary": "Google 推出面向软件开发、知识工作和网络安全的前沿模型 Gemini 4 Argon，在公布的 18 项基准中 13 项领先或持平，DeepSWE v1.1 得分 77.9%。目前仅向 Fairwind 计划中的安全防御机构有限开放，之后再面向付费 API 用户和 AI Ultra 订阅者；输出上限提升到 100 万 token，首发价为每百万 token 输入 2 美元、输出 10 美元。",
+      "insight": "超长输出和较低的首发价格适合大规模代码迁移类任务，Google 内部已用它把代码改写为 Rust；但 API 何时全面开放尚无时间表。",
+      "source": "VentureBeat",
+      "source_title": "Google unveils Gemini 4 Argon, retaking benchmark lead over OpenAI and Anthropic — but in limited release",
+      "url": "https://venturebeat.com/technology/google-unveils-gemini-4-argon-retaking-benchmark-lead-over-openai-and-anthropic-but-in-limited-release"
+    },
+    {
+      "title": "Argon 内置防提示注入与越权监控",
+      "summary": "SiliconANGLE 报道，Fairwind 计划已有 650 多家机构加入，包括 CrowdStrike 和 Palo Alto Networks。Argon 加强了对间接提示注入的防护，并配有独立监控器，在模型行为超出用户意图时可将其叫停。",
+      "insight": "“模型外再套一层监控”正成为前沿模型的标配，自建 Agent 系统时也值得把执行监督与主模型解耦。",
+      "source": "SiliconANGLE",
+      "source_title": "Google's new frontier AI model Gemini 4 Argon goes to cybersecurity defenders first",
+      "url": "https://siliconangle.com/2026/09/30/googles-new-frontier-ai-model-gemini-4-argon-goes-to-cybersecurity-defenders-first/"
+    },
+    {
+      "title": "OpenAI 用 Decisions API 管 Agent",
+      "summary": "OpenAI 在 DevDay 推出 Decisions API，开发者给定一组预设选项，由 Luna 模型快速从中选择，思路与 TypeSafe AI 本月发布的 Jev 类似。有安全从业者用 Jev 做了概念验证：逐条核对 Agent 动作是否符合任务，单次监控成本约 2.94 美元，而用前沿大模型约需 372 美元。",
+      "insight": "把“是否允许这一步”变成低成本分类问题，让持续监控 Agent 在经济上可行，对需要审批流的产线和运维场景很有参考价值。",
+      "source": "TechCrunch",
+      "source_title": "OpenAI's Jev clone could help the frontier lab stop its swarming agents",
+      "url": "https://techcrunch.com/2026/09/30/openais-jev-clone-could-help-the-frontier-lab-stop-its-swarming-agents/"
+    },
+    {
+      "title": "安全护栏频繁误伤正常开发",
+      "summary": "多位开发者反映，OpenAI 和 Anthropic 的安全护栏经常拦截航天、机器人和网络安全方面的正常工作：有机器人工程师在处理机械臂和远程设备访问时遭遇大量拒答，而纯仿真工作则较顺利。部分人因此转向 Qwen、Kimi 等开源模型；OpenAI 承认护栏可能拖慢正常工作并表示会改进。",
+      "insight": "做工业控制、远程运维的团队应预留备选模型或本地开源方案，避免关键流程被闭源模型的拒答卡住。",
+      "source": "VentureBeat",
+      "source_title": "Developers say OpenAI and Anthropic safeguards are flagging routine work and costing them time",
+      "url": "https://venturebeat.com/technology/developers-say-openai-and-anthropic-safeguards-are-flagging-routine-work-and-costing-them-time"
+    },
+    {
+      "title": "DoorDash 推出短信点餐 Agent",
+      "summary": "DoorDash 发布可在 Apple Messages 中使用的 AI Agent，用户发一句“老样子”即可复购常点的订单，它还能推荐附近餐厅、处理口味不同的团体订单。美国已开放候补名单，同时公司在北加州部分餐厅测试无人机配送。",
+      "insight": "Agent 正从独立 App 走向用户已在用的消息入口，“对话即界面”对企业内部系统的交互设计同样有启发。",
+      "source": "TechCrunch",
+      "source_title": "DoorDash launches an AI agent you can text to order food",
+      "url": "https://techcrunch.com/2026/09/30/doordash-launches-an-ai-agent-you-can-text-to-order-food/"
+    },
+    {
+      "title": "Alexa+ 登陆 Fire TV 独立入口",
+      "summary": "Amazon 为 Fire TV 上的 Alexa+ 设立专属入口，推理能力增强，可结合用户订阅和观看记录给出个性化推荐，并支持连续追问。美国部分 Fire TV 设备将于 11 月起获得更新，2027 年扩展到更多设备和海外市场。",
+      "insight": "生成式助手在客厅场景的落地重点是结合个人数据与多轮上下文，这也是设备端 AI 助手的共同方向。",
+      "source": "Android Authority",
+      "source_title": "Amazon is giving Alexa Plus a big overhaul for Fire TVs",
+      "url": "https://www.androidauthority.com/amazon-alexa-plus-upgrades-fire-tv-3717289/"
+    },
+    {
+      "title": "日本法院首认声音受公开权保护",
+      "summary": "东京地方法院在声优津田健次郎起诉 TikTok 一案中裁定，声音属于受保护的公开权，这在日本尚属首次；涉案账号用疑似模仿其声音的 AI 旁白发布了近 200 条视频。不过法院驳回了删除内容的请求，部分原因是账号已被删除。",
+      "insight": "使用 AI 语音合成做商业内容时，需要评估音色与真人的相似度风险，训练数据和授权来源要留痕。",
+      "source": "Digital Music News",
+      "source_title": "Japan Rules Voice Is A Protected Publicity Right in Ruling",
+      "url": "https://www.digitalmusicnews.com/2026/09/30/japanese-court-voice-protected/"
+    },
+    {
+      "title": "Google 按 AI 答案贡献付费给媒体",
+      "summary": "Google 启动试点，当新闻内容对 AI 生成的搜索回答有显著贡献时向发布方付费，约 100 家媒体参与，头部媒体收入超过 100 万美元，小型参与者每月不足 1000 美元。背景是 AI Overviews 出现时，首条自然结果的点击率大幅下降。",
+      "insight": "内容被 AI 引用开始有了计价方式，做技术内容的站点也需关注 AI 搜索带来的流量与分成变化。",
+      "source": "The Desk",
+      "source_title": "Google pays some news publishers as AI-generated results dominate search",
+      "url": "https://thedesk.net/2026/09/google-paying-news-publishers-ai-search-results/"
+    }
+  ]
+}
