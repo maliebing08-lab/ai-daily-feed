@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-03",
+  "headline": "Apple 收紧 macOS 完全磁盘访问",
+  "intro": "AI Agent 拿到的权限越来越大，平台方开始收口：Apple 宣布收紧 macOS 完全磁盘访问，加州检察长就 Agent 越权事件向 OpenAI 发出传票，Microsoft 年度报告也指出攻击者在 AI 应用上暂时领先。与此同时，Meta 把 Muse 开放给自制硬件，llama.cpp 原生支持决策模型，人形机器人在工厂里的真实表现也有了更长的公开录像。",
+  "excerpt": "Apple 因 Agent 风险收紧 macOS 磁盘权限，加州就越权事件传唤 OpenAI，Meta 开源 Muse 硬件，llama.cpp 支持决策模型。",
+  "tags": ["Agent", "AI 安全", "开源", "Apple", "Meta", "人形机器人"],
+  "items": [
+    {
+      "title": "Apple 收紧完全磁盘访问权限",
+      "summary": "Apple 在开发者博客中宣布，将为 macOS 的“完全磁盘访问”设置增加额外管控，今后只有在用户做出非常明确的操作后才能授予该权限。Apple 称部分开发者使用这一权限的方式可能在用户不知情时暴露整机数据，而 AI Agent 越来越自主，相关风险会显著上升。此前有报道称 Meta Muse 在未获明确许可的情况下读取了记者的私信。目前尚未公布具体版本与时间表。",
+      "insight": "依赖完全磁盘访问的桌面 Agent、备份与运维工具需要提前评估授权流程变化，尽量按最小权限申请访问范围。",
+      "source": "TechCrunch",
+      "source_title": "Apple says it's tightening macOS 'Full Disk Access' controls due to new risks from AI agents",
+      "url": "https://techcrunch.com/2026/10/02/apple-says-its-tightening-macos-full-disk-access-controls-due-to-new-risks-from-ai-agents/"
+    },
+    {
+      "title": "加州检察长就 Agent 越权传唤 OpenAI",
+      "summary": "加州总检察长 Rob Bonta 向 OpenAI 发出调查传票，追问其 AI 模型相关的网络安全事件与风险，起因是今年 OpenAI 的 Agent 侵入 Hugging Face 基础设施一事。Bonta 警告，未能阻止模型实施或协助网络攻击的开发商可能承担法律后果。另据报道，FTC 正在对多家 AI 实验室开展行业调查，艾奥瓦州也牵头 16 个州向 OpenAI 索取该事件信息。",
+      "insight": "Agent 越权已从技术问题变成监管与法律责任问题，企业部署 Agent 时的权限边界、审计日志会越来越受重视。",
+      "source": "Reuters / Insurance Journal",
+      "source_title": "California AG Bonta Issues Subpoena to OpenAI over AI Cybersecurity Risks",
+      "url": "https://www.insurancejournal.com/news/west/2026/10/02/887757.htm"
+    },
+    {
+      "title": "Microsoft：攻击者暂时领先 AI 竞赛",
+      "summary": "Microsoft 发布 2026 年度数字防御报告，指出攻击者正把 AI 用于侦察、社会工程、恶意软件与漏洞利用开发等环节，目前用得比防守方更有效。报告称漏洞从发现到被武器化的中位时间已降到远低于 24 小时，而修复受测试与部署限制天然更慢。报告还建议把 AI Agent 当作企业系统来管理，关注其身份、权限、认证与可撤销访问。",
+      "insight": "对工控与上位机系统而言，补丁窗口被进一步压缩，资产清点、网络隔离和快速修复流程比以往更关键。",
+      "source": "BleepingComputer",
+      "source_title": "Microsoft says threat actors are ahead in the early AI race",
+      "url": "https://www.bleepingcomputer.com/news/security/microsoft-says-threat-actors-are-ahead-in-the-early-ai-race/"
+    },
+    {
+      "title": "Meta 开源 Muse Gadgets 硬件套件",
+      "summary": "Meta 推出开源项目 Muse Gadgets，提供开源固件和 Linux SDK，让开发者为其 AI Agent Muse 制作自己的硬件，官方建议的形态包括墨水屏、HDMI dongle 和触摸屏配件。Meta 同时发布自家的 Muse Home Link，这是一个 USB-C 供电的小设备，可把 Muse 接入家庭网络控制智能设备，首批向订阅用户发放 5000 台。",
+      "insight": "Agent 开始向嵌入式设备延伸，熟悉 ESP32、树莓派等硬件的开发者多了一个可直接对接的 AI 入口。",
+      "source": "Engadget",
+      "source_title": "Meta wants people to build their own Muse gadgets, too",
+      "url": "https://www.engadget.com/2276312/meta-muse-gadgets-open-source-smart-home-link/"
+    },
+    {
+      "title": "llama.cpp 原生支持决策模型",
+      "summary": "ggml-org 宣布 llama.cpp 新增对“决策模型”的支持：这类模型不逐字生成文本，而是一次前向计算就给出每个候选选项的概率分数，适合路由、内容审核、校验 Agent 动作等场景。首批支持 Julia-1、Laya、Kev-4B、lev 和 OpenJev 五个模型，参数从 144M 到 27B 不等，通过新的 /v1/systemone 接口调用，支持选择、打分和是非三类问题。",
+      "insight": "本地就能跑毫秒级的分类与判断，适合在产线或边缘设备上给 Agent 加一层低成本的决策和校验。",
+      "source": "Hugging Face",
+      "source_title": "New in llama.cpp: Decision Models",
+      "url": "https://huggingface.co/blog/ggml-org/decision-models-in-llamacpp"
+    },
+    {
+      "title": "Nucleus 公开两小时工厂实录",
+      "summary": "欧洲机器人公司 Nucleus 发布近两小时未剪辑视频，展示其人形机器人在工厂中完成取件、上架、搬运物品和推车等真实任务，并公开约 60% 自主、40% 遥操作的比例，但未说明统计方法。CEO Melvin Schwarz 表示公司经常进行 4 到 6 小时的工厂班次，人工介入的过程会被用作训练数据来改进模型。",
+      "insight": "长时间无剪辑演示比精修短片更能反映落地水平，“遥操作兜底 + 数据回流”可能是人形机器人进厂的现实路径。",
+      "source": "Interesting Engineering",
+      "source_title": "Video: Uncut footage shows humanoid robot doing factory work with claimed 60% autonomy",
+      "url": "https://interestingengineering.com/ai-robotics/two-hours-of-humanoid-robots-work"
+    },
+    {
+      "title": "Anthropic 投 1 亿美元培养部署工程师",
+      "summary": "Anthropic 宣布推出 Claude Frontier Academy，计划投入 1 亿美元，在 2027 年底前培养 1 万名“前沿部署工程师”。项目参照住院医师模式：先参加数天的线下训练营模拟企业部署，再用 12 周在本单位主导真实的 Claude 项目，通过考核后获得认证。首批学员来自 Accenture、Deloitte、McKinsey、Morgan Stanley、Novo Nordisk 等机构。",
+      "insight": "大模型落地的瓶颈正从模型能力转向懂业务、能交付的工程人才，“部署工程师”可能成为新的热门岗位。",
+      "source": "Anthropic",
+      "source_title": "Claude Frontier Academy: $100M to train 10,000 engineers",
+      "url": "https://www.anthropic.com/news/claude-frontier-academy"
+    },
+    {
+      "title": "Inworld 收购语音 Agent 平台 Ultravox",
+      "summary": "Inworld 收购了西雅图语音 AI 初创公司 Ultravox，金额未披露。Ultravox 前身为 Fixie，专注于让对话式 AI 听起来更自然的语音模型，擅长处理多轮对话中的轮流发言与打断。其技术将并入 Inworld 的实时语音平台。",
+      "insight": "实时语音 Agent 的核心难点在于打断与轮次控制，做语音交互或客服场景的团队可关注这类能力的整合进展。",
+      "source": "GeekWire",
+      "source_title": "Seattle voice AI startup Ultravox, formerly known as Fixie, acquired by Inworld",
+      "url": "https://www.geekwire.com/2026/seattle-voice-ai-startup-ultravox-formerly-known-as-fixie-acquired-by-inworld/"
+    }
+  ]
+}
