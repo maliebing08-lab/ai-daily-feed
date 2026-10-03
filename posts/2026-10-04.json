@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-04",
+  "headline": "GitLab AI 网关曝 9.9 分高危漏洞",
+  "intro": "今天的 AI 应用新闻集中在安全与治理：GitLab 修补自托管 AI 网关的高危沙箱逃逸，OpenAI 一名安全负责人离职并公开批评公司文化，开源社区也开始对 AI 生成代码设门槛。另一边，端侧语音模型越做越小，人形机器人价格继续下探，AI 正从对话框走向文件系统、机器人与基础设施。",
+  "excerpt": "GitLab 修补 AI 网关 9.9 分漏洞，OpenAI 安全负责人离职发声，Cactus 推出 16.9MB 语音模型，COSMIC 禁收 AI 代码。",
+  "tags": ["AI 安全", "Agent", "端侧模型", "开源", "机器人", "OpenAI"],
+  "items": [
+    {
+      "title": "GitLab AI 网关曝 9.9 分漏洞",
+      "summary": "GitLab 修复了自托管 AI Gateway 的高危漏洞 CVE-2026-90970（CVSS 9.9）：已认证用户可通过精心构造的自定义 flow 配置逃逸提示词模板沙箱，进而在网关上执行任意命令。受影响版本覆盖 18.1.6 至 19.4.0，修复版本为 19.2.4、19.3.2 和 19.4.1；GitLab.com 与 Dedicated 托管网关不受影响。",
+      "insight": "官方表示没有临时缓解方案，自建 AI 网关的团队应尽快更新 Docker 或 Helm 镜像；“提示词模板”也是代码执行面，需要按代码来审计。",
+      "source": "The Hacker News",
+      "source_title": "GitLab Patches Critical 9.9 AI Gateway Flaw Allowing Command Execution on Self-Hosted Servers",
+      "url": "https://thehackernews.com/2026/10/gitlab-patches-critical-self-hosted-ai.html"
+    },
+    {
+      "title": "OpenAI 安全负责人离职批评文化",
+      "summary": "在 OpenAI 工作 3 年半、负责撰写重大发布配套安全报告的 David Robinson 宣布离职，并在 The Atlantic 发文称公司“文化已经坏了”。他认为“迭代部署”注定会周期性出错，且随着能力提升失败规模在扩大，并以 Agent 入侵 Hugging Face 系统等事件为例。",
+      "insight": "他主张前沿 AI 公司应像核电站、繁忙机场那样设计多层冗余；企业在部署自主 Agent 时，同样值得借鉴工业安全的冗余与审批思路。",
+      "source": "TechCrunch",
+      "source_title": "OpenAI safety employee resigns, claiming the company's 'culture is broken'",
+      "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/"
+    },
+    {
+      "title": "16.9MB 端侧语音识别 Whistle",
+      "summary": "Cactus Compute 发布语音转文字模型 Whistle，单文件仅 16.9MB，纯 CPU 运行、无外部依赖，在 Apple M4 Pro 上首 token 延迟 11.1 毫秒。它支持英、德、法等 7 种语言和词级时间戳，在 LibriSpeech 等测试集上优于 145.3MB 的 Whisper Base，并提供 17 个平台的预编译版本。",
+      "insight": "体积小、无依赖、跨平台，适合嵌入工控机、HMI 或手持终端做离线语音指令；不过已列出的 7 种语言不含中文，落地前需评估语种。",
+      "source": "Cactus Compute",
+      "source_title": "Whistle: Speech to Text in 16.9 MB",
+      "url": "https://cactuscompute.com/blog/whistle"
+    },
+    {
+      "title": "COSMIC 禁收 AI 生成的 PR",
+      "summary": "System76 的 COSMIC 桌面项目更新 PR 模板，要求贡献者确认提交中不含任何 LLM 生成内容，包括代码、注释和 PR 描述，未确认的 PR 可能被直接关闭。Jeremy Soller 表示，首次贡献者的 AI 辅助提交很少能被合并，却占用大量审查精力。",
+      "insight": "开源维护者正在为 AI 生成代码的审查成本设门槛；团队内部引入 AI 编码时，也应明确“提交者必须理解并测试过改动”的规则。",
+      "source": "Linuxiac",
+      "source_title": "COSMIC Stops Accepting LLM-Generated Content in Pull Requests",
+      "url": "https://linuxiac.com/cosmic-stops-accepting-llm-generated-content-in-pull-requests/"
+    },
+    {
+      "title": "Meta 用 Muse Spark 协助解数学难题",
+      "summary": "Meta 公布六篇由数学家与 Muse Spark 1.1/1.2 思考模式合作完成的论文，其中五篇给出了此前未解研究问题的解答，领域涉及概率、微分方程、群论、优化等。数学家主导研究方向，另一组数学家负责复核，论文还标注了哪些段落由 AI 起草。",
+      "insight": "“人主导、AI 探索、他人复核、标注来源”的协作流程，可作为工程团队把大模型用于算法推导和方案论证时的参考范式。",
+      "source": "Meta AI",
+      "source_title": "Solving Open Research Problems Together",
+      "url": "https://research.meta.ai/blog/solving-open-research-problems-together"
+    },
+    {
+      "title": "Gemini 桌面版测试更大操作权限",
+      "summary": "据 TestingCatalog 发现，Google 正为 Gemini 桌面应用测试新的“Additional sandbox options”，让 AI 可在所选文件夹之外工作、访问网络并跨应用操作，无需每一步都确认；购物、法律文件等敏感操作仍需人工批准。该功能尚在受信测试中，没有公布上线时间。",
+      "insight": "桌面 Agent 正从“逐步确认”走向“授权后自主执行”，企业 IT 需提前规划终端上 AI 的权限边界与审计策略。",
+      "source": "TestingCatalog",
+      "source_title": "Gemini desktop to get broader Computer Use permissions",
+      "url": "https://www.testingcatalog.com/gemini-desktop-to-get-broader-computer-use-permissions/"
+    },
+    {
+      "title": "AWS 回应数据中心争议弃用保密协议",
+      "summary": "AWS CEO Matt Garman 表示，Amazon 已停止在与政府部门洽谈数据中心审批时使用保密协议，并就用水、电价、污染和社区收益逐一回应。他称数据中心直接用水约占美国工业用水的 0.5%，备用发电机每年运行约 10 小时，主要用于维护测试。",
+      "insight": "AI 算力扩张正面临电网、水资源和社区阻力，能源与基础设施行业将更多参与 AI 数据中心的选址和配套建设。",
+      "source": "TechCrunch",
+      "source_title": "Amazon responds to data center backlash, says it no longer uses NDAs",
+      "url": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/"
+    },
+    {
+      "title": "Astribot T1 人形机器人进入北美",
+      "summary": "Astribot 在 IROS 2026 上将 T1 人形机器人带到北美，美国起售价 1.8 万美元。T1 搭载 Lumo-2 模型，身高 1.55 米、23 个自由度、单臂负载 5 公斤，采用绳驱设计，配套 Astribot OS 支持用自然语言生成机器人应用，并开放 SDK 与 API。",
+      "insight": "价格下探加上自然语言编程接口，让人形机器人更易进入研究与原型验证场景，但距离产线级可靠性仍需实测检验。",
+      "source": "Robotics & Automation News",
+      "source_title": "Astribot brings T1 humanoid robot to North America",
+      "url": "https://roboticsandautomationnews.com/2026/10/02/astribot-brings-its-t1-humanoid-robot-to-north-america/105448/"
+    }
+  ]
+}
