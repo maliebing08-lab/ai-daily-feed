@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-05",
+  "headline": "施耐德电气拟约 200 亿美元收购 PTC",
+  "intro": "今天的 AI 应用新闻一头连着工业软件，一头连着安全治理：施耐德电气据报接近以约 200 亿美元收购 PTC，工业软件版图可能重排。安全方面，AI 发现的漏洞公开次日即遭利用，Google 也因大量无效的 AI 提交暂停开源漏洞赏金。此外还有 AI 加速药物发现、本地与云端混合部署 Agent 的成本测算，以及美国白宫推动的非约束性安全承诺。",
+  "excerpt": "施耐德电气据报拟约 200 亿美元收购 PTC；Mythos 发现的 HFS 漏洞次日遭利用；Google 因 AI 垃圾报告冻结开源赏金。",
+  "tags": ["工业软件", "AI 安全", "Agent", "AI 制药", "政策"],
+  "items": [
+    {
+      "title": "施耐德电气拟收购 PTC",
+      "summary": "据金融时报援引知情人士报道，法国施耐德电气正接近以约 200 亿美元收购美国工业软件公司 PTC。路透社表示暂时无法独立核实，交易尚未正式宣布。",
+      "insight": "PTC 是 CAD、PLM 与工业物联网软件的重要厂商，若交易落地，自动化硬件巨头将进一步掌握设计到运维的软件链条，值得工业软件从业者持续关注。",
+      "source": "Investing.com / Reuters",
+      "source_title": "France's Schneider Electric nears $20 billion deal to buy US software group PTC, FT reports",
+      "url": "https://www.investing.com/news/stock-market-news/frances-schneider-electric-nears-20-billion-deal-to-buy-us-software-group-ptc-ft-reports-4930950"
+    },
+    {
+      "title": "Mythos 找到的漏洞次日遭利用",
+      "summary": "Horizon3 研究员借助 Anthropic 的 Mythos 发现 Rejetto HFS 的认证绕过漏洞 CVE-2026-61500：程序用 Math.random() 生成会话签名密钥且泄露其输出，可用 Z3 求解器还原种子并伪造会话。漏洞周三公开，周四晚即被检测到在野利用。",
+      "insight": "AI 能把多个弱点串成完整攻击链，修补窗口被压缩到以小时计；使用 HFS 的团队应尽快升级到 3.2.1 及以上，也提醒开发者别用非加密随机数生成密钥。",
+      "source": "The Register",
+      "source_title": "Anthropic's super bug-hunting model Mythos is hardcore good at math, as latest vuln under attack shows",
+      "url": "https://www.theregister.com/security/2026/10/03/anthropics-super-bug-hunting-model-mythos-is-hardcore-good-at-math-as-latest-vuln-under-attack-shows/5300933"
+    },
+    {
+      "title": "Google 冻结开源漏洞赏金计划",
+      "summary": "Google 自 10 月 1 日起暂停开源软件漏洞奖励计划，原因是自动化提交大幅增加且绝大多数无效，维护者被大量含 AI 幻觉的报告淹没。计划至少冻结到 2027 年第一季度再公布进展。",
+      "insight": "AI 生成的低质量报告正在消耗开源维护者的精力，漏洞平台和企业内部安全流程都需要引入更严格的复现与验证门槛。",
+      "source": "TechCrunch",
+      "source_title": "Google froze its open source bug bounty program due to a 'significant rise' in AI submissions",
+      "url": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/"
+    },
+    {
+      "title": "AI 设计血液癌症候选药物",
+      "summary": "位于阿布扎比的 Insilico Medicine 用 PandaOmics 找靶点、Chemistry42 设计分子，得到针对 BTK 蛋白的 PROTAC 类先导化合物，可能用于部分白血病和淋巴瘤。选出待测药物用时 12 至 18 个月，传统方法通常需 2.5 至 4 年。",
+      "insight": "靶点发现加分子生成的两段式 AI 流水线正在把早期研发周期压缩一半以上，但化合物仍需进一步测试才能进入临床。",
+      "source": "The National",
+      "source_title": "UAE scientists harness AI to discover potential blood cancer drug",
+      "url": "https://www.thenationalnews.com/news/uae/2026/10/04/uae-scientists-harness-ai-to-discover-potential-blood-cancer-drug/"
+    },
+    {
+      "title": "AMD：本地加云端可省 Agent 成本",
+      "summary": "AMD 认为 Agent 推高了 token 消耗，主张把算力分布到云、数据中心、边缘和 AI PC。其测算称，500 台 AI PC 按本地与云端各半分担中等负载，三年可比纯云方案节省 40% 至 60%。",
+      "insight": "这是厂商自己的测算，需按实际负载验证；但对数据敏感、调用频繁的工业现场，本地推理加云端兜底的混合架构值得评估。",
+      "source": "NewsBytes.PH",
+      "source_title": "AMD sees distributed computing as answer to rising agentic AI costs",
+      "url": "https://newsbytes.ph/2026/10/03/amd-sees-distributed-computing-as-answer-to-rising-agentic-ai-costs/"
+    },
+    {
+      "title": "白宫推出非约束性 AI 安全承诺",
+      "summary": "美国总统特朗普召集 AI 企业领袖发布《前沿责任联合承诺》，Zuckerberg、Bezos、Musk 和 Anthropic 的 Dario Amodei 等人签署，但文件没有法律约束力。同时行政命令要求官员改用“super intelligence”一词指代 AI。",
+      "insight": "这类承诺更多是姿态而非可执行规则，企业落地 AI 时仍应以具体的安全、合规和审计要求为准。",
+      "source": "TechCrunch",
+      "source_title": "Can 'super intelligence' and a non-binding safety pact solve AI's image problem?",
+      "url": "https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem/"
+    }
+  ]
+}
