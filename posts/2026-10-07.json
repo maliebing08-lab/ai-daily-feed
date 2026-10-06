@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-07",
+  "headline": "AI 代理遭网站拦截，业界推开放标准",
+  "intro": "个人 AI 代理正从演示走向日常使用，但被各大网站拦在门外成了新瓶颈，Meta、Walmart、Stripe 等公司开始联手制定代理与商家的通信标准。与此同时，端侧运行的私人助手、可直接读取自然语言规则的小型决策模型陆续亮相，Anthropic 也加码争夺初创开发者。",
+  "excerpt": "AI 代理频遭网站拦截，多家公司联手制定开放标准；Anthropic 送初创公司一年 Claude Team；Musubi 开源 1.7B 审核决策模型。",
+  "tags": [
+    "Agent",
+    "Anthropic",
+    "开源模型",
+    "端侧AI",
+    "工业AI"
+  ],
+  "items": [
+    {
+      "title": "AI 代理被网站拦截，业界推开放标准",
+      "summary": "Meta 的 Muse、OpenAI 的 Dots、Instinct 等个人代理在购物、订票时频繁被网站拦截：Amazon 主动屏蔽了 Muse，Walmart 因人机验证误拦，Yelp 要求付费授权才放行。Meta、Walmart、Stripe、Sierra、Decagon 等公司正共同制定面向电商场景的代理与商家通信开放标准，以区分合法代理和恶意爬虫。",
+      "insight": "代理能否落地，越来越取决于目标系统是否愿意开放接口；做代理产品时应优先对接官方 API 与标准协议，而不是依赖模拟浏览器操作。",
+      "source": "TechCrunch",
+      "source_title": "The next hurdle for AI agents: getting websites to let them in",
+      "url": "https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in/"
+    },
+    {
+      "title": "Anthropic 送初创公司一年 Claude Team",
+      "summary": "Anthropic 扩大 Claude for Startups 计划：符合条件的公司可免费使用一年 Claude Team（最多 5 个高级席位），并获得 1000 美元 API 额度、Claude Marketplace 插件开发权限以及 Applied AI 团队的线上答疑。成立不满 5 年或近 2 年内获得融资的公司均可申请。",
+      "insight": "模型厂商争夺开发者生态的竞争进一步加剧，小团队验证 AI 应用的试错成本随之降低。",
+      "source": "TechCrunch",
+      "source_title": "Anthropic is giving startups a free year of Claude Team and $1,000 in credits",
+      "url": "https://techcrunch.com/2026/10/06/anthropic-gives-startups-a-free-year-of-enterprise-service-and-1000-in-token-credits/"
+    },
+    {
+      "title": "Musubi 开源 1.7B 内容审核决策模型",
+      "summary": "Musubi 发布开放权重的 PolicyLM-1.7B，专用于实时内容审核。它直接读取用简单英文写成的审核规则，规则变更时无需重新训练，并且只输出“是否符合某类别”的二元判断而非生成文本，单次决策耗时低于 50 毫秒。",
+      "insight": "“小模型 + 自然语言规则 + 二元判断”的思路同样适用于工单分类、质检判定等需要低延迟、规则常变的业务场景。",
+      "source": "TechCrunch",
+      "source_title": "How AI decision models could change content moderation",
+      "url": "https://techcrunch.com/2026/10/06/how-ai-decision-models-could-change-content-moderation/"
+    },
+    {
+      "title": "Underdog：全端侧运行的私人 AI 助手",
+      "summary": "Thiel Fellow 出身的开发者 Sigil Wen 推出邀请制测试的 AI 助手 Underdog，完全在用户的 Mac 和 Windows 电脑上运行，使用基于 Qwen3.8 27B 微调的推理模型。产品承诺不收集数据用于广告或训练，对用户永久免费，靠代用户付款时的小额交易费盈利。",
+      "insight": "27B 级模型已能在个人电脑上支撑代理类应用，对数据不能出厂的工业现场而言，本地化部署的可行性正在提升。",
+      "source": "TechCrunch",
+      "source_title": "Silicon Valley's AI wunderkind launches Underdog, the most private Instinct/Muse competitor yet",
+      "url": "https://techcrunch.com/2026/10/06/silicon-valleys-ai-wunderkind-launches-underdog-the-most-private-instinct-muse-competitor-yet/"
+    },
+    {
+      "title": "TikTok 上线 AI 购物助手与一键结账",
+      "summary": "TikTok 推出对话式 Shopping Assistant，可记住用户偏好，实时解答商品详情、配送、尺码和库存问题；同时支持在 For You 信息流中一键直接购买。相关功能与 Salesforce、Shopify、Shoplazza、Stripe 等商业与支付服务商合作开发。",
+      "insight": "导购代理正与支付链路深度绑定，“对话即交易”可能成为消费类应用的标准形态。",
+      "source": "TechCrunch",
+      "source_title": "TikTok rolls out an AI shopping assistant and one-click checkout",
+      "url": "https://techcrunch.com/2026/10/05/tiktok-rolls-out-an-ai-shopping-assistant-and-one-click-checkout/"
+    },
+    {
+      "title": "犹他州允许 AI 自主开具痤疮处方",
+      "summary": "初创公司 Nolla Health 获准在犹他州 AI 监管沙盒中试点，由 AI 为痤疮患者开具外用乳膏处方，口服药和异维 A 酸不在范围内。试点分三阶段：先由医生审批全部处方，再改为 AI 先开、医生事后复核，最后医生每月抽查至少 10%。",
+      "insight": "“人工全审—事后复核—抽检”的分阶段放权机制，可作为高风险场景引入 AI 自动决策时的参考模板。",
+      "source": "SiliconANGLE",
+      "source_title": "Utah gives startup Nolla Health permission to start issuing AI automated prescriptions for acne treatments",
+      "url": "https://siliconangle.com/2026/10/05/utah-gives-startup-nolla-health-permission-to-start-issuing-ai-automated-prescriptions-for-acne-treatments/"
+    },
+    {
+      "title": "LibreOffice 宣布“不加 AI”是特性",
+      "summary": "The Document Foundation 表示，LibreOffice 在可预见的未来不会内置生成式 AI，理由是文档不应上传服务器处理，也不应依赖单一 AI 厂商。需要 AI 的用户可安装连接本地模型的第三方扩展。",
+      "insight": "对涉密或离线环境，“默认无 AI、按需接本地模型”的插件化思路比强行集成云端 AI 更易通过安全审查。",
+      "source": "TechCrunch",
+      "source_title": "LibreOffice says 'no AI' is now a software feature",
+      "url": "https://techcrunch.com/2026/10/06/libreoffice-says-no-ai-is-now-a-software-feature/"
+    },
+    {
+      "title": "Siemens 联手 TD SYNNEX 推工业 AI",
+      "summary": "Siemens 与 IT 分销商 TD SYNNEX 建立全球分销合作，覆盖工业自动化、软件与 AI、网络安全、智能基础设施和电气化产品，借助后者的系统集成商、云厂商和 ISV 网络推动 IT/OT 融合与物理 AI 落地。",
+      "insight": "工业 AI 正通过 IT 渠道触达更多集成商，熟悉 OT 现场又懂 IT 与 AI 的复合型团队将更吃香。",
+      "source": "Automation World",
+      "source_title": "Siemens, TD SYNNEX Announce Partnership For IT/OT Convergence, Physical AI Adoption",
+      "url": "https://automationworld.com/business-intelligence/news/55409735/siemens-td-synnex-announce-partnership-for-it-ot-convergence-physical-ai-adoption"
+    }
+  ]
+}
