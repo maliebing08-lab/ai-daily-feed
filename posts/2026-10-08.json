@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-08",
+  "headline": "GPT-6 上线 ChatGPT，回答可交互",
+  "intro": "OpenAI 把 GPT-6 推向 ChatGPT 全部档位，并让回答从纯文本变成可点击、可编辑的图表与工具；Anthropic 则以大幅降价的 Haiku 5.5 打响小模型价格战。与此同时，微软推出可在本地跑大模型的 RTX Spark 设备，Mistral 放出万亿参数级 Large 4，Agent 身份认证与工厂落地也各有新进展。",
+  "excerpt": "GPT-6 携可交互界面登陆 ChatGPT，Haiku 5.5 成本降约 75%，微软推本地 AI 设备与 Agent 沙箱，工厂 AI 持续落地。",
+  "tags": [
+    "大模型",
+    "Agent",
+    "OpenAI",
+    "Anthropic",
+    "AI PC",
+    "工业AI"
+  ],
+  "items": [
+    {
+      "title": "ChatGPT 推出可交互的 Intelligent UI",
+      "summary": "OpenAI 随 GPT-6 推出 Intelligent UI，ChatGPT 的回答中会出现可点击按钮、定制计算器、可编辑图表等交互元素，演示包括机翼升力示意图、徒步路线地图和储蓄计算器。Pro、Plus、Business、Enterprise 用户 10 月 7 日起全球可用，免费版和 Go 版于 10 月 8 日上线，用户也可调低可视化内容的比例。",
+      "insight": "聊天界面开始“按需生成 UI”，对做工具类、数据看板类产品的团队而言，生成式界面可能成为新的交互范式。",
+      "source": "TechCrunch",
+      "source_title": "ChatGPT is getting a lot more visual, with the launch of a new interface",
+      "url": "https://techcrunch.com/2026/10/07/chatgpt-is-getting-a-lot-more-visual-with-the-launch-of-a-new-interface/"
+    },
+    {
+      "title": "Claude Haiku 5.5 发布，成本降约 75%",
+      "summary": "Anthropic 发布 Claude Haiku 5.5，面向摘要、分类、数据库查询、客服和浏览器操作等高并发场景，也可作为 Opus/Sonnet 5.5 的编码子代理，并首次在 Haiku 级别支持可调 effort。官方称其平均运行成本比 Haiku 4.5 低约 75%，输入价格为每百万 token 0.10 美元（10 万 token 以内），已在 AWS、Google Cloud、Azure 等平台上线。",
+      "insight": "便宜又快的小模型适合放在流水线里做大批量分类与数据处理，复杂编码任务官方仍建议用 Sonnet 或 Opus。",
+      "source": "Anthropic",
+      "source_title": "Introducing Claude Haiku 5.5",
+      "url": "https://www.anthropic.com/claude-haiku-5-5"
+    },
+    {
+      "title": "微软发布 RTX Spark 设备与 Agent 沙箱",
+      "summary": "微软发布搭载 Nvidia RTX Spark 芯片的 Surface Laptop Ultra（起价约 2600 美元）和 Surface RTX Spark Dev Box 工作站（起价约 6000 美元，预装 VS Code、GitHub Copilot CLI、WSL 等），主打在本地运行 AI 模型。改版 Windows 11 新增 Execution Containers，用于更方便地沙箱化运行 AI Agent，微软称将向所有 Windows 11 用户开放。",
+      "insight": "Agent 沙箱进入操作系统层，有望降低在工控机或工程站上安全运行本地 Agent 的门槛。",
+      "source": "TechCrunch",
+      "source_title": "Microsoft releases new Nvidia-chip AI PCs with revamped Windows 11",
+      "url": "https://techcrunch.com/2026/10/07/microsoft-releases-new-nvidia-chip-ai-pcs-with-revamped-windows-11/"
+    },
+    {
+      "title": "Mistral Large 4 开放 API 预览",
+      "summary": "Mistral 发布 1.05 万亿参数的混合专家模型 Mistral Large 4，每个 token 激活约 490 亿参数，支持图像输入和 100 万 token 上下文，在其欧洲自建数据中心训练。公开预览 API 已上线，开放权重计划于 10 月底发布，许可证尚未公布。",
+      "insight": "若权重如期开放，将是重视数据主权的企业可选的又一款超大规模开放模型，但自托管门槛也不低。",
+      "source": "MarkTechPost",
+      "source_title": "Mistral AI Releases Mistral Large 4 (Le Chonk): A 1.05T Parameter Multimodal MoE Model",
+      "url": "https://www.marktechpost.com/2026/10/06/mistral-ai-releases-mistral-large-4-le-chonk-a-1-05t-parameter-open-weight-multimodal-moe/"
+    },
+    {
+      "title": "Meta 与 Sierra 推个人 Agent 协议",
+      "summary": "Meta 联合 Sierra、Walmart、Stripe 提出 Personal Agent Protocol，用于规范个人 AI 代理与企业网站、API 或企业代理之间的交互，重点解决身份认证，并让商家能识别经用户授权的代理所做的购买。Sierra 联合创始人 Bret Taylor 表示该标准任何人都可实现。",
+      "insight": "Agent 访问外部系统的身份与授权正走向标准化，对外提供 API 的系统需提前考虑如何识别和管控代理流量。",
+      "source": "SiliconANGLE",
+      "source_title": "Meta teams up with Bret Taylor's Sierra Technologies on new standards for AI agent commerce",
+      "url": "https://siliconangle.com/2026/10/06/meta-teams-up-with-bret-taylors-sierra-technologies-on-new-standards-for-ai-agent-commerce/"
+    },
+    {
+      "title": "Anthropic 网络安全访问计划分三级",
+      "summary": "Anthropic 将 Cyber Verification Program 与 Project Glasswing 合并为三级体系：防御访问覆盖事件调查、恶意软件与漏洞分析；红队访问增加授权渗透测试；专门访问面向测试电网、通信网络等高风险系统的少数机构，需与美国政府共同审核。可能造成物理伤害或大范围破坏的操作仍会被实时拦截。",
+      "insight": "关键基础设施运营方的安全团队可申请更强的 AI 辅助漏洞分析能力，但需满足数据留存与安全管控要求。",
+      "source": "Help Net Security",
+      "source_title": "Anthropic loosens Claude's cyber restrictions for verified defenders",
+      "url": "https://www.helpnetsecurity.com/2026/10/07/anthropic-expands-cyber-verification-program/"
+    },
+    {
+      "title": "Tulip 将 AI Agent 带上工厂车间",
+      "summary": "制造运营软件公司 Tulip 在 Operations Calling 2026 上发布一系列 AI 功能：可在项目上下文中起草应用的 Authoring Agent、把机器数据与工单工位关联的 Industrial Connectivity、原生 MCP 连接器，以及支持用 IDE 和 AI 编程工具开发、经 Git 审计发布的代码化应用，多数处于预览或客户测试阶段。",
+      "insight": "MCP 与 Git 工作流进入车间应用平台，上位机与 MES 开发者可以用熟悉的软件工程方式交付现场应用。",
+      "source": "Business Wire / Yahoo Finance",
+      "source_title": "Tulip Brings AI to the Factory Floor at Operations Calling 2026",
+      "url": "https://finance.yahoo.com/technology/ai/articles/tulip-brings-ai-factory-floor-182000490.html"
+    },
+    {
+      "title": "通用大模型答工业零件题最高仅 52%",
+      "summary": "工业 AI 厂商 Reshape Automation 用 14 家制造商目录中的 100 道工业零件问题测试通用模型：不借助工具时得分仅 12%–14%，联网搜索后 GPT-6 Astra 得分 52%、Claude 40.5%。约 36.5% 的错误答案会不加保留地给出具体数字或型号；该研究由厂商自行出题评分，未经第三方审核。",
+      "insight": "选型、备件查询等场景不能直接依赖通用模型，需要结合厂商目录做检索增强并保留人工核对。",
+      "source": "Modern Distribution Management",
+      "source_title": "Study: AI Models Top Out at 52% on Industrial Parts Questions",
+      "url": "https://mdm.com/news/technology/ai/study-ai-models-top-out-at-52-on-industrial-parts-questions"
+    }
+  ]
+}
