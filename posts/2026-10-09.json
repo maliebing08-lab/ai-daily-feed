@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-09",
+  "headline": "谷歌 Gemini 智能体面向企业上线",
+  "intro": "今天的主线是“能干活的 AI”继续向企业系统深处走：谷歌把 Gemini 做成带独立工作账号、可接 MCP 的统一智能体，Anthropic 联合多家 OT 安全厂商启动关键基础设施防御计划。与此同时，推理基础设施暴露出高危漏洞，边缘侧决策小模型和本地化会议助手也在提醒我们：AI 落地既要能力，也要安全与可控。",
+  "excerpt": "谷歌推出企业版统一 Gemini 智能体；Anthropic 联合工控安全厂商守护关键基础设施；LMCache 曝高危漏洞；Liquid AI 开源决策模型。",
+  "tags": [
+    "AI Agent",
+    "Google",
+    "Anthropic",
+    "AI 安全",
+    "边缘 AI",
+    "开源"
+  ],
+  "items": [
+    {
+      "title": "谷歌推出企业版统一 Gemini 智能体",
+      "summary": "谷歌在 Google Cloud 活动上发布统一的 Gemini 智能体，用户可以下达“目标”而非逐条指令，由它规划任务、调用技能与工具并连接内部系统。它可接入 Workspace、Microsoft 365、Slack、Jira、BigQuery、Postgres、Snowflake 及任意 MCP 服务器，默认自动选模型，也可选用 Anthropic Claude 等第三方模型。智能体拥有自己的 Workspace 账号和邮箱，操作全程记入审计轨迹，先面向企业，之后再开放给个人用户。",
+      "insight": "“智能体即同事”的账号与审计模式值得借鉴；支持 MCP 意味着自建的数据库、MES 或上位机服务只要封装成 MCP 服务器，就有机会被这类企业智能体直接调用。",
+      "source": "TechCrunch",
+      "source_title": "Google brings agentic AI to Gemini, starting with businesses",
+      "url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses"
+    },
+    {
+      "title": "Anthropic 联手 11 家伙伴守护关键基础设施",
+      "summary": "Anthropic 宣布一项面向关键基础设施和开源软件的长期网络防御计划，结合 Claude 模型、自家工程师与威胁研究，帮助发现并修复漏洞。首批 11 家伙伴包括 Rockwell Automation、Dragos、Nozomi Networks、Hitachi、CrowdStrike、Palo Alto Networks 等。计划还提供开源项目可选加入的免费定期扫描，报告附带概念验证与补丁建议，但官方提示结果可能存在误报。",
+      "insight": "伙伴名单里有多家工控与 OT 安全厂商，说明大模型辅助漏洞挖掘正进入 PLC、SCADA 等工业场景；维护开源工控组件的团队可以关注这项免费扫描。",
+      "source": "CyberScoop",
+      "source_title": "Anthropic rolls out program for 'long-term commitment' to secure critical infrastructure, open source software",
+      "url": "https://cyberscoop.com/anthropic-cybersecurity-program-critical-infrastructure-open-source/"
+    },
+    {
+      "title": "LMCache 曝未修复的远程代码执行漏洞",
+      "summary": "JFrog 披露 LLM 推理缓存组件 LMCache 存在严重漏洞 CVE-2026-105192，评分 9.8。问题出在多进程模式下未鉴权的 ZeroMQ 端口，它会先反序列化消息再检查类型，攻击者发送一条构造消息即可执行命令，官方容器中以 root 身份运行。0.3.9 至最新 0.5.5 版本均受影响，目前尚无修复版本。",
+      "insight": "自建 vLLM + LMCache 推理集群的团队应立即检查绑定地址，不要把多进程服务暴露在可路由网络上；官方 Kubernetes 示例默认绑定所有网卡，需要特别留意。",
+      "source": "The Hacker News",
+      "source_title": "Unpatched Critical LMCache Flaw Lets Unauthenticated Attackers Run Code Remotely",
+      "url": "https://thehackernews.com/2026/10/unpatched-critical-lmcache-flaw-lets.html"
+    },
+    {
+      "title": "Liquid AI 开源边缘决策模型 d1",
+      "summary": "Liquid AI 在 Hugging Face 发布开放权重的 d1-3B 和 d1-omni-600M 两款“决策模型”。它们不生成文本，而是一次前向计算直接给出分类、打分等结构化判断；d1-3B 支持文本和图像，omni 版还支持音频。官方数据显示 d1-3B 在 Jetson AGX Thor 上单题约 16 毫秒，在 RTX 4090 上约 8 毫秒。",
+      "insight": "毫秒级、可本地部署的判断模型很适合产线上的工单路由、告警分级和图像计数等场景，比调用大模型生成再解析更快也更好控制；具体许可证需查看模型卡。",
+      "source": "Hugging Face Blog",
+      "source_title": "Multimodal open d1 decision models for the edge",
+      "url": "https://huggingface.co/blog/LiquidAI/open-d1"
+    },
+    {
+      "title": "谷歌推出离线会议笔记应用 Foresight",
+      "summary": "谷歌发布 Mac 应用 Google AI Edge Foresight，针对 Apple Silicon 优化，可完全离线记录会议笔记，包括线下会议。它使用端侧模型 EmbeddingGemma 2，并由 Gemma 4 驱动问答助手；用户可上传 PDF、Office 文档、Markdown 等建立知识库，会议中出现相关话题时实时给出提示。",
+      "insight": "数据不出本机的会议助手对保密要求高的制造与研发团队更友好，也展示了 Gemma 系列在端侧做转写、检索和问答的完整组合。",
+      "source": "TechCrunch",
+      "source_title": "Google releases a new local-first Granola competitor",
+      "url": "https://techcrunch.com/2026/10/08/google-releases-a-new-local-first-granola-competitor/"
+    },
+    {
+      "title": "澳大利亚拟要求 AI 公司证明安全有效",
+      "summary": "澳大利亚助理部长 Andrew Charlton 在悉尼演讲中提出，前沿 AI 开发者需要证明其安全体系确实有效，并持续测试模型风险、建立事故检测与预防机制。这一思路参照职业健康安全、银行监管和航空安全中的“体系化监管”。政府计划在 2026 年底前完成国家 AI 标准，2027 年立法。",
+      "insight": "从“遵守清单”转向“证明有效”的监管思路，与功能安全领域的做法相近；面向海外交付 AI 系统的团队应提前积累测试记录和事故响应流程。",
+      "source": "ABC News",
+      "source_title": "Australia outlines plans to make AI companies prove their safety systems work",
+      "url": "https://www.abc.net.au/news/2026-10-08/federal-politics-ai-regulation-andrew-charlton-speech/107241674"
+    },
+    {
+      "title": "Anthropic 更新使用政策禁止虐待模型",
+      "summary": "Anthropic 更新使用政策，新增禁止对其模型进行“持续且无谓的辱骂或残忍行为”，仅针对反复且无明显目的的情形，违规后果是结束对话而非封禁账号，于 2026 年 11 月 12 日生效。此次更新还细化了欺骗性影响、武器相关活动、监控行为以及高风险医疗与金融场景的规定。",
+      "insight": "基于 Claude 构建产品的开发者应复核新版政策，尤其是涉及监控和高风险行业的用例，避免上线后出现合规问题。",
+      "source": "Crypto Briefing",
+      "source_title": "Anthropic updates usage policy to prohibit abusive behavior toward Claude",
+      "url": "https://cryptobriefing.com/anthropic-usage-policy-abusive-behavior-claude/"
+    }
+  ]
+}
