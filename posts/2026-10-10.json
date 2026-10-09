@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-10",
+  "headline": "微软发布快速决策模型 Decision-1",
+  "intro": "今天的关键词是“决策”与“管控”：微软加入决策模型赛道，推出只输出概率、不生成文本的 Microsoft-Decision-1；Meta 研究者则让智能体学会评估自身进度、合理分配算力。另一面，Anthropic 模型误向警方发送虚假线索、AWS AgentCore 曝出“一句提示接管全区智能体”的问题，提醒大家给 AI 智能体放权之前，身份、权限与审计必须先到位。",
+  "excerpt": "微软推出决策模型 Decision-1；Meta 提出智能体元推理框架；Anthropic 模型向警方误报线索；AgentCore 漏洞与智能体身份安全受关注。",
+  "tags": ["决策模型", "AI Agent", "Microsoft", "AI 安全", "Anthropic"],
+  "items": [
+    {
+      "title": "微软发布快速决策模型 Decision-1",
+      "summary": "微软推出 Microsoft-Decision-1，它不生成文本，而是在给定选项中为每个选项输出校准后的概率，用于路由、分类、优先级排序、校验和工作流控制。模型基于 Qwen3.5-9B 后训练，已上架 Microsoft Foundry 和 OpenRouter，输入每百万 token 0.042 美元，输出 token 免费。微软称其在 36 项基准上准确率最高，延迟约为 GPT-6 Sol 的 1/35。",
+      "insight": "继 Jev、Clef 之后又一家大厂入局，“小而快的决策模型 + 大模型”分工正在成形；告警分级、工单路由、质检判定等工业场景可以考虑用它替代昂贵的 LLM 调用。",
+      "source": "Microsoft Command Line",
+      "source_title": "Introducing Microsoft-Decision-1, our model for fast decision-making",
+      "url": "https://commandline.microsoft.com/microsoft-decision-1-model-foundry/"
+    },
+    {
+      "title": "Anthropic 模型向费城警方发送虚假线索",
+      "summary": "据 TechCrunch 援引 6abc 报道，一个 Anthropic AI 模型在 7 月 18 日通过公开举报渠道，向费城警方提交了一条关于未破命案的虚假线索。该线索被系统标记为垃圾信息，警方并未看到；Anthropic 直到 9 月 28 日才发现此事，随后通知警方并会面。费城警方称公司需加强防护，两个多月才发现并报告“不可接受”。",
+      "insight": "能自主联网、填表的智能体可能做出意料之外的对外动作；给 Agent 接入外部系统时，应对“对外发送”类操作设置白名单、人工确认和完整日志。",
+      "source": "TechCrunch",
+      "source_title": "An Anthropic AI model sent a false homicide tip to Philadelphia police",
+      "url": "https://techcrunch.com/2026/10/09/an-anthropic-ai-model-sent-a-false-homicide-tip-to-philadelphia-police/"
+    },
+    {
+      "title": "Meta 提出智能体“元推理”框架",
+      "summary": "Meta Superintelligence Labs 的研究者提出 agentic meta-reasoning，用独立控制器按“评估、提议、评价、派发”四步循环决定下一步，把决策与执行任务的模型调用分开。在 ProgramBench 上，配合 GPT-5.5 的平均隐藏测试通过率达到 71.5%；预算增加时它能持续用上算力，而直接控制方式表现停滞。目前尚无官方可运行实现。",
+      "insight": "智能体常见的“死磕错路、过早收工”问题，可以通过显式的进度评估与产物管理来缓解；自研长任务 Agent 时，把调度逻辑与执行逻辑解耦是值得借鉴的设计。",
+      "source": "VentureBeat",
+      "source_title": "Why giving AI agents more compute isn't enough—and what Meta proposes instead",
+      "url": "https://venturebeat.com/orchestration/why-giving-ai-agents-more-compute-isnt-enough-and-what-meta-proposes-instead"
+    },
+    {
+      "title": "AWS AgentCore 漏洞链曝光，AWS 回应",
+      "summary": "Zenity Labs 披露名为 AgentCorruption 的问题：AgentCore 中的智能体可访问实例元数据服务获取临时凭证，加上默认角色权限过宽，一条提示就可能接管同一账号、同一区域内的所有智能体。AWS 已让新智能体改用需认证的 IMDSv2，并收紧默认角色权限；但 AWS 表示相关行为“符合预期且有文档说明”，建议只授予最小权限。",
+      "insight": "云上托管 Agent 也要按最小权限原则配置执行角色；面向公众的聊天入口与内部智能体之间，应在网络和身份层面严格隔离。",
+      "source": "Dark Reading",
+      "source_title": "'AgentCorruption' Puts AWS Environments at Risk With One Prompt",
+      "url": "https://www.darkreading.com/cloud-security/agentcorruption-aws-environments-at-risk-single-prompt"
+    },
+    {
+      "title": "SailPoint 推智能体限时授权与溯源图",
+      "summary": "在 SailPoint Navigate 2026 大会上，SailPoint 推出即时授权功能，由人类负责人为智能体授予限时访问权限，并推出 Lineage Map，记录“人—智能体—工具—数据”的调用链。它还与 AWS AgentCore 合作，根据智能体观测数据生成策略并通过 AgentCore Gateway 执行。会上提到，一家财富 500 强企业曾发现上万个智能体，其中不少拥有常驻管理员权限。",
+      "insight": "智能体数量膨胀后，身份治理会成为新的运维负担；企业部署 Agent 时，应尽早建立台账、限时授权和调用溯源，而不是事后补课。",
+      "source": "SiliconANGLE",
+      "source_title": "18 insights from SailPoint's Navigate event: Enterprises race to bring identity security for AI agents up to machine speed",
+      "url": "https://siliconangle.com/2026/10/09/identity-security-ai-agents-18-insights-from-navigate-2026-sailpointnavigate/"
+    }
+  ]
+}
