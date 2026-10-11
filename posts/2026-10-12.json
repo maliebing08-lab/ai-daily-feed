@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-12",
+  "headline": "纳德拉呼吁给 AI 装“紧急刹车”",
+  "intro": "周末的 AI 应用新闻以“如何管住模型”为主线：Microsoft CEO Satya Nadella 主张把安全控制移到模型之外，并保留人工随时叫停的能力。与此同时，Nvidia 被曝洽谈加码或收购开源模型公司 Reflection AI，Sakana AI、OrcaRouter 等在科研审稿与安全研究上推出新的专用方案。",
+  "excerpt": "纳德拉呼吁为 AI 设紧急刹车、把管控移出模型；Nvidia 洽谈收购 Reflection AI；Sakana AI 审稿系统查出七成核心错误。",
+  "tags": ["AI 安全", "Agent", "开源模型", "Microsoft", "Nvidia", "端侧 AI"],
+  "items": [
+    {
+      "title": "纳德拉：AI 需要“紧急刹车”",
+      "summary": "Microsoft CEO Satya Nadella 周六在 X 上发文，呼吁业界重新审视 AI 的“信任架构”：把模型与管理其工作的软件层分开，将安全控制放在模型之外，并为每个重要动作保留防篡改、人可读的记录。他还主张默认模型可能已被攻破，从一开始就加以隔离，并让授权人员能在任务中途暂停或终止模型。",
+      "insight": "对做智能体落地的团队，这意味着权限、审计和急停应由外部编排层掌握，而不是寄望于模型自律；这和工控系统中安全回路独立于控制逻辑的思路一致。",
+      "source": "TechCrunch",
+      "source_title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+      "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/"
+    },
+    {
+      "title": "Nvidia 洽谈加码或收购 Reflection AI",
+      "summary": "据 FT 报道，Nvidia 正与开源模型公司 Reflection AI 进行早期谈判，可能追加投资或直接收购，也可能采用“招人加技术授权”的方式以避开冗长的监管审查。Nvidia 此前已向 Reflection 投资 8 亿美元，后者刚发布首个面向编程与智能体任务的开放权重模型 Beam。",
+      "insight": "芯片巨头直接下场整合开放权重模型，可能让 Beam 这类模型与 Nvidia 软硬件栈结合更紧，私有化部署编程智能体的团队值得持续关注。",
+      "source": "Business Standard (Reuters)",
+      "source_title": "Nvidia in talks to deepen investment in or acquire AI startup Reflection",
+      "url": "https://www.business-standard.com/world-news/nvidia-in-talks-to-deepen-investment-in-or-acquire-ai-startup-reflection-126101100061_1.html"
+    },
+    {
+      "title": "Sakana AI 审稿系统专挑硬伤",
+      "summary": "Sakana AI 发表论文，不再以“像不像人类评审”衡量 AI 审稿，而是看能否找出故意植入的错误。其多层评审系统 MLR 由三个基于 Claude 的智能体组成，四次评审可发现 73.43% 的核心论点错误，远高于最佳基线的 14.81%，单次评审成本约 0.47 美元。",
+      "insight": "“植入错误再检测”的评估方法可以直接借鉴到技术文档、需求规格或代码评审工具的验收上；但文中提到隐藏提示注入仍会影响所有被测 AI 评审，接入外部文档时要设防。",
+      "source": "MarkTechPost",
+      "source_title": "Sakana AI's LLM Peer Review System Catches 73% of Core-Claim Errors",
+      "url": "https://www.marktechpost.com/2026/10/10/sakana-ais-llm-peer-review-system-catches-73-of-core-claim-errors/"
+    },
+    {
+      "title": "OrcaCyber Zero 1.5 安全模型发布",
+      "summary": "OrcaRouter 发布面向授权漏洞研究的 OrcaCyber Zero 1.5，支持 100 万 token 上下文和 12.8 万 token 输出，可用于漏洞复现、渗透测试和安全审计，提供兼容 OpenAI 的 API。模型不开放权重，只能通过需要审核的安全研究通道调用，官方公布的基准成绩均为自测。",
+      "insight": "长上下文让整库代码或大型固件一次性送审成为可能，适合做内部安全审计；但闭源且门槛较高，基准尚无第三方验证，选型前应拿自有样本测试。",
+      "source": "MarkTechPost",
+      "source_title": "OrcaRouter Releases OrcaCyber Zero 1.5 Cybersecurity Model With 1M Context",
+      "url": "https://www.marktechpost.com/2026/10/10/orcarouter-releases-orcacyber-zero-1-5-cybersecurity-model-with-1m-context/"
+    },
+    {
+      "title": "OpenAI 定价页现新生命科学模型",
+      "summary": "OpenAI 的 API 定价页在“生命科学模型”分类下新增了 gpt-rosalind-discovery，与 gpt-rosalind-research 并列，价格相同：每百万输入 token 5 美元、输出 25 美元。OpenAI 尚未发布任何公告或系统卡，该模型的具体用途和准入条件仍不清楚。",
+      "insight": "OpenAI 在细分行业持续推出专用 SKU，说明“垂直模型 + 受控准入”正成为主流做法，工业、能源等领域也可能出现类似的专用模型。",
+      "source": "TestingCatalog",
+      "source_title": "OpenAI lists new gpt-rosalind-discovery model in docs",
+      "url": "https://www.testingcatalog.com/openai-lists-new-gpt-rosalind-discovery-model-in-docs/"
+    },
+    {
+      "title": "高通：手机将跑千亿参数模型",
+      "summary": "Qualcomm CEO Cristiano Amon 在访谈中表示，部分前沿 AI 公司正在打造能持续运行 1000 亿参数模型的手机，预计 2028 年可能出现，厂商也会在内存紧缺的情况下加大 RAM 配置。Wccftech 指出，即便做 4-bit 量化，这类模型也需要约 50GB 内存，散热与 DRAM 成本都是难题。",
+      "insight": "端侧大模型的瓶颈主要在内存而非算力；对边缘设备和工控终端而言，近期更现实的路线仍是蒸馏小模型或 MoE 专家卸载。",
+      "source": "Wccftech",
+      "source_title": "Qualcomm CEO Hints That Smartphones Capable Of Running 100B LLMs Could Arrive By 2028, Without Addressing Two Elephants In The Room; DRAM Supply & Cost",
+      "url": "https://wccftech.com/qualcomm-ceo-smartphones-100b-llms-2028-dram-supply-cost/"
+    },
+    {
+      "title": "Apple 招揽 AI 播客团队 Huxe",
+      "summary": "Apple 在向欧盟委员会提交的文件中披露，将向 Huxe AI 部分员工发出聘用邀请，并获得其知识产权的非独家授权。Huxe 由曾参与 Google NotebookLM AI 播客功能的开发者创立，已于今年 5 月宣布关停。文件未说明 Apple 的具体计划。",
+      "insight": "“招人加授权”已成为大厂获取 AI 能力的常见方式；AI 生成个性化音频若进入 Apple Podcasts，语音播报类应用的门槛会进一步降低。",
+      "source": "TechCrunch",
+      "source_title": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+      "url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/"
+    }
+  ]
+}
