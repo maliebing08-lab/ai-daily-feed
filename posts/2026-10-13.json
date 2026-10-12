@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-13",
+  "headline": "Meta 发布 Muse Wonder",
+  "intro": "今天的主角是 Meta：Muse Wonder 系列面向长时运行的智能体，API 价格和开放策略都很值得开发者关注。基础设施方面，OCP 全球峰会开幕，Cisco 等厂商密集发布 AI 网络与服务器新品；训练框架、工业数字孪生实验室和全天候 AI 助理也各有进展。",
+  "excerpt": "Meta 发布 Muse Wonder 并开放 API；Qwen 推出长任务智能体 RL 框架；Cisco 在 OCP 峰会发布 AI 网络芯片与光模块。",
+  "tags": ["大模型", "Agent", "Meta", "AI 基础设施", "智能制造"],
+  "items": [
+    {
+      "title": "Meta 发布 Muse Wonder 系列模型",
+      "summary": "Meta Superintelligence Labs 推出 Muse Wonder 与 Muse Wonder Full 两款闭源模型，主打跨应用、长时间运行的智能体任务，支持文本、图像、音频、视频输入和约 100 万 token 上下文，并带有 Active Memory、Active Focus 等能力。Muse Wonder 已通过 Meta Model API 开放，输入每百万 token 4 美元、输出 20 美元；更强的 Wonder Full 只能在 Muse Code 订阅中使用。",
+      "insight": "API 兼容 OpenAI 与 Anthropic 的开发工具，迁移成本低；但两款模型都不提供权重、无法私有部署，对数据敏感的工业场景仍需权衡。",
+      "source": "VentureBeat",
+      "source_title": "Meta's new Muse Wonder and Muse Wonder Full models achieve frontier performance, but only the weaker one is available via API",
+      "url": "https://venturebeat.com/technology/metas-new-muse-wonder-and-muse-wonder-full-models-achieve-frontier-performance-but-only-the-weaker-one-is-available-via-api"
+    },
+    {
+      "title": "Qwen 提出超长任务 RL 框架 QwenGyre",
+      "summary": "阿里 Qwen 团队发布论文介绍 QwenGyre，这是一个在线强化学习训练框架，可直接套用未修改的智能体运行环境，训练持续数小时的编程智能体。它通过弹性调度让 GPU 在推理采样和训练之间动态切换，并以轨迹树方式记录智能体调用。论文称在相同得分下比 Async、Colocate 两种方案快 1.21 至 1.85 倍。",
+      "insight": "长链路 Agent 的训练成本主要卡在算力调度上，这种“采样与训练共享集群”的思路值得自建训练平台的团队参考；目前尚未公开代码。",
+      "source": "MarkTechPost",
+      "source_title": "Alibaba Qwen Introduces QwenGyre: Elastic Reinforcement Learning RL for XLong-Horizon Agents",
+      "url": "https://www.marktechpost.com/2026/10/12/alibaba-qwen-introduces-qwengyre-elastic-reinforcement-learning-rl-for-xlong-horizon-agents/"
+    },
+    {
+      "title": "Cisco 在 OCP 峰会发布 AI 网络新品",
+      "summary": "Cisco 在 OCP 全球峰会主题演讲中宣布 102.4T 的 Silicon One G300 已批量出货，并推出 51.2T 的机架顶交换芯片 G302，支持芯片直触液冷，年底前发货。它还与 Nvidia 合作推出可插拔高密度光模块 USFP，并为开源网络系统 SONiC 增加面向 AI 负载的运行时安全功能 Live Protect。",
+      "insight": "AI 集群的瓶颈正从 GPU 向网络和光互连转移；液冷、可插拔光模块和开放网络栈会直接影响未来数据中心与边缘机房的建设方案。",
+      "source": "SiliconANGLE",
+      "source_title": "Cisco Systems scales programmable AI network capacity with new silicon and repluggable optics innovations",
+      "url": "https://siliconangle.com/2026/10/12/cisco-systems-scales-programmable-ai-network-capacity-with-new-silicon-and-repluggable-optics-innovations/"
+    },
+    {
+      "title": "LTTS 开设 AI 原生工厂实验室",
+      "summary": "L&T Technology Services 在班加罗尔园区启用面向数字制造的工程智能实验室，向客户展示数字孪生、AI 驱动制造与自主系统的协同运作。实验室的 AI 原生工厂区基于 Nvidia Omniverse、Isaac Sim、Cosmos 和 NeMo，集成机器人、协作机器人和无人机，并设置校验关卡，在智能体生成的指令下发到设备前先行审核。",
+      "insight": "“智能体指令先过校验关卡再到机器”的设计，是把 Agent 引入产线控制的务实做法，对上位机和 MES 开发者很有参考价值。",
+      "source": "Semiconductor For You",
+      "source_title": "L&T Technology Services Launches EI Lab for Manufacturing and Operations, Featuring NVIDIA Accelerated AI-Native Factory",
+      "url": "https://www.semiconductorforu.com/lt-technology-services-launches-ei-lab-for-manufacturing-and-operations-featuring-nvidia-accelerated-ai-native-factory/"
+    },
+    {
+      "title": "QCT 推出 AMD 新一代 AI 服务器",
+      "summary": "广达云科技 QCT 在 OCP 峰会发布两款基于即将推出的 AMD EPYC 9006 系列处理器的服务器：单路 1U 的 QuantaGrid S46V-1U，以及全液冷、搭载 8 GPU 基板的 2U 双路机型 QuantaGrid D76W-2U，后者面向大规模 AI 训练与推理，支持 PCIe Gen6。两款产品均遵循 OCP 与 DC-MHS 模块化服务器规范。",
+      "insight": "液冷和模块化标准正在成为 AI 服务器的默认配置，规划本地推理算力时需要提前考虑机房散热与供电改造。",
+      "source": "EIN Presswire",
+      "source_title": "QCT Debuts New Server Platforms Powered by AMD at the 2026 OCP Global Summit",
+      "url": "https://www.einnews.com/pr_news/949001722/qct-debuts-new-server-platforms-powered-by-amd-at-the-2026-ocp-global-summit"
+    },
+    {
+      "title": "Ambi 推全天候聆听的 AI 助理",
+      "summary": "由前 Plaud 高管创立的 Ambi 宣布累计融资 2600 万美元，并上线 iPhone、Mac 和 Apple Watch 应用。它既可作为会议记录工具，也可由用户选择开启全天聆听，在会议中结合日历、知识库和网络信息给出建议。全天采集默认关闭，公司称不保存录音并对数据加密。",
+      "insight": "环境感知型助理在车间巡检、现场运维中有想象空间，但对旁人的录音告知问题尚无行业解法，落地前要先过合规这一关。",
+      "source": "TechCrunch",
+      "source_title": "Former Plaud exec raises $26M for AI app that listens to you in the background",
+      "url": "https://techcrunch.com/2026/10/12/former-plaud-exec-raises-26m-for-ai-app-that-listens-to-you-in-the-background/"
+    },
+    {
+      "title": "智能体治理转向运行时管控",
+      "summary": "在 Dell AI Leadership Symposium 上，多位企业高管谈到全天候运行的智能体让传统治理方式失效。Singulr AI 表示已把智能体治理延伸到员工终端上的本地 AI 工具，并提醒外发数据等高风险动作可能藏在工作流中；Sycamore Labs 则称 CIO 们希望把智能体和模型调用留在自己的私有云内。",
+      "insight": "Agent 上线后，权限与行为审计要在运行时持续进行，而不只是上线前评审；私有化部署的需求也会随之上升。",
+      "source": "SiliconANGLE",
+      "source_title": "AI governance shifts to runtime as always-on agents spread",
+      "url": "https://siliconangle.com/2026/10/12/ai-governance-shifts-runtime-always-agents-spread-dellaileadershipsymposium/"
+    }
+  ]
+}
