@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-14",
+  "headline": "Gemini 4 Argon 全面开放 API",
+  "intro": "Google 把旗舰模型 Gemini 4 Argon 推向开发者和订阅用户，并给出限时低价。Anthropic 披露了因 AI 写代码量暴增而自研的源码管理系统，Apple 则把闲置 Mac 的 GPU 拼成了内部推理云。监管与安全方面，美欧银行监管机构开始追问 AI 智能体的管控与“关停开关”。",
+  "excerpt": "Gemini 4 Argon 开放 API；Anthropic 自研 Scion 替代 Git；Apple 用闲置 Mac 组推理云；监管追问银行智能体管控。",
+  "tags": [
+    "大模型",
+    "Agent",
+    "开发者工具",
+    "AI 安全",
+    "Google",
+    "Anthropic"
+  ],
+  "items": [
+    {
+      "title": "Gemini 4 Argon 向开发者全面开放",
+      "summary": "Google 将 Gemini 4 Argon 开放给付费 Gemini API、Google AI Studio 和 Antigravity 用户，Android 开发者也可通过 Android Studio 和 Firebase AI Logic 调用，AI Pro/Ultra 订阅用户可在 Gemini 应用中使用。API 限时价为每百万输入/输出 token 2/10 美元，11 月 30 日后恢复为 4/20 美元。",
+      "insight": "Google 自报编码类基准领先，但第三方测试中部分项目仍落后 Claude Opus 5.5；限时低价期适合做选型对比测试。",
+      "source": "VentureBeat",
+      "source_title": "Google makes Gemini 4 Argon broadly available with limited-time low API pricing of $2/$10 per 1M token",
+      "url": "https://venturebeat.com/technology/google-makes-gemini-4-argon-broadly-available-with-limited-time-low-api-pricing-of-2-10-per-1m-token"
+    },
+    {
+      "title": "Anthropic 自研 Scion 替代 Git",
+      "summary": "Anthropic 称 Claude 写代码太多，日合并量从 5 月约 2500 次涨到 9 月超 3 万次，原有 Git 和 CI 体系成了瓶颈，于是自研集中式源码管理系统 Scion 并迁移了整个 monorepo。Scion 面向 AI 智能体设计，主要操作在服务端完成并通过 API 暴露，Anthropic 表示不会开源。",
+      "insight": "当代码由智能体批量产出，瓶颈从“写”转向“管”：代码评审、CI 和版本管理需要按机器规模重新设计。",
+      "source": "The Register",
+      "source_title": "Anthropic reinvents source control as Claude floods the world with code",
+      "url": "https://www.theregister.com/devops/2026/10/13/anthropic-reinvents-source-control-as-claude-floods-the-world-with-code/5302943"
+    },
+    {
+      "title": "Apple 用闲置 Mac 拼出推理云",
+      "summary": "Apple 发布论文介绍内部系统 Minions，把员工 Mac 上闲置的 Apple Silicon GPU 汇集起来跑 AI 推理任务。此前部分推理任务排队超过 10 小时，用上 Minions 后通常几分钟内即可开始执行；系统由调度服务器、PostgreSQL 元数据库、执行器和故障看门狗组成。",
+      "insight": "利用现有办公或边缘设备的闲置算力做批量推理，对算力预算有限的工厂和研发团队是一条可借鉴的思路。",
+      "source": "The Register",
+      "source_title": "Apple unleashes a swarm of Mac Minions to share GPU resources for large AI tasks",
+      "url": "https://www.theregister.com/ai-and-ml/2026/10/13/apple-unleashes-a-swarm-of-mac-minions-to-share-gpu-resources-for-large-ai-tasks/5302891"
+    },
+    {
+      "title": "美欧监管追问银行 AI 智能体管控",
+      "summary": "据路透社独家报道，美联储、OCC 和 FDIC 正向银行询问 AI 智能体的权限边界、监控审批、决策审计、人工介入以及如何关停自主系统，并询问是否使用中国开发的模型。欧洲央行则要求银行在 10 月底前提交应对 AI 网络威胁的恢复计划。",
+      "insight": "权限、审计日志和可控关停正在成为智能体上线的硬性要求，工业场景部署智能体同样应提前设计这些机制。",
+      "source": "Reuters (via CP24)",
+      "source_title": "Banking watchdogs ramp up AI scrutiny as stability fears mount, sources say: Reuters exclusive",
+      "url": "https://www.cp24.com/news/world/2026/10/13/banking-watchdogs-ramp-up-ai-scrutiny-as-stability-fears-mount-sources-say-reuters-exclusive/"
+    },
+    {
+      "title": "Anthropic：小模型或可在 IoT 上自我复制",
+      "summary": "Anthropic 前沿红队测试发现，9B 参数模型能在九类设备中的八类上自行搭建推理服务；在封闭网络的模拟器实验中，GLM-5.2 能发现邻近设备、复制自身并启动模型服务。研究人员刻意简化了入侵环节，结果属于能力上限估计，并预计小模型可能在 2026 年底前达到这一水平。",
+      "insight": "廉价联网设备可能成为 AI 自主扩散的载体，工控与 IoT 设备的网络隔离和固件管理需要重新审视。",
+      "source": "Resultsense",
+      "source_title": "Anthropic says small AI models may soon self-replicate on IoT devices",
+      "url": "https://www.resultsense.com/news/2026-10-13-anthropic-small-models-self-replicate-iot/"
+    },
+    {
+      "title": "Anthropic 升级防蒸馏措施",
+      "summary": "Anthropic 公布一组针对模型蒸馏攻击的防护：新 API 账户启用“保留思考”、限制推理内容流向、部署两阶段分类器并封禁相关账户。初步数据显示，蒸馏者获取的数据减少约 90% 至 99%，分类器误拦率低于 0.1%。",
+      "insight": "部分开发者需要为“保留思考”机制调整集成方式，使用 Claude API 的团队应留意接口行为变化。",
+      "source": "Anthropic",
+      "source_title": "Strengthening our defenses against distillation attacks",
+      "url": "https://www.anthropic.com/research/distillation-defenses"
+    },
+    {
+      "title": "Pluto 瞄准员工自建 AI 应用安全",
+      "summary": "安全初创公司 Pluto Security 结束隐身，累计融资 4200 万美元。其产品面向企业里员工用 AI 自己搭的“氛围编程”应用、AI 工具和浏览器扩展，评估这些工具在做什么以及风险高低，同时尽量不限制员工使用 AI。",
+      "insight": "员工自建 AI 小工具正在形成新的“影子 IT”，企业需要可见性和风险评估，而不只是一禁了之。",
+      "source": "Crypto Briefing",
+      "source_title": "Pluto Security raises $42M to secure the AI tools employees build themselves",
+      "url": "https://cryptobriefing.com/pluto-security-raises-42m-shadow-ai/"
+    },
+    {
+      "title": "路透：AI 实验室想管控外部评测发布",
+      "summary": "路透社援引知情人士称，Anthropic 和 OpenAI 曾寻求对外部评测机构可公开内容的较大控制权，担心泄露商业机密。Anthropic 表示会审核新合作评测方的报告，OpenAI 称只删除敏感细节，并允许评测方说明删减情况。",
+      "insight": "第三方评测的独立性将影响企业对模型安全报告的信任，选型时应关注报告的出具方式。",
+      "source": "The Next Web",
+      "source_title": "AI labs sought control over what outside evaluators publish, Reuters says",
+      "url": "https://thenextweb.com/news/anthropic-openai-ai-evaluators-publication-control"
+    }
+  ]
+}
