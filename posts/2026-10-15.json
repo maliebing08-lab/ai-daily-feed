@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-15",
+  "headline": "Nvidia RTX Spark 本地跑智能体",
+  "intro": "今天的主线是“把 AI 搬到离用户更近的地方”：Nvidia 让 RTX Spark 笔记本开机即装本地智能体，Google DeepMind 把反诈模型塞进手机。与此同时，Nvidia 把 Run:ai 调度平台整体开源，工厂机器人和开源语音模型也有新进展。",
+  "excerpt": "Nvidia 笔记本内置本地智能体并开源 Run:ai，DeepMind 推端侧反诈模型，Industrial Next 让产线机器人分钟级换型。",
+  "tags": ["端侧AI", "Agent", "开源", "Nvidia", "工业机器人"],
+  "items": [
+    {
+      "title": "RTX Spark 笔记本内置本地智能体",
+      "summary": "Nvidia 宣布 RTX Spark 笔记本将于 10 月 16 日上市，首次开机即可安装 GitHub Copilot、Hermes、OpenClaw、Perplexity 等智能体应用，并自动配置本地模型，由 OpenShell 等提供系统级沙箱，Switchyard 负责本地与云端模型间路由。同时发布完全开源的 MoE 模型 Nemotron 3.5 Bolt 74B-A9B，2-bit 量化后可装进 24GB 显存。",
+      "insight": "本地智能体加沙箱隔离，正适合不便把数据上云的工控与研发场景；开发者也多了一个可在单卡上部署的开源 MoE 选项。",
+      "source": "TechAeris",
+      "source_title": "NVIDIA RTX Spark Local AI Gains Agents, Adobe Speedups, and DLSS 5",
+      "url": "https://techaeris.com/2026/10/14/nvidia-rtx-spark-local-ai-agents/"
+    },
+    {
+      "title": "Nvidia 把 Run:ai 整体开源",
+      "summary": "Nvidia 将此前主要以商业授权提供的 Run:ai GPU 编排平台完整开源，用于在 Kubernetes 上为数据处理、训练和推理动态分配 GPU。开源组件包括 KAI Scheduler、带显存硬隔离的 GPU Fractioning Operator、KAI Resource Management 和 Workload Map，代码放在 DSX AI Factory 的 GitHub 组织下，NGC 上提供免订阅的 Helm 安装包。",
+      "insight": "自建 GPU 集群的团队可以免费获得 GPU 切分与配额调度能力；不过文章也指出，切分层仍依赖 CUDA，不支持其他加速卡。",
+      "source": "Techstrong.ai",
+      "source_title": "NVIDIA Hands Run:ai to the Open Source Community",
+      "url": "https://techstrong.ai/articles/nvidia-hands-runai-to-the-open-source-community/"
+    },
+    {
+      "title": "DeepMind 与新加坡推端侧反诈模型",
+      "summary": "Google DeepMind 与新加坡 GovTech 公布一套在手机本地运行的聊天诈骗识别方案：先由轻量分类器初筛消息，再由用新加坡本地诈骗对话调优的轻量 Gemma 模型分析，私人消息无需上传云端。双方表示，即时通讯平台和操作系统厂商可以集成这些模型。",
+      "insight": "“小模型 + 本地数据微调 + 两级筛选”的架构，对需要在边缘设备上做实时异常识别的工业场景同样有参考价值。",
+      "source": "Unite.AI",
+      "source_title": "Google DeepMind and GovTech Unveil On-Device Scam Detection Model",
+      "url": "https://www.unite.ai/google-deepmind-and-govtech-unveil-on-device-scam-detection-model/"
+    },
+    {
+      "title": "Industrial Next 让产线分钟级换型",
+      "summary": "由两位前 Tesla 工程师创办的 Industrial Next 在 TechCrunch Disrupt 上亮相，其自带 AI 基础模型的机器人工作站融合视觉、任务上下文与运动控制，通过仿真和示教学习新任务，号称产线换型从数周缩短到几分钟、无需传统编程。部分工作站已用于某款手机的排线插接、盖帽和撕膜等工序，公司还宣布与 BMW Group Technology Office 合作评估其灵巧操作技术。",
+      "insight": "“仿真训练 + 免编程换型”若能落地，将直接冲击传统示教编程和工装改造的工作量，自动化集成商值得关注。",
+      "source": "TechCrunch",
+      "source_title": "Industrial Next wants factory robots to switch tasks in minutes, not weeks",
+      "url": "https://techcrunch.com/2026/10/13/industrial-next-wants-factory-robots-to-switch-tasks-in-minutes-not-weeks/"
+    },
+    {
+      "title": "Fish Audio 开源 Drama 3 语音模型",
+      "summary": "Fish Audio 发布开放权重的 TTS 模型 Drama 3，总参数 35B、每个 token 约激活 3B，基于 Qwen3.5-35B-A3B 主干，支持 83 种语言、单次请求最多 16 个说话人，输出 44.1 kHz 音频。权重已上架 Hugging Face，也可通过官方 API 和 OpenRouter 调用；自部署需至少 48GB 显存的 Nvidia GPU。",
+      "insight": "许可证对年收入 50 万美元以下的商业使用免费，但禁止未经同意克隆真人声音；做语音播报、人机交互的团队可以评估。",
+      "source": "MarkTechPost",
+      "source_title": "Fish Audio Releases Drama 3, a 35B Open-Weight MoE Text-to-Speech Model",
+      "url": "https://www.marktechpost.com/2026/10/14/fish-audio-drama-3-open-weight-tts-model/"
+    },
+    {
+      "title": "Anthropic 设新加坡办公室并签 MOU",
+      "summary": "Anthropic 在新加坡开设亚太第五个办公室，并与新加坡数码发展及新闻部签署谅解备忘录，合作范围涵盖 AI 安全与模型评测、AI 采用研究，以及帮助中小企业和公务人员负责任地使用 AI。公告提到 GovTech 已有超过 1500 名工程技术人员使用 Claude Code，受监管行业可在 Amazon Bedrock 上使用区域内推理。",
+      "insight": "区域内推理和政府级合作，降低了金融、制造等受监管行业在东南亚引入大模型的合规门槛。",
+      "source": "Anthropic",
+      "source_title": "Anthropic opens Singapore office and signs MOU with the Government of Singapore",
+      "url": "https://www.anthropic.com/news/singapore-office-opening"
+    },
+    {
+      "title": "Claude 为美国中期选举加防护",
+      "summary": "Anthropic 公布美国中期选举应对措施：Claude.ai 将接入 Democracy Works 提供分州的官方投票信息，选举夜展示官方计票结果；同时新增分类器识别多步骤滥用，如批量伪造社交账号和新闻网站，并加强对选举基础设施的网络安全防护。",
+      "insight": "多步骤滥用检测和权威数据源接入，是面向公众的 AI 应用在高风险场景中控制输出质量的典型做法。",
+      "source": "Anthropic",
+      "source_title": "Preparing for the 2026 US midterms",
+      "url": "https://www.anthropic.com/news/2026-us-midterms"
+    }
+  ]
+}
