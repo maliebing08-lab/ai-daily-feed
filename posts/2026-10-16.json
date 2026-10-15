@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-16",
+  "headline": "Meta 开放 816B 的 Muse Spark",
+  "intro": "开放权重模型今天密集上新：Meta 把 Muse Spark 开放下载，Nvidia 发布面向企业智能体的 Nemotron 3.5 Super VL。与此同时，Nvidia 联合一众半导体厂商推进“AI 定义的晶圆厂”，Perplexity 开源智能体沙箱 SPACE，GitHub 的 AI 代码安全扫描正式可用，AI 工程化的配套设施正在快速补齐。",
+  "excerpt": "Meta 开放 Muse Spark 权重，Nvidia 发布新模型并推进晶圆厂 AI，Perplexity 开源智能体沙箱，GitHub AI 扫描上线。",
+  "tags": ["开源模型", "Agent", "Nvidia", "Meta", "半导体制造", "AI 安全"],
+  "items": [
+    {
+      "title": "Meta 开放 Muse Spark 模型权重",
+      "summary": "Meta 将 4 月以来一直闭源的 Muse Spark 开放权重，发布 Muse Spark Open：总参数 816B、每 token 激活 42B，上下文最长 100 万 token，支持文本、图像、音频和视频输入。模型主打编码与长时程智能体任务，Meta 演示了用两台 M5 Ultra Mac Studio 通过 MLX 跑通该模型。",
+      "insight": "许可证并非完全开放：托管服务年收入超 2000 万美元需另签协议，且禁止用于军事和关键基础设施，工业场景选型前务必核对条款。",
+      "source": "SiliconANGLE",
+      "source_title": "Meta releases 816B-parameter Muse Spark Open for coding and agent work",
+      "url": "https://siliconangle.com/2026/10/15/meta-releases-816b-parameter-muse-spark-open-for-coding-and-agent-work/"
+    },
+    {
+      "title": "Nvidia 开放 Nemotron 3.5 新模型",
+      "summary": "Nvidia 推出 120B 参数的开放模型 Nemotron 3.5 Super VL，可读取 PDF、图表、表格、图片和网页并调用工具，同时发布 74B 总参数、9B 激活、2-bit 压缩后可装进 24GB 显存的 Bolt 74B-A9B。模型采用允许商用和微调的 OpenMDW 许可，并公开训练配方与数据集。",
+      "insight": "Bolt 支持 llama.cpp、Ollama、vLLM，可在单卡本地部署；Nvidia 宣称的“超越前沿模型”仅限后训练后的特定任务，测试细节未公开。",
+      "source": "VentureBeat",
+      "source_title": "NVIDIA's new, open Nemotron 3.5 Super VL with post-training beats Claude Opus 5, GPT-6.1 Sol on specialized task benchmarks",
+      "url": "https://venturebeat.com/technology/nvidias-new-open-nemotron-3-5-super-vl-with-post-training-beats-claude-opus-5-gpt-6-1-sol-on-specialized-task-benchmarks"
+    },
+    {
+      "title": "Nvidia 推进“AI 定义的晶圆厂”",
+      "summary": "Nvidia 发布 cuPotential 早期访问版，用于构建模拟原子与分子相互作用的智能体，并公布 Synopsys、Cadence、Lam Research、KLA、Teradyne、Applied Materials 等厂商在仿真、光刻、检测和探针维护中采用 CUDA-X 库的案例。FANUC 与 Foxconn 接入 Omniverse 做工厂数字孪生，OMRON 用 Cosmos 和 Metropolis 构建电路板缺陷分析智能体。",
+      "insight": "GPU 加速正从芯片设计延伸到量测、测试和产线运维，对做设备上位机和视觉检测的团队，是重新评估算力架构的信号。",
+      "source": "NVIDIA Newsroom",
+      "source_title": "NVIDIA and Semiconductor Leaders Advance AI Across Chip Design and Manufacturing for AI-Defined Fabs",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-and-semiconductor-leaders-advance-ai-across-chip-design-and-manufacturing-for-ai-defined-labs"
+    },
+    {
+      "title": "Perplexity 开源智能体沙箱 SPACE",
+      "summary": "Perplexity 宣布开源内部用于隔离 AI 智能体的沙箱 SPACE，CoreWeave、Akamai 和 Crusoe 将向客户提供该工具。Perplexity 称曾让 9 个前沿模型尝试突破 SPACE，118 次尝试均未成功，并表示它还能减少严格沙箱带来的算力浪费。",
+      "insight": "让智能体执行代码已成常态，开源沙箱降低了自建隔离环境的门槛；不过测试结果来自厂商自述，生产使用仍需自行验证。",
+      "source": "Semafor",
+      "source_title": "Perplexity to give away its AI security software",
+      "url": "https://www.semafor.com/article/10/15/2026/perplexity-to-give-away-its-ai-security-software"
+    },
+    {
+      "title": "GitHub AI Scan 扫描 PR 漏洞",
+      "summary": "GitHub 的 AI Scan for pull requests 正式可用，作为 CodeQL 的补充，可在 PR 中发现 PHP、Shell、Terraform、Dockerfile 等 CodeQL 尚未覆盖语言中的漏洞，并给出风险解释和修复建议。公开仓库可直接使用，私有仓库需 Code Security 或 Advanced Security，无需 Copilot 许可。",
+      "insight": "结果仅作提示、不阻断合并，适合先接入脚本和基础设施代码较多的仓库，补齐传统静态分析的盲区。",
+      "source": "GitHub Changelog",
+      "source_title": "AI Scan for pull requests generally available",
+      "url": "https://github.blog/changelog/2026-10-15-ai-scan-for-pull-requests-generally-available/"
+    },
+    {
+      "title": "Volvo 加码 Nvidia 自动驾驶方案",
+      "summary": "Volvo 扩大与 Nvidia 的合作，将采用 Hyperion 传感与计算架构、Alpamayo 驾驶软件栈和 Halos 安全评估层，覆盖纯电、插混和燃油车型，目标是城市道路与高速场景。Alpamayo 让 AI 模型与传统机器学习感知栈同时运行以实现冗余，首款搭载车型将在本十年内亮相。",
+      "insight": "“AI 模型 + 传统算法并行冗余”的架构思路，同样适用于对安全性要求高的工业控制场景。",
+      "source": "TechCrunch",
+      "source_title": "Volvo makes a bigger bet on Nvidia",
+      "url": "https://techcrunch.com/2026/10/15/volvo-makes-a-bigger-bet-on-nvidia/"
+    },
+    {
+      "title": "CERN 与 Mistral 共建物理大模型",
+      "summary": "CERN 与 Mistral 签署非约束性协议，计划打造首个面向对撞机物理的基础模型 Large Physics Model，用 LHC 数十亿次模拟质子碰撞数据训练，用于碰撞重建、粒子识别、异常信号发现和探测器设计评估。是否开放权重尚未说明。",
+      "insight": "用一个预训练模型统一多个物理分析任务，为工业界构建“领域基础模型”替代零散专用模型提供了参照。",
+      "source": "CERN",
+      "source_title": "CERN and Mistral join forces to accelerate AI for science",
+      "url": "https://home.cern/cern-and-mistral-join-forces-to-accelerate-ai-for-science/"
+    }
+  ]
+}
