@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-17",
+  "headline": "AI 审查让 PostgreSQL 19 延期",
+  "intro": "今天的主线是 AI 深入软件工程流程：PostgreSQL 19 因 LLM 辅助审查挖出大量缺陷而推迟发布，Claude Code 团队公开了以 AI 审查为核心的合并流水线。模型侧，Black Forest Labs 开放了能在 8GB 显卡上运行的图像模型，Microsoft 披露了新一代基座模型的预训练成果。",
+  "excerpt": "AI 审查挖出大量缺陷致 PG 19 延期；Claude Code 团队公开 AI 审查流水线；FLUX 3 Klein 开放权重；MAI-Base-2 亮相。",
+  "tags": ["开源", "代码审查", "开发者工具", "大模型", "Anthropic", "自动驾驶"],
+  "items": [
+    {
+      "title": "AI 审查发现大量缺陷，PG 19 延期",
+      "summary": "PostgreSQL 19 原计划 9 月底至 10 月初发布，现预计推迟到 11 月 19 日左右，8 到 10 个重要特性被撤回并顺延到 PostgreSQL 20，其中包括 SQL/PGQ 图查询。EDB 的 committer Peter Eisentraut 表示，LLM 辅助代码审查在后期集中报出大量边界情况类小缺陷，修复工作量超出了社区能力。",
+      "insight": "AI 审查能把原本要在发布后几年里才暴露的问题提前揪出来，但也会让维护者的修复带宽成为新瓶颈，团队需要提前规划审查节奏与分级处理。",
+      "source": "The Register",
+      "source_title": "Postgres 19 delayed after AI reviewers find more bugs than humans can fix",
+      "url": "https://www.theregister.com/databases/2026/10/16/postgres-19-delayed-after-ai-reviewers-find-more-bugs-than-humans-can-fix/5303471"
+    },
+    {
+      "title": "Claude Code 团队公开 AI 审查流水线",
+      "summary": "Anthropic 介绍了 Claude Code 代码库的审查做法：并行的找 bug 智能体加验证投票、独立安全审查、按变更风险分级的人工审批，以及合并队列、特性开关和快速回滚。6 月到 9 月，合并 PR 数量翻倍以上，被回滚的比例下降 40% 以上。",
+      "insight": "思路是把大部分阅读交给机器、把人的时间留给架构与高风险代码，同时让出错可以快速撤销；对引入 AI 编码的团队是一份可直接参照的流程模板。",
+      "source": "claude.dev Blog",
+      "source_title": "How the Claude Code team does code review",
+      "url": "https://claude.dev/blog/solving-code-review-at-anthropic/"
+    },
+    {
+      "title": "FLUX 3 Klein 开放权重，8GB 显卡可跑",
+      "summary": "Black Forest Labs 发布 56 亿参数的开放权重模型 FLUX 3 Image Klein，支持文生图、图像编辑和最多 10 张参考图的多图生成，可用边界框控制元素位置。INT8 版本可在 8GB 显存的 GeForce RTX 显卡上运行，RTX 5090 上生成 1MP 图像约 4 秒。",
+      "insight": "年营收 500 万美元以下的企业可免费商用，适合在本地或边缘设备上做产品图、界面素材等生成，减少对云端 API 的依赖。",
+      "source": "Black Forest Labs",
+      "source_title": "FLUX 3 Image Klein: open weights, 5.6B parameters",
+      "url": "https://bfl.ai/blog/flux-3-image-klein"
+    },
+    {
+      "title": "Microsoft 披露 MAI-Base-2 预训练",
+      "summary": "Microsoft AI 公布基座模型 MAI-Base-2：MoE 架构，总参数 2.8 万亿、激活参数 800 亿，用 1.6 万块 GB200 训练 38 天。官方称其预训练算力效率是 DeepSeek-V4-Pro-Base 的 4 到 12 倍，并优于其测试过的所有开放权重模型。",
+      "insight": "模型仍在后训练，计划通过 Foundry 向受信任伙伴授权权重；Azure 用户未来可能多一个自研前沿模型选项，但发布时间未定。",
+      "source": "Microsoft AI",
+      "source_title": "Frontier Pre-training at Microsoft AI",
+      "url": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/"
+    },
+    {
+      "title": "Claude 自主改进量子电路设计",
+      "summary": "Anthropic 研究显示，Claude 根据自然语言需求为化学、优化、物理模拟和数论领域的 8 个量子电路编写 Python 设计，由自动评估器检查正确性并按“量子比特数×门数”打分，在无人工干预的闭环中迭代，多项结果优于已发表的最佳版本。",
+      "insight": "“生成—自动验证—迭代”的闭环同样适用于工程优化问题，只要能写出可靠的评估器，就能让模型长时间自主搜索更优方案。",
+      "source": "Anthropic",
+      "source_title": "Designing more efficient quantum circuits with Claude",
+      "url": "https://www.anthropic.com/research/designing-efficient-quantum-circuits"
+    },
+    {
+      "title": "Sakana 开源第三代 AI 科学家",
+      "summary": "Sakana AI 发布并以 Apache 2.0 开源 The Agentic Scientist，它调度多个编码智能体并行开展实验、基线和消融测试，用来检验一个看似成立的结果是否站得住。研究人员仍负责最终判断。",
+      "insight": "把“证据核查”内建进自动化流程，是让智能体参与研发和实验分析时控制误判风险的可借鉴做法。",
+      "source": "Runtime Wire",
+      "source_title": "Sakana AI builds evidence checks into its open-source AI scientist",
+      "url": "https://runtimewire.com/article/sakana-ai-agentic-scientist-v3"
+    },
+    {
+      "title": "Waymo 进军多伦多，2028 年载客",
+      "summary": "Waymo 宣布多伦多成为其首个加拿大城市，目标 2028 年向公众开放乘车；车辆近期将在有人值守下上路建图和验证软件。Element Fleet Management 负责车队运营，Magna 为制造伙伴。",
+      "insight": "这是 Waymo 在美国以外第四个市场，落地仍取决于安大略省将于 2027 年到期的试点法规如何接续。",
+      "source": "Electrek",
+      "source_title": "Waymo picks Toronto as first Canadian city, targets riders in 2028",
+      "url": "https://electrek.co/2026/10/16/waymo-toronto-canada-robotaxi-2028/"
+    }
+  ]
+}
