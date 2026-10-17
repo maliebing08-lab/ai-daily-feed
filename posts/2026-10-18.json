@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-18",
+  "headline": "DeepSeek 新版 Flash 开放搜索 API",
+  "intro": "今天的主线是智能体基础设施继续下沉：DeepSeek 更新 V4.1-Flash 并首次向开发者开放自家搜索与抓取接口，Reflection 以开放权重的 Beam 主打“少用 token”。与此同时，OpenCode 泄露事件提醒大家重视 API 密钥管理，Anthropic 则用内部数据展示了智能体对工作方式的改变。",
+  "excerpt": "DeepSeek 新版 Flash 开放搜索 API；OpenCode 部分用户密钥外泄；Anthropic 公布智能体工时；ChatGPT 推 Slides。",
+  "tags": ["大模型", "Agent", "开源", "AI 安全", "DeepSeek", "Anthropic"],
+  "items": [
+    {
+      "title": "DeepSeek 更新 Flash 并开放搜索 API",
+      "summary": "DeepSeek 发布 V4.1-Flash 的新检查点 V4.1-Flash-1017，已上线官网、App 与 API，官方称其在 11 项自报基准上全部超过前一版，DeepSWE v1.1 得分 77.0。同时其 Search 与 Fetch 两个接口向所有开发者开放，每千次成功请求 0.75 美元，空结果和失败不计费。",
+      "insight": "模型厂商开始自带检索与网页抓取能力，搭建联网智能体时可少接一层第三方搜索服务；不过 1017 版权重的许可证尚未公布，私有化部署前需确认。",
+      "source": "MarkTechPost",
+      "source_title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API",
+      "url": "https://www.marktechpost.com/2026/10/17/deepseek-just-released-v4-1-flash-1017-scores-77-0-on-deepswe-opens-search-api/"
+    },
+    {
+      "title": "OpenCode 遭攻击，部分用户密钥外泄",
+      "summary": "开源 AI 编程智能体 OpenCode 披露，一个正在下线的旧系统遭未授权访问，约 1.4% 绑定了外部模型服务商的 Console 用户受影响，官方称这是一次“大规模蒸馏攻击”，已邮件通知受影响用户，并与 Anthropic、OpenAI、Google 协同处理。",
+      "insight": "把第三方模型密钥托管在工具平台上存在连带风险；受影响用户应立即在各服务商后台吊销并更换密钥，检查近期用量，团队也应尽量用短期、限额的密钥。",
+      "source": "OfficeChai",
+      "source_title": "OpenCode Discloses Security Breach, Says Attackers May Have Accessed Users' OpenAI, Anthropic And Google API Keys",
+      "url": "https://officechai.com/ai/opencode-discloses-security-breach-says-attackers-may-have-accessed-users-openai-anthropic-and-google-api-keys/"
+    },
+    {
+      "title": "Anthropic 智能体工时达员工六倍",
+      "summary": "Anthropic 发布报告称，到 8 月，员工发起的交互式智能体工时已是员工人数对应工时的六倍；工程师人均代码提交量是半年前的 5 倍。技术部门初级岗位招聘占比从 27% 降到 9%，面试中对候选人 AI 工具使用经历的考察明显增多。",
+      "insight": "这是少见的一手企业数据：智能体正在改变团队结构与招聘标准，会用、会管 AI 工具正成为工程岗位的基本能力。",
+      "source": "Anthropic",
+      "source_title": "How employment is changing at Anthropic",
+      "url": "https://www.anthropic.com/research/employment-at-anthropic"
+    },
+    {
+      "title": "ChatGPT 上线 Slides 协作演示",
+      "summary": "OpenAI 推出 ChatGPT Slides，可从对话、文件或大纲生成演示文稿，支持直接编辑文字、图片、图表，邀请同事实时协同编辑与评论，并可导出为 PowerPoint、PDF 或 Google Slides。目前面向有 Space 权限的 Pro、Business 与 Enterprise 用户逐步开放。",
+      "insight": "AI 助手正从“出草稿”走向承载完整办公流程，项目汇报、方案评审类文档的制作方式可能随之改变。",
+      "source": "OpenAI Help Center",
+      "source_title": "ChatGPT release notes",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    },
+    {
+      "title": "Reflection 开放 Beam，主打省 token",
+      "summary": "Reflection AI 以 Apache 2.0 许可开放首个模型 Beam，总参数 501B、每 token 激活 23B。公司称其在高级推理测试上与 GLM-5.2 相当，但推理算力少 3 到 4 倍；8 位和 4 位版本可放进一台八卡服务器。",
+      "insight": "智能体任务的成本越来越取决于“完成一件事要多少 token”，而不只是单价；宽松许可加可单机部署，对需要本地化的企业更友好。",
+      "source": "VentureBeat",
+      "source_title": "Reflection's Beam aims to undercut Chinese open models with fewer tokens, not cheaper tokens",
+      "url": "https://venturebeat.com/technology/reflections-beam-aims-to-undercut-chinese-open-models-with-fewer-tokens-not-cheaper-tokens"
+    },
+    {
+      "title": "Pudu 推出工业半人形与轮腿机器人",
+      "summary": "Pudu 将产品线从服务机器人扩展到工业场景：半人形机器人 D7 在手臂、腰部和头部共有 23 个关节，可搬运最重 20 kg 的负载；轮腿四足机器人 D5-W 可在滚动与行走间切换，载重最高 30 kg，能爬楼梯并在跌倒后自行恢复。",
+      "insight": "不追求双足、以轮式底盘加上半身操作的形态，更贴近工厂和仓储的实际需求，有望更快进入搬运、巡检等场景。",
+      "source": "Robotics & Automation News",
+      "source_title": "Pudu expands beyond service robots into semi-humanoids and quadrupeds",
+      "url": "https://roboticsandautomationnews.com/2026/10/16/pudu-expands-beyond-service-robots-into-semi-humanoids-and-quadrupeds/105988/"
+    },
+    {
+      "title": "Claude 揭开 NIST 曲线种子来源",
+      "summary": "Anthropic 称，Claude 在不到半小时内查明 NIST P-192 至 P-521 等椭圆曲线的种子并非哈希输出，而是来自以 Unix 时间戳为种子的 C 库 lrand48 随机数生成器。官方强调这不是密码学破解，也不意味着曲线存在弱点，用户无需采取行动。",
+      "insight": "模型在考据、逆向类长尾难题上的价值正在显现；可公开复现的种子来源也降低了“后门”猜测的可信度。",
+      "source": "Anthropic",
+      "source_title": "Claude reveals ECDSA curve origins",
+      "url": "https://www.anthropic.com/research/ecdsa-curve-origins"
+    }
+  ]
+}
