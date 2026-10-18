@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-19",
+  "headline": "Anthropic 拿 5% 股份做公益",
+  "intro": "周末的 AI 新闻不多，但信号清晰：一边是 Anthropic 用股权设立公益基金回应公众对 AI 的信任危机，另一边是越来越多网站开始拦截第三方 AI 智能体，智能体“上网办事”的路并不平坦。基础设施方面，电网接入再次成为数据中心落地的瓶颈。",
+  "excerpt": "Anthropic 拿 5% 股份设公益基金；网站拦截 AI 智能体；微软退出 Nscale 英国项目；Disney 接收 Character.AI 员工。",
+  "tags": [
+    "Agent",
+    "Anthropic",
+    "OpenAI",
+    "数据中心",
+    "AI 治理"
+  ],
+  "items": [
+    {
+      "title": "Anthropic 拿出 5% 股份设公益基金",
+      "summary": "Anthropic 宣布将 5% 的公司股份注入一个全资持有的“公益基金”，用于资助造福社会的项目，公司估值每上涨 50% 还可能再追加 2%。资金去向可能包括向成熟非营利机构捐赠或直接资助特定群体，也可能用于应对 AI 对就业的冲击；具体治理结构将在未来几个月公布。",
+      "insight": "头部模型厂商开始用股权而非一次性捐款来回应社会对 AI 的担忧，谁来决定钱怎么花，将是外界持续关注的焦点。",
+      "source": "TechCrunch",
+      "source_title": "Anthropic says it's committing 5% of its shares to a 'public benefit fund'",
+      "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/"
+    },
+    {
+      "title": "多家网站开始拦截 AI 智能体",
+      "summary": "据 The Verge 报道，Meta Muse、xAI Grok、OpenAI Dots 等智能体的用户陆续在大型网站上碰壁：Amazon 以违反站点政策为由屏蔽 Muse，Delta 不允许智能体代订机票，Yelp 只放行付费授权数据的智能体，JPMorgan Chase 与 Charles Schwab 出于安全考虑阻止其访问账户。Meta 转而与 Walmart、Best Buy 等零售商合作，Shopify 则向智能体开放店铺网络。",
+      "insight": "依赖网页自动化的智能体方案稳定性存疑，正式的 API、MCP 或合作授权通道会越来越重要，做企业集成时应优先走官方接口。",
+      "source": "Slashdot（转述 The Verge）",
+      "source_title": "Websites Are Closing Their Doors to AI Agents",
+      "url": "https://slashdot.org/story/26/10/18/1715218/websites-are-closing-their-doors-to-ai-agents"
+    },
+    {
+      "title": "电网难接入，微软退出 Nscale 项目",
+      "summary": "据 Telegraph 报道，Microsoft 已终止与 AI 算力商 Nscale 在英国埃塞克斯郡 Loughton 规划数据中心的协议，原本微软是该项目的主租户。报道称英国电网方面告知该站点可能要到 2030 年代才能通电，项目此前多次延期。Nscale 表示与微软的关系依然稳固，正在为该站点寻找替代电源。",
+      "insight": "算力项目的瓶颈正从芯片转向电力和并网，对能源与电力行业而言，数据中心配套供电仍是值得关注的增量市场。",
+      "source": "Yahoo Finance（Investing.com）",
+      "source_title": "Microsoft pulls out of UK data centre deal with Nscale, Telegraph reports",
+      "url": "https://ca.finance.yahoo.com/news/microsoft-pulls-uk-data-centre-095611920.html"
+    },
+    {
+      "title": "Disney 接收 Character.AI 多数员工",
+      "summary": "本周申请破产的 Character.AI 披露，Disney 同意向其至少 60 名员工发出聘用要约，覆盖公司大部分团队，预计年度薪酬约 6000 万美元，多数人已接受。此前 Disney 已同意以 2000 万美元收购其部分资产，前 CEO Karandeep Anand 也已出任 Disney 首位 CTO。该安排属于“假马竞标”，仍可能被更高报价取代。",
+      "insight": "独立的 AI 陪伴类应用在高成本与诉讼监管压力下难以为继，人才和技术最终流向拥有 IP 与渠道的大公司。",
+      "source": "TechCrunch",
+      "source_title": "Disney agrees to hire the majority of Character.AI's workforce",
+      "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/"
+    },
+    {
+      "title": "OpenAI API 现三个未公布模型",
+      "summary": "有研究者在 X 上发现，OpenAI API 中出现了 aurora-red-alpha、aurora-green-alpha、aurora-blue-alpha 三个新的模型标识。OpenAI 尚未发布任何公告、文档、定价或更新日志，相关能力目前均属外界猜测。",
+      "insight": "这类未公开标识通常意味着新模型在灰度测试中，开发者可留意后续正式发布，但在官方文档出现前不宜接入生产环境。",
+      "source": "Crypto Briefing",
+      "source_title": "OpenAI quietly lists three aurora alpha models in its API",
+      "url": "https://cryptobriefing.com/openai-aurora-alpha-models-api/"
+    },
+    {
+      "title": "Apple 收紧 AI 生成不雅图应用规则",
+      "summary": "Apple 更新 App Review Guidelines：要求应用主动防止或移除包括 AI 生成在内的非自愿私密影像；新增 2.5.19 条，禁止在审核时隐瞒用途、上架后才暴露有害功能的“偷梁换柱”式应用；涉及人口贩卖与儿童剥削的应用将被下架，并禁止通过其他渠道分发。",
+      "insight": "生成式 AI 应用上架 iOS 需要把内容审核做在产品里，而不只是靠使用条款，相关团队应尽早评估自家生成功能的风控能力。",
+      "source": "AppleInsider",
+      "source_title": "AI nudify apps targeted in App Review Guidelines update",
+      "url": "https://appleinsider.com/articles/26/10/17/generative-ai-porn-apps-targeted-in-app-review-guidelines-update"
+    }
+  ]
+}
