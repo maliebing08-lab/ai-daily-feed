@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-20",
+  "headline": "AI 智能体替黑客攻破百余网站",
+  "intro": "安全研究报告显示，攻击者已能把整套网站入侵流程交给 AI 智能体批量执行，单次成功成本仅数十美元。与此同时，底层基础设施继续演进：Amazon 让 PyTorch 原生跑在 Trainium 上，Meta 公开吉瓦级训练集群的工程细节，Cloudflare、Inception 和 doubleAI 则分别从抽取、生成速度和运行时优化三个方向压低 AI 应用成本。",
+  "excerpt": "黑客借 AI 智能体攻破百余网站；Amazon 开源 TorchNeuron，Meta 详解 Prometheus，Cloudflare 推出 Clairic。",
+  "tags": [
+    "Agent",
+    "AI 安全",
+    "开发者工具",
+    "算力基础设施",
+    "机器人"
+  ],
+  "items": [
+    {
+      "title": "AI 智能体替黑客攻破百余网站",
+      "summary": "安全公司 NorForge 发布报告称，一名攻击者借开源 AI 平台 Cairn 让智能体自动攻击超过 1200 个网站，其中 100 多个被攻破，目标主要是在线商店，意图植入 Web Shell 以便后续进入支付系统。Reuters 点名的受影响方包括 Deere、SharkNinja 和 Cummins 相关站点，各公司称已处置或正在调查。研究人员估算整场行动 token 花费约 5000 美元，平均每次成功入侵约 50 美元。",
+      "insight": "自动化攻击的边际成本已降到极低，企业官网、售后站点和供应商系统这类“边缘资产”最容易被批量扫中，补丁和暴露面管理要按智能体的速度来做。",
+      "source": "The Next Web",
+      "source_title": "AI agents broke into 100+ sites for one hacker at $50 each, researcher says",
+      "url": "https://thenextweb.com/news/ai-agents-hacker-cairn-100-sites-deere-norforge"
+    },
+    {
+      "title": "Amazon 开源 TorchNeuron",
+      "summary": "PyTorch 官方博客发布 TorchNeuron，这是面向 AWS Trainium2/Trainium3 的原生 PyTorch 后端，采用 Apache 2.0 许可，10 月 20 日起公开测试。模型只需 .to('neuron') 即可迁移，支持 eager 调试模式和 torch.compile 生产模式，以及 DDP、FSDP2 等分布式训练。首版暂不支持动态形状、稀疏张量等特性，部分算子仍缺原生实现。",
+      "insight": "非 NVIDIA 加速卡的最大门槛是改代码，原生后端把迁移成本降到一行，团队在评估云端训练成本时多了一个可实际落地的选项。",
+      "source": "PyTorch Blog",
+      "source_title": "Introducing TorchNeuron: Native PyTorch backend for AWS Trainium",
+      "url": "https://pytorch.org/blog/introducing-torchneuron-native-pytorch-backend-for-aws-trainium/"
+    },
+    {
+      "title": "Meta 详解吉瓦级集群 Prometheus",
+      "summary": "Meta 工程博客披露了位于俄亥俄州的 Prometheus 超级集群：一期已建成，目前有数十万块 GPU，目标约 100 万块，用于训练 Muse 系列模型。文章详述了 GB200/GB300 机柜的机内备卡策略、跨楼宇以太网互联、直触芯片液冷，以及训练负载 30%–40% 功率波动的削峰方案。经过一年治理，训练中断次数下降了 99%。",
+      "insight": "文中的可靠性经验（链路信号完整性、内存故障预测性下线、备件冗余）对任何规模的 GPU 集群运维都有参考价值，也说明大模型训练本质上是电力与工程问题。",
+      "source": "Engineering at Meta",
+      "source_title": "Inside Prometheus: Meta’s Journey to a Gigawatt-Scale Supercluster",
+      "url": "https://engineering.fb.com/2026/10/19/data-center-engineering/inside-prometheus-meta-gigawatt-scale-supercluster/"
+    },
+    {
+      "title": "Cloudflare 推出抽取模型 Clairic",
+      "summary": "Cloudflare 发布预览版 Clairic，定位为“System One”类抽取模型：单次前向即可从文本或图片中提取、计算或估算指定类型的数值，无答案时返回 null 并附置信度，不生成推理 token。在其理赔流水线测试中，相比全部使用 GLM-5.3 的方案，端到端耗时约快 3.2 倍、成本低 49%。模型已上线 Workers AI，计划日后开放权重。",
+      "insight": "表单、工单、设备日志里的结构化字段抽取是工业软件的高频需求，用专用小模型替代通用 LLM，结果更稳定、可直接写入数据库。",
+      "source": "Cloudflare Blog",
+      "source_title": "Introducing Clairic, a new System One class of extraction models",
+      "url": "https://blog.cloudflare.com/clairic-extraction-model"
+    },
+    {
+      "title": "扩散语言模型 Mercury 3 上线",
+      "summary": "Inception 发布扩散式大语言模型 Mercury 3，称在 NVIDIA GPU 上生成速度约每秒 1068 个 token，上下文窗口扩大到 100 万 token，多项基准可比肩 GPT-6 Luna 和 Claude Haiku 5.5。模型兼容 OpenAI 接口，已在自家平台、OpenRouter、Baseten 和 Vercel 提供，标准价格为每百万输入 0.20 美元、输出 0.70 美元。",
+      "insight": "对需要低延迟的交互式智能体和实时辅助场景，扩散路线提供了自回归模型之外的提速选择，性能数据目前均为厂商自测。",
+      "source": "Inception",
+      "source_title": "Diffusion at Scale: Introducing Mercury 3",
+      "url": "https://www.inceptionlabs.ai/blog/introducing-mercury-3"
+    },
+    {
+      "title": "doubleAI 让 AI 在运行时改写机器码",
+      "summary": "Amnon Shashua 创办的 doubleAI 发布 Maxwell，称其为“代码执行模型”：在程序运行时观察实际硬件和数据，直接改写机器码以降低算力消耗，源代码保持不变，支持 CPU 和 GPU。公司称每项改动都经过形式化证明保持行为一致，条件不满足时自动回退原代码。据称早期客户的数据管道提速超 38 倍，一家客户算力成本降低 67%。",
+      "insight": "不改源码的运行时优化若可靠，适合遗留系统和难以重构的生产代码，但“无需人工审核”的改动在关键系统中仍需谨慎验证。",
+      "source": "The Next Web",
+      "source_title": "Amnon Shashua’s doubleAI launches an AI that speeds up code while it runs",
+      "url": "https://thenextweb.com/news/doubleai-maxwell-code-execution-model-compute-costs"
+    },
+    {
+      "title": "超导 AI 芯片实时分析聚变等离子体",
+      "summary": "Brookhaven 国家实验室联合 PPPL、DIII-D 和芯片公司 Great Sky，用超导神经网络芯片处理 DIII-D 托卡马克每秒百万次采样的数据，完成异常分类和破裂预测，并在 TORAX 模拟数据上预测锯齿不稳定性。目前芯片只分析已采集数据，尚未控制运行中的装置，DIII-D 计划在下一轮实验中接入。",
+      "insight": "微秒级的 AI 推理正在进入能源装置的实时控制回路，这类“边缘硬实时 AI”的思路同样适用于高速工业检测与保护。",
+      "source": "Brookhaven National Laboratory",
+      "source_title": "First-of-a-Kind Super Intelligence Chips Successfully Analyze Fusion Plasmas",
+      "url": "https://www.bnl.gov/newsroom/news.php?a=123222"
+    },
+    {
+      "title": "Dream Labs 按小时出租机器人大脑",
+      "summary": "前 NVIDIA GR00T 团队创办的 Dream Labs 推出机器人基础模型 Dream-1，把机器人控制当作视频预测问题，主要用第一人称人类视频训练，声称可零样本控制双臂平行夹爪机器人。模型通过 API 按小时计费，旗舰版每小时 3 美元、轻量版 0.75 美元，主要面向 2000 至 10000 美元价位的机器人。",
+      "insight": "按小时计费的“机器人大脑”降低了低成本机械臂的智能化门槛，不过公司明确不针对高精度工业任务，产线应用还需观望。",
+      "source": "Forbes",
+      "source_title": "Robot Brains For 75 Cents/Hour? Former Nvidia Researchers Raise $90 Million",
+      "url": "https://www.forbes.com/sites/johnkoetsier/2026/10/19/robot-brains-for-75-centshour-former-nvidia-researchers-raise-90-million/"
+    }
+  ]
+}
