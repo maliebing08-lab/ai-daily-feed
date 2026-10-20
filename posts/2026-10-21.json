@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-21",
+  "headline": "Google 开源 TorchTPU 挑战 CUDA",
+  "intro": "继 Amazon 推出 Trainium 的 PyTorch 后端之后，Google 也开源 TorchTPU，云厂商争夺 AI 开发者的竞争延伸到软件栈。DeepSeek 开源生产推理引擎，Microsoft、Notion 则围绕智能体的风险管控与长时运行推出新能力。",
+  "excerpt": "Google 开源 TorchTPU，PyTorch 应用改配置即可上 TPU；DeepSeek 开源推理框架；Microsoft 为智能体加风险熔断。",
+  "tags": [
+    "大模型",
+    "Agent",
+    "开源",
+    "Google",
+    "DeepSeek",
+    "机器人"
+  ],
+  "items": [
+    {
+      "title": "Google 开源 TorchTPU",
+      "summary": "Google 发布并开源 TorchTPU，让现有 PyTorch 应用只需修改配置即可迁移到 TPU 和 Google Cloud，无需重写代码。同时推出 TPU 智能体工具套件，帮助开发者迁移应用并排查迁移中的错误；Google 表示已与 Meta、Hugging Face、vLLM、SGLang 等团队合作确保兼容，还更新了端侧推理工具 LiteRT 以更好支持 PyTorch。",
+      "insight": "Google 与 Amazon 相继在软件层挑战 CUDA 生态，PyTorch 用户在算力选型上将有更多可替代方案。",
+      "source": "TechCrunch",
+      "source_title": "Google has joined Amazon in attacking Nvidia's stronghold with AI app developers",
+      "url": "https://techcrunch.com/2026/10/20/google-has-joined-amazon-in-attacking-nvidias-stronghold-with-ai-app-developers/"
+    },
+    {
+      "title": "DeepSeek 开源推理框架 DeepInfer",
+      "summary": "DeepSeek 以 Apache 2.0 协议开源 DeepInfer，即支撑其 V4.1-Flash 生产服务的推理框架，支持 NVIDIA Blackwell GPU 与华为 Ascend 950 NPU。框架主要基于 vLLM 构建，包含专家并行负载均衡、名为 DSpark 的投机解码、结构化输出等特性；但目前仅支持离线推理，缺少 KV cache 系统和 PD 分离。",
+      "insight": "大规模 MoE 推理的工程细节首次以生产级代码公开，对自建推理服务的团队有较高参考价值，但部署门槛很高。",
+      "source": "MarkTechPost",
+      "source_title": "DeepSeek Open-Sources DeepInfer, the Inference Framework Behind DeepSeek-V4.1-Flash",
+      "url": "https://www.marktechpost.com/2026/10/20/deepseek-deepinfer-open-source-inference-framework/"
+    },
+    {
+      "title": "Microsoft 给 AI 智能体装上“熔断”",
+      "summary": "Microsoft 在 Microsoft 365 E7 和 Project Perception 中推出新工具，把 AI 智能体视为潜在的内部威胁，持续为每个智能体计算风险分。风险升高时，系统可收回写权限只保留读取、对高风险操作要求人工审批，或直接关停智能体；终端上可识别的智能体类型从 25 种扩展到 60 种，包括 Claude Code、Codex 和 GitHub Copilot。",
+      "insight": "智能体权限要动态收放、可随时叫停，这一思路同样适用于接入产线和控制系统的 AI 应用。",
+      "source": "GeekWire",
+      "source_title": "Microsoft unveils tools to monitor and corral rogue AI agents",
+      "url": "https://www.geekwire.com/2026/microsoft-unveils-tools-to-monitor-and-corral-rogue-ai-agents/"
+    },
+    {
+      "title": "Mistral 发布 Voxtral 3 语音模型",
+      "summary": "Mistral 推出 Voxtral 3 系列，包括转写、实时转写（延迟低于 500 毫秒）和语音合成模型，转写覆盖 50 多种语言。同时发布语音智能体 SDK，把语音输入、推理、工具调用和语音回复整合进一个流式系统，可通过欧盟托管的 API 使用，也可私有化部署。",
+      "insight": "支持私有部署的低延迟语音方案，适合客服、设备语音交互等对数据驻留有要求的场景。",
+      "source": "Technobezz",
+      "source_title": "Mistral AI Launches Voxtral 3 With Voice Agent SDK and 50+ Languages",
+      "url": "https://www.technobezz.com/news/mistral-ai-voxtral-3-voice-agent-sdk"
+    },
+    {
+      "title": "Notion 智能体单任务可跑 24 小时",
+      "summary": "Notion 重建了第六代智能体运行框架，单个任务可连续运行超过 24 小时（此前为 5 分钟），并加入由另一模型审查操作安全性的模式。新的 Auto 路由会按任务在质量、速度和成本间选择模型，Notion 称在 20 多个常见场景中以约低 90% 的平均成本取得相近效果。",
+      "insight": "队列化 worker、上下文压缩、独立审查模型等做法，是长时运行智能体工程化的可借鉴范式。",
+      "source": "Notion",
+      "source_title": "Agents, rebuilt to do more for less",
+      "url": "https://www.notion.com/blog/notion-ai-more-for-less"
+    },
+    {
+      "title": "OpenAI 提升 COBOL 等老语言编码能力",
+      "summary": "OpenAI 表示其最新模型在 COBOL、Fortran 和 Visual Basic 等老旧语言的编写与迁移上明显进步，并公布了相关评测结果。其中部分 COBOL 迁移评测使用 OpenAI 自行设计的隐藏测试，尚未经过独立验证；OpenAI 也提醒，生产系统仍需专家审查。",
+      "insight": "工业与金融领域大量遗留系统有望借 AI 加速改造，但迁移结果仍需严格测试兜底。",
+      "source": "RuntimeWire",
+      "source_title": "OpenAI reports benchmark gains for COBOL and other legacy-language coding",
+      "url": "https://runtimewire.com/article/openai-low-resource-language-coding-benchmarks"
+    },
+    {
+      "title": "Eka 用“视觉-力-动作”模型做灵巧操作",
+      "summary": "机器人公司 Eka Robotics 完成 A 轮融资，其视觉-力-动作（VFA）模型把视觉信息与机器人操作物体时感受到的力结合，决定施力大小并随情况调整，主要通过仿真和强化学习训练。公司展示的任务包括包装易损农产品、组装 GPU 服务器机架、拧灯泡和插线。",
+      "insight": "把力觉纳入机器人基础模型，正对准装配、插接等传统自动化难以覆盖的精细工序。",
+      "source": "The AI Insider",
+      "source_title": "Eka Robotics Raises $150M Series A to Scale Vision-Force-Action Model for Dexterous Robots",
+      "url": "https://theaiinsider.tech/2026/10/20/eka-robotics-raises-150m-series-a-to-scale-vision-force-action-model-for-dexterous-robots/"
+    },
+    {
+      "title": "OpenAI 收购 Orchestra Bio",
+      "summary": "OpenAI 收购 AI 生物科技软件公司 Orchestra Bio，后者开发的智能体帮助药企处理药物研发中的财务、临床试验排期等运营事务。其团队和技术将并入 OpenAI 面向生命科学的 Rosalind 模型及 Rosalind Workbench 实验规划工具。",
+      "insight": "通用模型厂商正通过收购补齐垂直行业的流程能力，“模型 + 行业工作流”成为落地主路径。",
+      "source": "TechCrunch",
+      "source_title": "OpenAI acquires startup Orchestra Bio to beef up its biotech business",
+      "url": "https://techcrunch.com/2026/10/20/openai-acquires-startup-orchestra-bio%E2%81%A0-to-beef-up-its-biotech-business"
+    }
+  ]
+}
