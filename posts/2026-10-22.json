@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-22",
+  "headline": "LiteLLM 再遭供应链投毒，速查版本",
+  "intro": "今天的 AI 应用新闻安全味很重：常用的大模型网关 LiteLLM 发布版被植入窃密后门，AI 先于人发现的 PHP 高危漏洞紧急修补。Nvidia 在 GTC Berlin 推出集装箱式 AI 工厂和参考人形机器人，Anthropic 发布主动式智能体 Claude Duet，本地可跑的开源编码模型也有新成员。",
+  "excerpt": "LiteLLM 新版被投毒窃取凭据，AI 发现的 PHP 高危漏洞紧急修补，Nvidia 推出集装箱式 AI 工厂与参考人形机器人。",
+  "tags": ["AI 安全", "供应链安全", "Nvidia", "机器人", "Agent", "开源模型"],
+  "items": [
+    {
+      "title": "LiteLLM 1.107.0 被植入后门",
+      "summary": "大模型代理网关 LiteLLM 的 1.107.0 版本在 PyPI wheel 和 Docker 镜像中被植入恶意代码，会窃取云令牌、私钥、浏览器数据、环境变量及 AI 工具凭据，并驻留一个每小时拉取远程 Python 代码执行的后台进程。官方称攻击者疑似利用三名工程师被盗的 GitHub CLI OAuth 令牌触发并批准了发布流程，PyPI 包已隔离、恶意镜像已下架。",
+      "insight": "装过该版本的环境应在干净机器上吊销并轮换全部凭据，并按 digest 固定到 1.106.2；这也是今年 LiteLLM 第二次被投毒，AI 依赖链的发布权限管控需要重视。",
+      "source": "The Hacker News",
+      "source_title": "LiteLLM Compromised in Supply Chain Attack Delivering Credential Stealer and Backdoor",
+      "url": "https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html"
+    },
+    {
+      "title": "AI 先发现的 PHP 漏洞紧急修补",
+      "summary": "PHP 紧急修复两个 CVSS 9.2 的内存安全漏洞（CVE-2026-109618/109619），组合后可让未认证攻击者在几乎任意 PHP 服务器上执行代码，Apache + mod_php 部署风险最高。Calif 借助 OpenAI 的 GPT-5.6 Sol 在源码审计中先发现，Wiz 随后用多款模型独立找到；修复版本为 8.5.12、8.4.27、8.3.36、8.2.35，并为 7.4 至 8.1 提供回移补丁。",
+      "insight": "用 PHP 做 MES 前端或设备管理后台的团队应尽快升级；AI 辅助代码审计已经能挖出这种级别的老漏洞，攻防双方的节奏都在加快。",
+      "source": "The Next Web",
+      "source_title": "PHP rushes out emergency patches for two critical bugs AI found first",
+      "url": "https://thenextweb.com/news/php2shell-php-rce-ai-openai-wiz"
+    },
+    {
+      "title": "Nvidia 推出集装箱式 AI 工厂 DSX POD",
+      "summary": "Nvidia 在 GTC Berlin 发布 DSX POD，这是基于 Vera Rubin 的完整 AI 工厂参考设计：计算、网络、布线、机柜供电和液冷都在合作伙伴工厂内装进模块化集装箱并完成验证，到场后接入电力与冷却即可。Nvidia 称在场地就绪的前提下，部署时间可从六个月缩短到最快 14 天，Dell、HPE、施耐德、维谛等将于 2027 年初开始交付。",
+      "insight": "数据中心建设正走向“工厂预制+现场拼装”，供配电和液冷厂商的角色更像整线集成商，对工业电气与暖通从业者是新的业务方向。",
+      "source": "NVIDIA Newsroom",
+      "source_title": "NVIDIA Introduces DSX POD AI Factories to Accelerate Europe's Infrastructure Deployment",
+      "url": "https://nvidianews.nvidia.com/news/nvidia-introduces-dsx-pod-ai-factories-to-accelerate-europes-infrastructure-deployment"
+    },
+    {
+      "title": "Nvidia 发布参考人形机器人",
+      "summary": "Nvidia 扩充 Isaac 机器人平台：与 Agile Robots 推出预装 Isaac GR00T、搭载 Jetson Thor 的参考人形机器人 Agile ONE SN，计划 2027 年初供货；开源机器人学习框架 Isaac Lab 3.0 正式可用，并推出基于 Holoscan 的开源运行时 Isaac OS，以及 2000 多个仿真就绪的机器人与工厂资产库。ABB、KUKA 等欧洲厂商在合作名单中。",
+      "insight": "从仿真资产、训练框架到实时运行时和安全平台 Halos，Nvidia 正把机器人开发做成整套工具链，做产线仿真和机器人集成的团队可以直接评估 Isaac Lab 3.0。",
+      "source": "Unite.AI",
+      "source_title": "NVIDIA Expands Isaac Platform with Agile ONE SN Reference Humanoid",
+      "url": "https://www.unite.ai/nvidia-expands-isaac-platform-with-agile-one-sn-reference-humanoid/"
+    },
+    {
+      "title": "Anthropic 推出主动式智能体 Claude Duet",
+      "summary": "Anthropic 发布基于 Opus 5.5 的 Claude Duet，它连接用户的各类应用，每天早上发简报、每隔几小时巡检一次，发现需要处理的事情会主动提醒，并能在自带浏览器的云端虚拟机里完成任务。发消息、付款、签署文件或删除文件前需要用户批准，目前以研究预览形式面向美国 Pro 和 Max 用户排队开放，支持网页和 iOS。",
+      "insight": "智能体正从“被动等指令”转向“主动盯事项”，关键动作需人工审批的设计值得在工业场景的告警处理和工单流转中借鉴。",
+      "source": "MacRumors",
+      "source_title": "Anthropic Launches Claude Duet, a Proactive AI Agent",
+      "url": "https://www.macrumors.com/2026/10/21/anthropic-claude-duet/"
+    },
+    {
+      "title": "开源编码模型 Flint 可在笔记本运行",
+      "summary": "初创公司 Recursive 发布首个模型 Flint，总参数 400 亿、每次仅激活约 25 亿的 MoE 编码模型，以 Apache 2.0 许可开放在 Hugging Face。公司测试显示其在 M4 Pro MacBook Pro 上约每秒 131 个 token，可离线运行；该公司称其自动化研究系统 Eureka Machine 参与了从预训练到推理优化的几乎所有环节。",
+      "insight": "对代码不能出内网的工业软件团队，本地可跑、许可宽松的编码模型多了一个可选项，跑分为厂商自测，落地前建议用自家代码库实测。",
+      "source": "TechCrunch",
+      "source_title": "Recursive launches Flint, a laptop coding model it says was largely built by AI",
+      "url": "https://techcrunch.com/2026/10/21/recursive-launches-flint-a-laptop-coding-model-it-says-was-largely-built-by-ai/"
+    },
+    {
+      "title": "Trail of Bits 开源补丁回归检查插件",
+      "summary": "安全公司 Trail of Bits 开源两个智能体插件：patching-bugs 负责复现缺陷、编写并验证修复，要求原代码失败、补丁通过、回退后再次失败；regression-hunt 追踪改动影响的真实接口，在实际部署上复现可能的回归。初步评估中，后者的误报比直接让 Codex 审查 PR 少约 25%，团队还在 130 多个已合并 PR 中确认了 21 处回归。",
+      "insight": "让 AI 改代码之后，验证“顺手改坏了什么”同样重要；这套方法适合放进 CI，用于审查 AI 提交的补丁。",
+      "source": "Trail of Bits Blog",
+      "source_title": "Your AI agent fixed the bug, but what else did it change?",
+      "url": "https://blog.trailofbits.com/2026/10/21/your-ai-agent-fixed-the-bug-but-what-else-did-it-change/"
+    },
+    {
+      "title": "Mach9 转型 AI CAD，服务土木测绘",
+      "summary": "原本做巡检硬件的 Mach9 转型为 AI 驱动的 CAD 软件公司，其系统读取测绘数据后自动生成初版图纸，工程师再在其中调整顶点、评估模型质量。公司自研模型以达到路缘、路面标线等厘米级精度，内测期已有近 100 家客户、用于 2500 多个项目，并完成 3400 万美元 A 轮融资。",
+      "insight": "“采集数据→AI 出初稿→工程师修订”的模式同样适用于工厂点云建模和设备布局图绘制，关键在领域专用模型的精度。",
+      "source": "TechCrunch",
+      "source_title": "Mach9 raises $34M after pivoting to AI CAD software",
+      "url": "https://techcrunch.com/2026/10/21/mach9-raises-34m-after-pivoting-to-ai-cad-software/"
+    }
+  ]
+}
