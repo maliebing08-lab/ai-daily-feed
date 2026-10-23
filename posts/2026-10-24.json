@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-24",
+  "headline": "Claude 为百余开源库写出形式化证明",
+  "intro": "今天的主线是“让 AI 的产出可以被验证”：Anthropic 用 Claude 给上百个开源库写机器可检验的证明，Agentic AI Foundation 一次接收四个智能体标准项目。与此同时，Kimi K3.1 Pro 预告开放权重，OpenAI 决策模型 API 全面开放，Agility 也为 Digit 5 定下了量产算力平台。",
+  "excerpt": "Claude 为 123 个开源库写出不崩溃证明；四个智能体标准项目并入 AAIF；Kimi K3.1 Pro 发布，OpenAI 决策模型 API 全量开放。",
+  "tags": [
+    "形式化验证",
+    "Agent",
+    "开源",
+    "Anthropic",
+    "OpenAI",
+    "机器人"
+  ],
+  "items": [
+    {
+      "title": "Claude 为 123 个开源库写形式化证明",
+      "summary": "Anthropic 前沿红队与 Theorem 合作，让 Claude 以 OSS-Fuzz 的模糊测试为规格，为 123 个开源库的 239 个入口点写出 Rocq 证明，证明其编译后的 RISC-V 二进制在 64 MB 以内任意输入下都不会崩溃。过程中发现了解压器越界写、图像解码器越界读等需要极端输入才能触发的漏洞。",
+      "insight": "部分证明、RISC-V/Linux 语义模型和一个可用于自家项目的 Claude 技能已在 GitHub 开源；但官方强调“已验证”不等于“无缺陷”，证明只覆盖特定二进制模型。",
+      "source": "Anthropic",
+      "source_title": "LLMs are making formal software verification feasible at a much larger scale",
+      "url": "https://www.anthropic.com/research/formal-verification"
+    },
+    {
+      "title": "四大智能体标准项目并入 AAIF",
+      "summary": "Linux 基金会旗下的 Agentic AI Foundation 宣布接收四个新项目：Anthropic 的 Agent Skills、OpenAI 基于 Responses API 的跨厂商接口规范 Open Responses、Hugging Face 的强化学习环境框架 OpenEnv，以及阿里巴巴的通用沙箱平台 OpenSandbox。基金会托管项目由成立时的 3 个增至 10 个。",
+      "insight": "技能打包、模型接口、沙箱运行时都走向中立标准，企业自建智能体平台时可以少押注单一厂商，切换模型的成本会更低。",
+      "source": "Linux Foundation",
+      "source_title": "Agentic AI Foundation Announces Four New Projects: Agent Skills, Open Responses, OpenEnv, and OpenSandbox",
+      "url": "https://www.linuxfoundation.org/press/agentic-ai-foundation-announces-four-new-projects-agent-skills-open-responses-openenv-and-opensandbox"
+    },
+    {
+      "title": "Kimi K3.1 Pro 发布，11 月开放权重",
+      "summary": "Moonshot 发布 Kimi K3.1 Pro，定位为其 3T 级别开放权重模型，支持 100 万 token 上下文，并提供速度快 2-3 倍的 Highspeed 版本。官方称其在 Terminal-Bench 4.0 上得分 65.7%，内部幻觉压力测试的错误率由 23.4% 降至 8.3%；完整权重将在 11 月 4 日前放出。",
+      "insight": "开放权重模型在终端类编码任务上逼近闭源一线水平，对需要私有化部署编码助手的团队是值得跟进的选项，跑分以官方自测为准。",
+      "source": "Kimi",
+      "source_title": "Kimi K3.1 Pro Tech Blog: Advancing Open Intelligence",
+      "url": "https://www.kimi.ai/blog/kimi-k3-1-pro"
+    },
+    {
+      "title": "OpenAI 决策模型 API 全量开放",
+      "summary": "OpenAI 将 9 月开发者日发布的 Decisions API 向所有客户开放，并新增语音和视觉输入。这类“决策模型”在给定选项中快速做出选择并给出置信度，OpenAI 称可把响应从一到三秒压到 100-180 毫秒；Speak 称动作间隔从 1.4 秒降到 0.13 秒。",
+      "insight": "分类、路由、质检判定这类环节不必再调用完整大模型；对实时性敏感的上位机和产线视觉场景，低延迟判定模型值得评估。",
+      "source": "TechCrunch",
+      "source_title": "OpenAI makes its Jev competitor widely available as decision model competition heats up",
+      "url": "https://techcrunch.com/2026/10/22/openai-makes-its-jev-competitor-widely-available-as-decision-model-competition-heats-up/"
+    },
+    {
+      "title": "Digit 5 统一采用 NVIDIA IGX Thor",
+      "summary": "Agility Robotics 宣布量产版人形机器人 Digit 5 的机载算力统一采用 NVIDIA IGX Thor，并把 NVIDIA Halos 的部分功能纳入自研的人体检测安全系统，同时参加 Halos 检测实验室，为第三方认证做准备。早期交付预计在 2027 年上半年开始，面向制造、仓储与配送客户。",
+      "insight": "人形机器人进入工厂的门槛正从“能不能干活”转向“能不能过安全认证”，算力与功能安全一起设计将成为工业机器人选型的新关注点。",
+      "source": "Agility Robotics",
+      "source_title": "Agility Robotics Expands NVIDIA Collaboration as It Prepares Digit 5 for Commercial Scale",
+      "url": "https://www.agilityrobotics.com/content/agility-robotics-expands-nvidia-collaboration-as-it-prepares-digit-5-for-commercial-scale"
+    },
+    {
+      "title": "微软多智能体诊断系统登上 Science",
+      "summary": "微软在 Science 发表 MAI-DxO 的模拟研究：多个 AI 智能体像会诊小组一样问诊、开检查、讨论诊断，在 NEJM 疑难病例上正确率 83%，独立作答的全科医生为 36%。TechCrunch 指出，提升很大程度来自底层模型，且对比中未纳入专科医生。",
+      "insight": "“多智能体编排 + 强基座模型”能在复杂判断任务上提精度并降成本，这一思路同样适用于故障诊断等工业场景；系统尚未产品化，将在波士顿医院做真实环境对比。",
+      "source": "TechCrunch",
+      "source_title": "Microsoft's Mustafa Suleyman says its AI outperforms doctors on hard cases as he chases 'medical superintelligence'",
+      "url": "https://techcrunch.com/2026/10/22/microsofts-mustafa-suleyman-says-its-ai-outperforms-doctors-on-hard-cases-as-he-chases-medical-superintelligence/"
+    },
+    {
+      "title": "Canva 推出首个自研图像模型 Craft",
+      "summary": "Canva 发布自研图像生成模型 Canva Craft，先规划元素布局与文字，再生成最高 2K、30 种比例的图片，训练数据来自其模板库中的设计作品而非照片。所有用户可在 Dream Lab 使用，并将通过 Canva API 和 MCP 开放给 ChatGPT、Gemini 等第三方。",
+      "insight": "生成图可再转成分层可编辑设计，对需要批量出说明图、海报的团队更实用；通过 MCP 对外提供能力也说明设计工具正在变成智能体可调用的服务。",
+      "source": "TechCrunch",
+      "source_title": "Canva releases its first image generation model",
+      "url": "https://techcrunch.com/2026/10/22/canva-releases-its-first-image-generation-model/"
+    }
+  ]
+}
