@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-26",
+  "headline": "Nanbeige 开源 33B 编程智能体模型",
+  "intro": "周末 AI 圈的焦点落在开源与治理上：Nanbeige 以 Apache 2.0 开源 33B 编程智能体模型，AWS 安全智能体的 89% 修复率被拆解出另一面。与此同时，开源社区开始抵制 AI 项目，医院员工误用公共 AI 工具造成患者数据外泄，经济学家则质疑 AI 至今未给非科技企业带来财务回报。",
+  "excerpt": "Nanbeige 开源 33B 编程智能体模型；AWS 安全智能体修复率另有隐情；r/opensource 禁止 AI 项目；医院员工误传患者数据至公共 AI。",
+  "tags": [
+    "开源模型",
+    "Agent",
+    "AI 安全",
+    "编码工具",
+    "数据合规"
+  ],
+  "items": [
+    {
+      "title": "Nanbeige 开源 33B 编程智能体模型",
+      "summary": "BOSS 直聘支持的 Nanbeige 团队在 Hugging Face 以 Apache 2.0 许可发布 Nanbeige4.3-33B，支持 512K 上下文，工具调用兼容 XML 与 JSON 格式。模型卡自报在 Terminal-Bench 2.1 得 80.9、DeepSWE 得 65.5，多数智能体编程评测领先 Qwen3.8-27B，但在 SWE-Bench Pro 和 GPQA Diamond 上略逊于对手。",
+      "insight": "它被定位为后续蒸馏小模型的“教师模型”；对想在本地或私有环境跑编码智能体的团队，30B 级开源模型的选择又多了一个，但成绩均为自报，需自行复测。",
+      "source": "Startup Fortune",
+      "source_title": "Nanbeige's New 33B Open Model Takes Aim at Qwen and Gemma on Coding",
+      "url": "https://startupfortune.com/nanbeiges-new-33b-open-model-takes-aim-at-qwen-and-gemma-on-coding/"
+    },
+    {
+      "title": "AWS 安全智能体 89% 修复率另有隐情",
+      "summary": "AWS 已正式推出 Continuum，可在代码仓库中查找并验证漏洞、提交修复 PR。AWS 称其在 CyberGym-E2E 上完成 920 个任务中的 819 个，端到端成功率 89.0%；但同时修掉基准指定的那个历史漏洞的比例只有 37.8%，且测试仅覆盖 C/C++ 内存安全类漏洞，结果也尚未经第三方复现。",
+      "insight": "评估安全类智能体时要分清“修好了某个崩溃”和“修好了你关心的那个漏洞”；把这类工具接入 CI 前，最好用自己的代码库和漏洞样本做针对性验证。",
+      "source": "The New Stack",
+      "source_title": "AWS says its AI security agent fixes 89% of bugs — but there's a catch",
+      "url": "https://thenewstack.io/aws-says-its-ai-security-agent-fixes-89-of-bugs-but-theres-a-catch/"
+    },
+    {
+      "title": "r/opensource 禁止 AI 构建的项目",
+      "summary": "Reddit 开源社区 r/opensource 发布新规：明显使用 AI 开发的项目，以及“为 AI 而做”的项目（包括人工编写的 MCP 等）都不再允许发布；新规还限制了成立不满一年的项目和账号。反对者转向新建的 AI 友好社区 r/TrueOpenSource。",
+      "insight": "开源社区对 AI 生成代码的接受度正在分化；用 AI 辅助开发的开源作者需要留意各社区和项目的贡献规则，宣传渠道也可能因此受限。",
+      "source": "Gizmodo",
+      "source_title": "'Tokens Are Cheap': Open Source Subreddit Bans AI",
+      "url": "https://gizmodo.com/tokens-are-cheap-open-source-subreddit-bans-ai-2000830386"
+    },
+    {
+      "title": "医院员工误用公共 AI 致数据外泄",
+      "summary": "Johns Hopkins Bayview 医疗中心通报，9 月下旬一名员工把含患者治疗信息、用药、病历号的表格上传到未经批准的第三方公共 AI 平台，涉及 3,182 名患者。医院当天发现，已要求平台删除数据，并加强关于可用工具的培训。",
+      "insight": "“影子 AI”是企业数据合规的现实风险；与其单靠禁令，不如提供经审批的内部 AI 工具，并配合数据防泄漏策略和上传审计。",
+      "source": "The Baltimore Banner",
+      "source_title": "Johns Hopkins data exposure caused by employee using unauthorized AI tool",
+      "url": "https://www.thebanner.com/community/public-health/johns-hopkins-data-exposure-unauthorized-ai-tool-3SO2HGS7XVDP7GMKSK7TP527NE/"
+    },
+    {
+      "title": "经济学家：AI 尚未给非科技企业带来回报",
+      "summary": "Apollo 首席经济学家 Torsten Slok 分析剔除七大科技巨头后的“S&P 493”，发现其利润率和人均营收基本持平，看不到 AI 提升生产率的证据。他认为 AI 像一台出色的计算器，但商业中的智能主要是判断力。",
+      "insight": "AI 项目的价值要落到可量化的业务指标上；工业与软件团队立项时，应先明确节省工时、良率或交付周期等具体收益，而非只看技术演示。",
+      "source": "TechCrunch",
+      "source_title": "AI delivers 'zero financial payoff' to most companies, Apollo economist says",
+      "url": "https://techcrunch.com/2026/10/25/ai-delivers-zero-financial-payoff-to-most-companies-according-to-apollo-economist/"
+    },
+    {
+      "title": "Grok 发布 AI 生成《奥德赛》首集",
+      "summary": "xAI 旗下 Grok 发布了 AI 生成影片《奥德赛》系列的第一集，时长约七分钟，与 Wonder Studios 及导演 Dev Walker 合作，使用 Grok Imagine 制作。TechCrunch 评价部分镜头足以乱真，但叙事拖沓、对白生硬，缺乏艺术性。",
+      "insight": "视频生成在画面质量上已接近实拍，但长篇叙事仍需大量人工把控；在培训、产品演示等短视频场景中落地会比长片更快。",
+      "source": "TechCrunch",
+      "source_title": "Grok releases the first seven minutes of its AI-generated 'Odyssey'",
+      "url": "https://techcrunch.com/2026/10/25/grok-releases-the-first-seven-minutes-of-its-ai-generated-odyssey/"
+    }
+  ]
+}
