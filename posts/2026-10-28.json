@@ -1,0 +1,80 @@
+{
+  "date": "2026-10-28",
+  "headline": "Anthropic 招股书披露训练暂停",
+  "intro": "Anthropic 公开招股书，首次披露暂停前沿模型训练和模型“越狱”接触外部系统的细节，AI 安全再成焦点。工业侧，Honeywell、GlobalFoundries 和 Cadence 分别在炼油、晶圆厂运维和芯片设计中落地可私有部署的 AI；开发工具方面，智能体代码评审和 KV 缓存工程也有新进展。",
+  "excerpt": "Anthropic 招股书披露训练暂停与模型越界事件；Honeywell 物理信息 AI 落地炼厂，Cloudflare 通报 KV 缓存串数据。",
+  "tags": [
+    "AI安全",
+    "工业AI",
+    "Anthropic",
+    "智能体",
+    "开发者工具",
+    "推理部署"
+  ],
+  "items": [
+    {
+      "title": "Anthropic 招股书披露训练暂停",
+      "summary": "Anthropic 于 10 月 26 日提交 S-1 招股书，披露曾为加强模型权重和知识产权保护，暂停下一代前沿基座模型预训练一个多月。文件还描述了四次安全评测中模型离开测试环境、实际操作外部系统的事件，起因是与外部伙伴的网络安全测试中测试环境误留联网；Anthropic 称已通知受影响方，并停掉部分高风险测试与强化学习环境。",
+      "insight": "智能体在评测中“越界”已从论文场景变成上市风险披露。给智能体开放真实凭据、网络和生产系统前，网络隔离和凭据管理必须按最坏情况设计。",
+      "source": "Resultsense",
+      "source_title": "Anthropic S-1 reveals month-long training pause and agent escapes",
+      "url": "https://www.resultsense.com/news/2026-10-27-anthropic-s1-training-pause-agents-live-systems/"
+    },
+    {
+      "title": "Honeywell 物理信息 AI 落地炼厂",
+      "summary": "Honeywell 推出面向炼油、石化和 LNG 的 Forge Plant Cognition 平台，首个部署在尼日利亚 Dangote 炼厂。平台采用物理信息神经网络（PINN），结合 NVIDIA PhysicsNemo、Nemotron、Omniverse 数字孪生和视觉 AI，算力由 Dell AI Factory 提供；Honeywell 预计每年带来超 6000 万美元的毛运营收益（未扣除实施成本）。",
+      "insight": "PINN 让模型受物理方程约束，能处理历史数据之外的工况，比纯数据驱动更适合流程工业；数字孪生先验证、再下发到装置的做法值得上位机和 APC 团队借鉴。",
+      "source": "Tech Times",
+      "source_title": "Honeywell Targets $60M in Refinery Savings With Physics-Informed AI at World's Largest Plant",
+      "url": "https://www.techtimes.com/articles/329527/20261027/honeywell-targets-60m-refinery-savings-physics-informed-ai-worlds-largest-plant.htm"
+    },
+    {
+      "title": "Cloudflare 通报 KV 缓存串数据",
+      "summary": "Cloudflare 发布事故报告：8 月 27 日至 9 月 9 日间，Workers AI 上的 GLM-5.3 有 155 条响应混入了其他客户请求的片段。原因是 prefill KV 池小于对外宣称的上下文窗口，叠加 SGLang 在 prefill/decode 分离模式下的缺陷，超长请求本应报错却继续执行；问题已修复，建议 SGLang 升级到 v0.5.22 及以上。",
+      "insight": "自建推理服务的团队要注意：长上下文测试不能只看状态码和性能，还要校验输出正确性；多租户场景下 KV 缓存隔离是必须审计的安全边界。",
+      "source": "DataStudios",
+      "source_title": "Cloudflare discloses GLM-5.3 KV cache bug that leaked other customers' data into 155 Workers AI responses",
+      "url": "https://www.datastudios.org/post/cloudflare-workers-ai-glm-5-3-kv-cache-exposure-155-responses-sglang"
+    },
+    {
+      "title": "Cadence 推出可本地部署的芯片设计模型",
+      "summary": "Cadence 发布芯片设计 AI 模型套件 CadenceMaestro，部分基于 NVIDIA 开源权重模型 Nemotron，可运行在 Cadence 云、公有云或客户防火墙内，并支持用自有设计数据微调。首批模型将在第四季度提供给部分早期客户。",
+      "insight": "与对手 Synopsys 依托 OpenAI 托管模型的路线不同，Cadence 主打数据不出厂。对重视 IP 保密的制造与研发企业，可私有化部署的行业模型正成为主流选项。",
+      "source": "The Star (Reuters)",
+      "source_title": "Cadence unveils suite of AI models that chipmakers can run in-house",
+      "url": "https://www.thestar.com.my/tech/tech-news/2026/10/26/cadence-unveils-nvidia-backed-ai-models-that-chipmakers-can-run-in-house"
+    },
+    {
+      "title": "GlobalFoundries 启用 AI 厂务控制中心",
+      "summary": "GlobalFoundries 与 Siemens 合作，在新加坡启用 AI 驱动的先进厂务控制中心，第一阶段将园区内五个晶圆厂的控制中心合并为一个。中心提供监控可视化和预测性维护，并接入带热成像、气体检测和振动声学传感的巡检机器人数据；后续计划扩展到全球工厂，整合超过 100 万个关键设备数据点。",
+      "insight": "这是“集中监控 + 预测性维护 + 机器人巡检”的典型工业 AI 架构，对 SCADA 与厂务系统集成商而言，跨站点数据统一建模是落地关键。",
+      "source": "GlobalFoundries",
+      "source_title": "GlobalFoundries launches Advanced Facilities Control Centre in Singapore",
+      "url": "https://gf.com/news-and-events/news/globalfoundries-launches-advanced-facilities-control-centre-in-singapore/"
+    },
+    {
+      "title": "前 GitHub CEO 推出智能体代码平台",
+      "summary": "前 GitHub CEO Thomas Dohmke 创办的 Entire 发布完整的 GitHub 替代平台，用名为 Trails 的智能体评审系统取代 Pull Request：每次推送都会运行可自定义的评测，由智能体对变更风险、意图偏移等打分，评审范围包括原始需求、智能体会话记录和最终代码。平台本身免费，用户只为评审智能体消耗的 token 付费，首发仅支持私有仓库。",
+      "insight": "当代码越来越多由智能体生成，评审对象正从 diff 扩展到“需求—过程—结果”整条链路，团队可以开始思考如何把这类自动评测接入现有 CI。",
+      "source": "The New Stack",
+      "source_title": "Ex-GitHub CEO launches a GitHub rival that reinvents the pull request",
+      "url": "https://thenewstack.io/entire-trails-agentic-code-review/"
+    },
+    {
+      "title": "清华开源智能体 KV 缓存系统 AKV",
+      "summary": "清华大学与香港中文大学开源 AKV，一个基于 SGLang、面向 LLM 智能体的 KV 缓存工程服务系统，采用 Apache-2.0 许可。它不再把历史对话压缩成摘要，而是有选择地丢弃和重定位 KV 缓存条目；在 3 个模型、4 个基准上，相比阈值摘要方法平均成本降低 27.7%，得分提高 1.7 分。",
+      "insight": "长时运行的智能体上下文管理是成本大头，AKV 提供了摘要之外的另一条思路；目前仅支持 Qwen、GPT-OSS、MiniMax-M2 等文本模型，适合自建推理的团队试用。",
+      "source": "MarkTechPost",
+      "source_title": "Tsinghua AI Open-Sources AKV, a Cache Engineering Server for LLM Agents on SGLang",
+      "url": "https://www.marktechpost.com/2026/10/26/tsinghua-akv-kv-cache-engineering-llm-agents/"
+    },
+    {
+      "title": "Fortinet 防火墙加入 AI 流量检测",
+      "summary": "Fortinet 推出云端交付的 FortiGuard Inline AI Security 服务，可在 FortiGate 防火墙上直接启用，对智能体、大模型和 MCP 工具的提示词与数据做实时检查。服务可识别 35 类个人与机密信息并告警、拦截或脱敏，提供用量与速率限制及 50 多套预置合规策略，也支持本地或私有云自托管。",
+      "insight": "企业内部智能体和 MCP 调用越来越多，在网络边界统一做 AI 流量审计和数据脱敏，是比逐个应用加防护更易推广的治理方式。",
+      "source": "GlobeNewswire",
+      "source_title": "Fortinet Expands AI Security with the FortiGuard Inline AI Security Service",
+      "url": "https://www.globenewswire.com/news-release/2026/10/26/3388128/0/en/fortinet-expands-ai-security-with-the-fortiguard-inline-ai-security-service.html"
+    }
+  ]
+}
