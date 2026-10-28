@@ -1,0 +1,72 @@
+{
+  "date": "2026-10-29",
+  "headline": "Gemini 4 Carbon 登顶智能指数",
+  "intro": "Google 发布 Gemini 4 Carbon，在 Artificial Analysis 智能指数上重回第一，但首批只开放给网络安全防御者。开发工具侧，GitHub Copilot Fusion 正式上线多模型自动编排，Apple 办公套件接入 MCP；安全与治理则成为企业部署 Agent 的另一条主线。",
+  "excerpt": "Gemini 4 Carbon 登顶智能指数；Copilot Fusion 正式上线；Nvidia 开源转写模型；AI 构造漏洞利用链引关注。",
+  "tags": [
+    "大模型",
+    "Agent",
+    "开发者工具",
+    "AI 安全",
+    "开源",
+    "Google"
+  ],
+  "items": [
+    {
+      "title": "Gemini 4 Carbon 登顶智能指数",
+      "summary": "Google 发布其最强前沿模型 Gemini 4 Carbon，在 Artificial Analysis Intelligence Index v5.0 上以 59 分领先 Claude Opus 5.5（58）和 GPT-6 Astra（57），在网络安全与复杂软件工程上提升明显。首发仅向 Fairwind 计划中的网络安全防御者开放，更大范围发布暂无日期；首发期定价为每百万 token 输入 2 美元、输出 10 美元。",
+      "insight": "VentureBeat 指出其幻觉率较上一代 Argon 从 4% 升至 11%，且未发布技术报告；对需要高可靠输出的工程场景，正式开放后仍需自行评测。",
+      "source": "VentureBeat",
+      "source_title": "Google unveils Gemini 4 Carbon, retaking the world's no. 1 spot on updated, harder benchmarks — but access is limited",
+      "url": "https://venturebeat.com/technology/google-unveils-gemini-4-carbon-retaking-the-worlds-no-1-spot-on-updated-harder-benchmarks-but-access-is-limited"
+    },
+    {
+      "title": "Copilot Fusion 正式上线多模型编排",
+      "summary": "GitHub 宣布 Copilot Fusion 全面可用：用户不再手动选模型，而是由 Copilot 自动路由和编排，提供 Standard、High、Max 三档强度，并支持单模型、级联（小模型起草、质检后升级）和互评修订三种执行模式。已覆盖所有 Copilot 套餐，可在 VS Code、Copilot CLI 和 JetBrains IDE 中使用。",
+      "insight": "按 GitHub 数据，Fusion Max 在编码 Agent 指数上接近 Claude Code + Opus 5.5 Max，但平均 API 成本约减半；管理员可按组织策略限定可用模型，适合对成本和合规敏感的团队。",
+      "source": "GitHub Changelog",
+      "source_title": "Route and orchestrate models with GitHub Copilot Fusion",
+      "url": "https://github.blog/changelog/2026-10-28-route-and-orchestrate-models-with-github-copilot-fusion/"
+    },
+    {
+      "title": "Nvidia 开源 30B 语音转写模型",
+      "summary": "Nvidia 发布开放权重语音转文字模型 Nemotron 3.5 Transcribe，参数 300 亿，可转写最多 40 种语言、支持 31 种语言与英语互译，能处理长达一小时的录音并区分最多 8 位说话人，同时开放 Granary v2 语音数据集。目前只支持录音文件，不支持实时流。",
+      "insight": "模型可在 Jetson AGX Thor、DGX Spark 等单芯片上运行，配合 NeMo 工具可针对行业术语做适配，适合车间会议纪要、巡检语音记录等本地化部署场景。",
+      "source": "TechCrunch",
+      "source_title": "Voice AI in vogue: Nvidia releases new open transcription model",
+      "url": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/"
+    },
+    {
+      "title": "Anthropic 模型构造五条漏洞利用链",
+      "summary": "Anthropic Frontier Red Team 披露，一个未发布的内部研究模型在实验室中发现 Chrome、Safari、Android、Windows 和 Linux 的漏洞，并串联成五条可用的概念验证利用链，其中 Chrome 链可在访问单个页面后逃逸沙箱。相关漏洞均按协调披露流程报告给厂商，Chrome 修复已随 Chrome 156 发布。",
+      "insight": "The Hacker News 提醒，模型与人工各自贡献多少并未说明，部分描述与公开 CVE 不完全吻合；但 AI 找洞、造链的速度在加快，及时打补丁的重要性随之上升。",
+      "source": "The Hacker News",
+      "source_title": "Anthropic's Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux Exploits",
+      "url": "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html"
+    },
+    {
+      "title": "IBM 推出 AI Agent 身份与管控",
+      "summary": "IBM 在 TechXchange 2026 上发布一组 Agent 治理能力：HashiCorp Vault 为 Agent 签发短期凭证并可实时吊销，Agent Identity 记录每个 Agent 的归属、生命周期和权限；watsonx Orchestrate 可发现 Bedrock、Microsoft Foundry 等平台上的 Agent，并提供沙箱隔离和一键关停。Vault 2.2、Agent Identity 等已正式可用。",
+      "insight": "当企业里的 Agent 越来越多，最小权限、凭证轮换和“紧急停机”会成为上线前的必备项；Terraform 远程 MCP 服务器等预览功能也值得基础设施团队关注。",
+      "source": "IBM Newsroom",
+      "source_title": "IBM Introduces Identity and Control for AI Agents, Securing Frontier Intelligence for the Enterprise",
+      "url": "https://newsroom.ibm.com/2026-10-27-ibm-introduces-identity-and-control-for-ai-agents,-securing-frontier-intelligence-for-the-enterprise"
+    },
+    {
+      "title": "Apple 办公三件套接入 MCP",
+      "summary": "Apple 为 Keynote、Pages 和 Numbers 加入理解文档上下文的 AI 助手，可帮助设计幻灯片、起草和改写文稿、计算并可视化表格数据，Logic Pro for Mac 也将获得助手。助手由 Apple 与 OpenAI 的模型共同驱动，三款办公应用同时支持 MCP，外部 Agent 可读取、编辑和自动化其中内容，更新计划于 11 月上架。",
+      "insight": "MCP 进入主流桌面办公软件，意味着报表生成、周报整理这类流程可以由自建 Agent 直接驱动，而不必依赖脚本或界面自动化。",
+      "source": "GIGAZINE",
+      "source_title": "An AI assistant built on Apple and OpenAI models has been added to Logic Pro as well as Keynote, Pages, and Numbers. Keynote, Pages, and Numbers now support MCP.",
+      "url": "https://gigazine.net/gsc_news/en/20261028-apple-creator-studio-ai-features-openai-models/"
+    },
+    {
+      "title": "Opera 推出浏览器本地 AI 标准",
+      "summary": "Opera 发布 WebAI 网页标准，让 AI 模型直接在用户浏览器本地运行，无需云端处理，可完成文本生成、内容分类等任务。该标准不绑定特定模型，支持 Gemma 等开放权重模型，在 Mac 上还可调用 Apple 端侧基础模型；目前以早期预览形式在 Opera One 中提供，需用户主动开启。",
+      "insight": "开发者无需自建推理服务、也不必按请求付费即可为网页加 AI 功能，适合内网或数据敏感的 Web 工具；但性能取决于终端硬件，且目前仅限 Opera 浏览器。",
+      "source": "TechCrunch",
+      "source_title": "Opera introduces a new web standard to let users deploy AI locally in their browser",
+      "url": "https://techcrunch.com/2026/10/27/opera-introduces-a-new-web-standard-to-let-users-deploy-ai-locally-in-their-browser/"
+    }
+  ]
+}
