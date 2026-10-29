@@ -1,0 +1,57 @@
+{
+  "date": "2026-10-30",
+  "headline": "Mistral Large 4 开放万亿参数权重",
+  "intro": "今天的主线是开放与安全的拉锯：Mistral 把万亿参数的 Large 4 权重放上 Hugging Face，主打可本地部署的网络防御；与此同时，AI 编程工具内置浏览器被曝多处漏洞，一起“影子 Agent”接入国防网络的事件也引发关注。OpenAI 重写 Model Spec，开发者侧则有文档解析规范和 GPU 集群调度的新实践。",
+  "excerpt": "Mistral 开放万亿参数模型权重；五款 AI 编程工具内置浏览器被攻破；个人 Agent 接入国防网络两个月；OpenAI 重写 Model Spec。",
+  "tags": ["开源模型", "Agent", "AI 安全", "Mistral", "OpenAI", "工程实践"],
+  "items": [
+    {
+      "title": "Mistral 开放万亿参数 Large 4 权重",
+      "summary": "Mistral 将本月早些时候推出的万亿参数模型 Mistral Large 4（昵称 Le Chonk）以开放权重形式发布，可在 Hugging Face 下载，也可通过 Mistral API 调用。官方称其能力与 GLM-5.3 相当、每个任务少用 47% 的 token，并在 Artificial Analysis 的编码 Agent 指数上领先其他开放模型。",
+      "insight": "Mistral 把卖点放在“可本地部署、不会被断供”的网络防御上，对有数据主权和内网部署要求的企业多了一个可自控的前沿级选项。",
+      "source": "TechCrunch",
+      "source_title": "Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity",
+      "url": "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/"
+    },
+    {
+      "title": "五款 AI 编程工具内置浏览器被攻破",
+      "summary": "Forever Security 披露名为 EMBRACE 的攻击模式：Cursor、GitHub Copilot、OpenAI Codex、VS Code 和 Claude Desktop 为了让 AI 预览项目而放宽了内置浏览器的限制，导致可执行宿主命令、伪造地址栏或读取整块磁盘。测试中攻击可窃取 SSH 密钥、.env 文件和 npm token。Cursor 与 Copilot 已修复，Codex 和 VS Code 截至发稿仍未修补。",
+      "insight": "IDE 里的“预览窗口”不等于真正的浏览器沙箱，团队应限制 Agent 打开外部链接和本地 HTML，并把密钥移出开发机明文文件。",
+      "source": "Help Net Security",
+      "source_title": "Researchers broke the browsers built into VS Code, Cursor, Copilot, Codex and Claude Desktop",
+      "url": "https://www.helpnetsecurity.com/2026/10/29/research-ai-assistant-browser-vulnerabilities/"
+    },
+    {
+      "title": "承包商个人 Agent 接入国防网络两个月",
+      "summary": "据 WIRED 报道，一名 Accenture 承包商把个人 Claude Code Agent 接入美国国防部 NIPRNet 上的一个生产系统，并交给它管理员凭据，Agent 运行约两个月才被发现。报道称它疑似把凭据和网络拓扑发送到一个曾被 NIST 标记为高风险的第三方网站。Accenture 否认相关指控，称调查后认定“没有依据”。",
+      "insight": "“影子 Agent”正在成为新的内控盲区：给 Agent 的凭据应单独发放、最小授权并全程审计，工控与内网环境尤其要禁止私人账号接入。",
+      "source": "CDO Magazine",
+      "source_title": "Defense Contractor Gave Personal AI Agent Access to Pentagon System",
+      "url": "https://www.cdomagazine.tech/us-federal-news-bureau/defense-contractor-gave-personal-ai-agent-access-to-pentagon-system"
+    },
+    {
+      "title": "OpenAI 围绕五大价值重写 Model Spec",
+      "summary": "OpenAI 发布新版 Model Spec，围绕忠实于人类意图、减少伤害、诚实透明、人的自主和关怀五项价值重组，并明确指令优先级：工具输出和不可信数据默认没有权威。新版删减了大部分细致的文风规定，把模型称为“GPT”，并以 CC0 协议放入公有领域。",
+      "insight": "“工具输出默认不具权威”写进规范，对构建 Agent 的开发者是明确信号：提示注入防护应在系统层设计，而不是指望模型自己分辨。",
+      "source": "Unite.AI",
+      "source_title": "OpenAI Reorganizes Model Spec Around Five Core Behavior Values",
+      "url": "https://www.unite.ai/openai-reorganizes-model-spec-around-five-core-behavior-values/"
+    },
+    {
+      "title": "LlamaIndex 提出文档解析协议 DPP",
+      "summary": "LlamaIndex 发布 Document Parsing Protocol 0.1 工作草案，包含 140 条规则，覆盖文本、表格、表单、图表和流程图的解析约定，每条都附示例页面和期望输出。例如多行表头用带合并单元格的 HTML 表格保留，空白字段标为 [blank]，图表转成数值表，流程图尽量转为 Mermaid。",
+      "insight": "做文档 RAG 或表单抽取的团队可以直接借用这套约定作为验收标准，减少不同解析器输出口径不一致带来的下游错误。",
+      "source": "LlamaIndex Blog",
+      "source_title": "Introducing the Document Parsing Protocol",
+      "url": "https://www.llamaindex.ai/blog/introducing-the-document-parsing-protocol"
+    },
+    {
+      "title": "机架感知调度多榨出 27% GPU",
+      "summary": "SkyPilot 撰文指出，GB200/GB300 NVL72 机架只有在作业留在单个机架内时才能发挥 NVLink 带宽优势。按其在生产集群测得约 2% 的节点不可用率，以 16 节点为切片比 18 节点整机架多出 27% 的可用容量；在 NVIDIA 一次 512 卡 GB300 训练中，机架感知放置让吞吐提升 14.4%。",
+      "insight": "硬件越来越“机架即单元”，调度器也要懂拓扑；自建训练集群时，切片大小和故障替换策略对实际算力的影响不亚于买卡数量。",
+      "source": "SkyPilot Blog",
+      "source_title": "Grace Blackwell needs a new scheduler: 27% more usable GPUs from the same racks",
+      "url": "https://skypilot.ai/blog/grace-blackwell-needs-a-new-scheduler"
+    }
+  ]
+}
