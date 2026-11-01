@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-02",
+  "headline": "DeepSeek 开源主动式编程 Agent",
+  "intro": "编程 Agent 的竞争正从“等人下指令”转向“主动发现问题”：DeepSeek 开源了会盯群聊找 Bug 的 Super-Agent 原型，Vercel 则把 Agent 的操作范围从浏览器扩展到整个桌面。与此同时，OpenAI 宣布 ChatGPT 与 Codex 将共用额度，基础模型也在推动新一轮自动驾驶创业潮。",
+  "excerpt": "DeepSeek 开源主动式编程 Agent 原型，Vercel 推出桌面操控工具，ChatGPT 与 Codex 将共用额度，基础模型带动自动驾驶创业潮。",
+  "tags": [
+    "Agent",
+    "编程工具",
+    "开源",
+    "DeepSeek",
+    "OpenAI",
+    "自动驾驶"
+  ],
+  "items": [
+    {
+      "title": "DeepSeek 开源主动式编程 Super-Agent",
+      "summary": "DeepSeek 的 Harness 团队发布编程 Agent 原型 Super-Agent，它会持续监看开发者群聊，识别其中的编码问题并在无人提示的情况下给出解决方案，目标是“用最少的人类注意力创造最大价值”。项目以开源形式放在 GitHub（deepseek-ai/dsh-superagent-prototype）。",
+      "insight": "目前仍是原型，可靠性和大规模部署能力尚未得到验证；但“主动介入”的交互模式值得关注，团队需要提前想好 Agent 能读哪些沟通渠道、权限边界在哪里。",
+      "source": "Digital Trends",
+      "source_title": "DeepSeek wants to steal Claude Code and Codex's lunch with an AI Super Agent that does not wait around",
+      "url": "https://www.digitaltrends.com/computing/deepseek-wants-to-steal-claude-code-and-codexs-lunch-with-an-ai-agent-that-does-not-wait-around/"
+    },
+    {
+      "title": "ChatGPT 与 Codex 12 月起共用额度",
+      "summary": "OpenAI 在开发者社区发布通知：从 12 月开始，Plus、Pro 和 Business 套餐的使用额度将在 ChatGPT 与 Codex 之间共享，这是把 Work 模式并入 Chat 的一部分。OpenAI 表示预计大多数用户等待额度重置的频率不会比现在更高。",
+      "insight": "重度使用 Codex 写代码的开发者，日常聊天也会消耗同一池额度，建议提前评估团队用量，必要时把批量任务转到 API 计费。",
+      "source": "OpenAI Developer Community",
+      "source_title": "Usage allowance will be shared across ChatGPT and Codex",
+      "url": "https://community.openai.com/t/usage-allowance-will-be-shared-across-chatgpt-and-codex/1411558"
+    },
+    {
+      "title": "Vercel 开源 agent-desktop 操控桌面应用",
+      "summary": "Vercel Labs 发布 agent-desktop，让任何能执行命令行的编程 Agent 操作原生桌面应用。它是 Rust 编写的 CLI 加 C 库，不截图、不内置大模型，而是读取操作系统的无障碍树，按“快照—操作—再快照验证”的循环工作，支持 macOS、Windows（UI Automation）和 Ubuntu，采用 Apache-2.0 许可。",
+      "insight": "对上位机和工控软件测试很有参考价值：基于 UI Automation 的元素引用比坐标点击更稳定，但不暴露无障碍树的老旧界面仍无法操作，宣传的节省 token 比例也尚无独立评测。",
+      "source": "DEV Community",
+      "source_title": "Vercel's agent-desktop Gives Your Coding Agent Hands on the Whole Desktop — Without Screenshots, Explained Honestly",
+      "url": "https://dev.to/paullovelace/vercels-agent-desktop-gives-your-coding-agent-hands-on-the-whole-desktop-without-screenshots-2ble"
+    },
+    {
+      "title": "基础模型催生新一轮自动驾驶创业潮",
+      "summary": "风投机构 Trucks VC 今年已收到 81 家新自动驾驶初创公司的融资提案，比去年多约三分之二。其合伙人认为基础模型让端到端系统成为可能，Nvidia Alpamayo、Qwen 视觉-语言-动作模型等开源模型也降低了门槛。同期，Toyota 将在日本工厂生产集成 Waymo 系统的 bZ4X，Kodiak AI 拿下首个公路无人驾驶卡车的约束性商业订单。",
+      "insight": "开源 VLA 模型正在把自动驾驶从少数巨头的游戏变成可快速试点的工程问题，工程机械、矿卡、园区物流等限定场景会最先受益。",
+      "source": "TechCrunch",
+      "source_title": "TechCrunch Mobility: A new, bigger AV boom is here",
+      "url": "https://techcrunch.com/2026/11/01/techcrunch-mobility-a-new-bigger-av-boom-is-here/"
+    },
+    {
+      "title": "Claude Code 新规则禁止复刻现有游戏",
+      "summary": "有用户发现 Claude Code 的规则中新增一条，要求不得构建“某款现有游戏的复刻版”，即使改名或声称原创也不行；原创游戏、类型游戏和基于用户自有设计与素材的游戏仍可开发。Anthropic 技术人员确认这是一次更新，理由是用 Claude 侵犯知识产权违反使用政策。",
+      "insight": "AI 编程工具开始在服务端加入版权类约束，做仿制类项目的团队要留意这类规则无法关闭，且执行边界目前并不清晰。",
+      "source": "Game Developer",
+      "source_title": "Anthropic orders AI tool Claude to stop remaking video games",
+      "url": "https://www.gamedeveloper.com/programming/anthropic-appears-to-have-ordered-ai-tool-claude-to-stop-remaking-video-games"
+    },
+    {
+      "title": "Okta AI Agent 曝初始化接口无鉴权漏洞",
+      "summary": "TAKO AI Agent for Okta（okta-ai-agent）3.0.1-beta 之前的版本存在 CVE-2026-63377（CVSS 9.8）：初始化接口 POST /api/auth/setup 不需要任何认证，攻击者可抢在管理员之前创建首个管理员账号并拿到有效会话；默认 Docker 配置把 8001 端口暴露在所有网卡上。修复版本为 3.0.1-beta。",
+      "insight": "自托管 Agent 越来越多，部署时别让管理端口直接对外，并尽快完成初始化，“首次启动即可注册管理员”是常见又致命的设计缺陷。",
+      "source": "Strix",
+      "source_title": "CVE-2026-63377: okta-ai-agent Missing Authentication (CVSS 9.8)",
+      "url": "https://www.strix.ai/cve/CVE-2026-63377"
+    }
+  ]
+}
