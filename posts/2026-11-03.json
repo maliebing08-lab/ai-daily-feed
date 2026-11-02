@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-03",
+  "headline": "Anthropic警示AI自我改进风险",
+  "intro": "今天的焦点落在“AI 造 AI”的安全边界上：Anthropic 在上市文件中首次明确提示递归自我改进风险。与此同时，OpenAI 在阿布扎比签下能源与政务合作，并推出数据中心电网调峰计划，算力与能源的耦合越来越紧；开源大模型、后训练平台和工业机器人订单也各有新进展。",
+  "excerpt": "Anthropic上市文件警示AI自我改进风险；ADNOC率先部署OpenAI前沿技术；OpenAI推电网调峰计划；美团发布LongCat-2.5等。",
+  "tags": [
+    "大模型",
+    "AI 安全",
+    "能源",
+    "开源",
+    "工业机器人",
+    "OpenAI"
+  ],
+  "items": [
+    {
+      "title": "Anthropic 警示 AI 自我改进风险",
+      "summary": "Anthropic 周一发布修订版 S-1A 上市文件，在风险因素中写道，用 AI 帮助构建更强 AI 可能带来相当大的安全风险。文件称公司过去并不总能及时察觉研发速度的显著加快，内部估计显示可能很快触及其 Responsible Scaling Policy 中“由 AI 带来的显著加速进展”的定义，但目前尚未认定任何现有模型越过该门槛。Anthropic 表示不打算让 Claude 在缺乏有效人类监督的情况下自主设计和构建下一代前沿模型，并考虑更新相关政策。",
+      "insight": "TechCrunch 也提醒，上市文件兼具披露与营销属性，需理性看待。对开发者而言，更现实的信号是：头部厂商正把“人在回路”写进治理框架，企业引入 Agent 时同样应保留关键环节的人工审批。",
+      "source": "TechCrunch",
+      "source_title": "Anthropic warns that it's very close to RSI capability, aka self-building AI",
+      "url": "https://techcrunch.com/2026/11/02/anthropic-warns-that-its-very-close-to-rsi-capability-aka-self-building-ai/"
+    },
+    {
+      "title": "ADNOC 首家部署 OpenAI 前沿技术",
+      "summary": "阿布扎比国家石油公司 ADNOC 与 G42 旗下 Inception42 签约，成为首家在运营中部署 OpenAI 前沿技术的能源企业，用于打通运营、投资和商业决策，系统基于 GPT 模型并使用阿联酋本地推理基础设施。这是阿布扎比与 OpenAI 当天签署的四项协议之一，另外三项涵盖“机器可读政府”试点（先从食品进口合规审查做起）、Mubadala 的投资分析，以及为期五年的政企与教育推广合作。协议未披露金额。",
+      "insight": "能源巨头把大模型接入生产运营决策，意味着 AI 正从办公助手走向流程工业核心环节；本地化推理部署也是工业客户关注数据主权时的常见方案。",
+      "source": "The National",
+      "source_title": "Adnoc signs agreement with OpenAI and G42 to deploy frontier AI",
+      "url": "https://www.thenationalnews.com/business/energy/2026/11/02/adnoc-signs-agreement-with-openai-and-g42-to-deploy-frontier-ai/"
+    },
+    {
+      "title": "OpenAI 推数据中心电网调峰计划",
+      "summary": "OpenAI 在美国推出 Grid Protectors Program，承诺未来的算力园区在电网紧张时主动降低用电。首个试点是佐治亚州 Effingham County 的 Project Camellia 园区，预计分阶段需要约 3,200 MW；根据与 Georgia Power 的 25 年协议，电力公司在用电高峰可削减对该园区最多 1,000 MW 的供电，OpenAI 承担全部基础设施和供电成本，并可能借助现场发电或储能平滑负荷。",
+      "insight": "大型 AI 负载开始以“可调节负荷”身份参与需求响应，这对储能、能源管理系统和电力自动化厂商是新机会；OpenAI 自己也承认，灵活调度无法替代新增电源和输电投资。",
+      "source": "ShiftDelete.Net",
+      "source_title": "OpenAI Grid Protectors Program to Cut Data Center Power at Peaks",
+      "url": "https://shiftdelete.net/en/openai-grid-protectors"
+    },
+    {
+      "title": "美团发布 LongCat-2.5 多模态模型",
+      "summary": "美团推出 LongCat-2.5（Preview），总参数 1.6 万亿、每个 token 激活约 480 亿，支持 100 万 token 上下文和原生多模态（含视觉），主打长周期的 Agent 编程任务。目前 API 已开放，GitHub 和 Hugging Face 版本尚待发布。",
+      "insight": "超长上下文加视觉能力，适合读取整套工程代码和界面截图做长链路任务；权重和许可证尚未公布，计划本地部署的团队需要再观望。",
+      "source": "Runtime Wire",
+      "source_title": "Meituan launches LongCat-2.5, a native multimodal model for long-horizon agents",
+      "url": "https://runtimewire.com/article/meituan-longcat-2-5-native-multimodal-agentic-model"
+    },
+    {
+      "title": "Trajectory 让行业专家自己微调模型",
+      "summary": "成立约一年的 Trajectory 完成 4,500 万美元 A 轮融资，其持续学习后训练平台已全面开放。企业从开源模型起步，接入自身应用并收集效果反馈，平台据此反复重训模型以提升特定任务表现；律师、医生等领域专家可通过界面直接参与改进，无需自建研究团队。Harvey、Rogo 等已用它为法律和金融任务后训练开源模型。",
+      "insight": "“开源模型 + 业务反馈闭环”降低了垂直领域定制门槛，工业场景中工艺工程师同样可以成为模型的“教练”，关键在于先把反馈数据采集流程设计好。",
+      "source": "TechCrunch",
+      "source_title": "Trajectory raises $45M to make AI model training accessible to nontechnical experts",
+      "url": "https://techcrunch.com/2026/11/02/trajectory-raises-45m-to-make-ai-model-training-accessible-to-nontechnical-experts/"
+    },
+    {
+      "title": "北美机器人订单三季度增长约 25%",
+      "summary": "据 A3 数据，2026 年第三季度北美机器人订单 10,989 台、金额 7.235 亿美元，同比分别增长 24.8% 和 26.1%。半导体与电子/光电子行业订单增长 97.6%，汽车零部件增长 90.4%，协作机器人订单约 1,831 台、同比增长约 56%；食品与消费品则下降 23.7%。文章将电子行业的增长与美国芯片制造投资及 AI 等应用的电子需求联系起来。",
+      "insight": "AI 带动的芯片与电子扩产正在传导到自动化装备需求，协作机器人增长尤其明显，相关集成商和上位机开发者可关注电子装配类项目机会。",
+      "source": "Robotics & Automation News",
+      "source_title": "North American robot orders increase 25 percent in third quarter of 2026",
+      "url": "https://roboticsandautomationnews.com/2026/11/02/north-american-robot-orders-increase-25-percent-in-third-quarter-of-2026/106606"
+    },
+    {
+      "title": "Grok Bot 因成本过高收紧额度",
+      "summary": "万圣节周末，部分 Grok Bot 用户发现每周额度突然被用满，有人从 50% 直接跳到 100%。Elon Musk 在 X 上确认这并非故障，称 Grok Bot 的服务成本相对收入“高得不可持续”，但未说明后续额度将如何调整。",
+      "insight": "继 ChatGPT 与 Codex 合并额度之后，又一家厂商因 Agent 类产品成本收紧用量，依赖订阅制工具跑自动化任务的团队应准备备用方案或改用按量计费的 API。",
+      "source": "TechCrunch",
+      "source_title": "Elon Musk throttles Grok Bot limits due to 'unsustainably high' costs",
+      "url": "https://techcrunch.com/2026/11/02/elon-musk-throttles-grok-bot-limits-due-to-unsustainably-high-costs/"
+    }
+  ]
+}
