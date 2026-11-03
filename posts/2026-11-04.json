@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-04",
+  "headline": "Siri AI 向所有第三方应用开放",
+  "intro": "今天的主线是“让 AI 进入应用和基础设施”：Apple 把 Siri AI 开放给全部第三方开发者，NVIDIA 展示 AI 如何重塑半导体工厂的仿真与工程流程。与此同时，Anthropic 开源模型身份证明方案，CrowdStrike 与 OpenAI 也在加码 AI Agent 与基础设施安全。",
+  "excerpt": "Apple Siri AI 开放给所有应用，NVIDIA 详解 AI 晶圆厂，Anthropic 开源模型身份验证，CrowdStrike 收购 AI 安全公司",
+  "tags": [
+    "Agent",
+    "AI 安全",
+    "工业 AI",
+    "Apple",
+    "Anthropic",
+    "NVIDIA"
+  ],
+  "items": [
+    {
+      "title": "Siri AI 向所有第三方应用开放",
+      "summary": "Apple 宣布任何第三方应用都可通过 App Intents 接入 Siri AI，并可编写“app skills”，让 Siri 把多个步骤串成一次请求完成。功能随 iOS 27.3、macOS 27.3 等开发者测试版提供，Siri 还能根据正在进行的 Live Activity 自动判断该调用哪个应用。",
+      "insight": "应用能否被 AI 助手调用正在变成基础能力，做移动端和桌面端工具的开发者应尽早梳理 App Intents，把核心操作暴露给 Agent。",
+      "source": "9to5Mac",
+      "source_title": "Developers can now create advanced 'app skills' for Siri AI",
+      "url": "https://9to5mac.com/2026/11/03/developers-can-now-create-advanced-app-skills-for-siri-ai/"
+    },
+    {
+      "title": "NVIDIA 详解 AI 驱动的晶圆厂",
+      "summary": "NVIDIA 博客介绍“AI 定义的晶圆厂”实践：Siemens 将 cuLitho 集成进 Calibre 光刻软件，关键仿真最高提速 17 倍；Applied Materials 用 PhysicsNeMo 让形貌仿真最高快 35 倍，并用 Omniverse 数字孪生模拟产线布局与产能；Lam Research 的模型可在毫秒级预测等离子体行为。",
+      "insight": "GPU 加速仿真、物理 AI 与数字孪生正在进入制造工程的核心环节，工业软件和上位机团队可关注这些工具链的集成方式。",
+      "source": "NVIDIA Blog",
+      "source_title": "AI Is Changing How Semiconductor Fabs Work — and Engineers Are Moving Faster Because of It",
+      "url": "https://blogs.nvidia.com/blog/ai-semiconductor-fabs"
+    },
+    {
+      "title": "Anthropic 开源模型身份证明方案",
+      "summary": "Anthropic 发布开源研究项目 FlashProve，目标是“可证明推理”：各实验室为模型发布指纹，输出可据此做密码学验证，确认出自哪个模型，且不暴露权重。设计足够轻量，可在本地设备上验证，部分规范与代码已在 GitHub 开源，目前尚无部署计划。",
+      "insight": "若这类机制普及，企业采购模型 API 时可核验服务商是否偷换了更便宜的模型，对需要审计与合规的工业场景尤其有意义。",
+      "source": "TechCrunch",
+      "source_title": "Anthropic is working on a system to prove AI models' identity",
+      "url": "https://techcrunch.com/2026/11/03/anthropic-is-working-on-a-system-to-prove-ai-models-identity/"
+    },
+    {
+      "title": "CrowdStrike 收购两家 AI 安全初创",
+      "summary": "CrowdStrike 将收购 Fiddler AI 与 Dreadnode：前者做企业 AI Agent 可观测性，将并入 Falcon 平台成为 Falcon Observe；后者在上线前自动化测试 AI 模型、应用和 Agent 的安全缺陷，将集成进 Falcon Guardian，把测试结果转为安全策略建议。",
+      "insight": "Agent 的监控与上线前红队测试正在成为安全厂商的标配能力，部署 Agent 的团队应提前规划日志、评估和权限控制。",
+      "source": "TechCrunch",
+      "source_title": "CrowdStrike to shell out nearly $500M for 2 AI security startups as the market for securing agents takes off",
+      "url": "https://techcrunch.com/2026/11/03/crowdstrike-to-shell-out-nearly-500m-for-2-ai-security-startups-as-the-market-for-securing-agents-takes-off/"
+    },
+    {
+      "title": "OpenAI 联手外部团队加固基础设施",
+      "summary": "OpenAI 与 Cathedral Systems 合作，双方研究人员将共同测试 OpenAI 的 AI 基础设施并寻找漏洞；同时计划把严重漏洞的赏金提高到原来的四倍，范围涵盖模型隐私、威胁检测与 AI Agent 安全等。此前 OpenAI 曾让约四分之一开发者借助 Codex 集中排查安全问题。",
+      "insight": "用 AI 编程工具做大规模安全排查已成为头部公司的实践，团队也可以尝试让编码 Agent 参与代码审计。",
+      "source": "TechRadar",
+      "source_title": "'Traditional cyber defenses alone are no longer sufficient': OpenAI is raising its bug bounty rewards for security researchers as AI attack worries grow",
+      "url": "https://techradar.com/pro/security/traditional-cyber-defenses-alone-are-no-longer-sufficient-openai-is-raising-its-bug-bounty-rewards-for-security-researchers-as-ai-attack-worries-grow"
+    },
+    {
+      "title": "AI 数据中心用退役航空发动机发电",
+      "summary": "由于电网接入和新燃气轮机都要等待多年，部分 AI 数据中心开始使用由退役飞机发动机改装、燃烧天然气的发电机组自行供电。xAI 已在密西西比部署八台此类机组为 Colossus 2 供电，Crusoe 也为 Stargate 园区订购了改装机组，但其效率更低、污染更高。",
+      "insight": "电力已成为 AI 落地的硬约束，现场发电、储能与能源管理系统将迎来更多与数据中心相关的工业需求。",
+      "source": "TechCrunch",
+      "source_title": "Data centers are turning to old jet engines as the wait for power grows",
+      "url": "https://techcrunch.com/2026/11/03/data-centers-are-turning-to-old-jet-engines-as-the-wait-for-power-grows/"
+    },
+    {
+      "title": "Netflix 上线按心情推荐的 AI 标签页",
+      "summary": "Netflix 在美国英语用户的电视端推出“AI Discover”标签页，首个实验功能根据用户心情、可用时间和偏好推荐内容，如“轻松一点”“吓我一跳”等主题，并可逐条调整推荐。Netflix 称其为新发现功能的“试验厨房”，背后是可实时响应并持续学习的新智能层。",
+      "insight": "把 AI 能力先放进独立的实验入口、按反馈逐步并入主流程，是消费级产品落地新功能的稳妥做法。",
+      "source": "TechCrunch",
+      "source_title": "Netflix's new AI Discover tab helps you find something to watch based on your mood",
+      "url": "https://techcrunch.com/2026/11/03/netflixs-new-ai-discover-tab-helps-you-find-something-to-watch-based-on-your-mood/"
+    }
+  ]
+}
