@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-05",
+  "headline": "Kimi K3.1 Pro 开源权重正式上线",
+  "intro": "开源大模型阵营再添重磅：Moonshot AI 放出 2.8 万亿参数的 Kimi K3.1 Pro 权重，腾讯 Hy4 正式版也带着视觉与电脑操作能力上线。与此同时，编程 Agent 赛道并购不断，AI 发现底层安全漏洞、辅助药物设计等工程化落地案例持续增多。",
+  "excerpt": "Kimi K3.1 Pro 开放权重，腾讯 Hy4 正式上线；Meta 收购 Conductor，Claude 发现 Xen 高危漏洞。",
+  "tags": ["开源模型", "Agent", "AI 编程", "AI 安全", "Moonshot", "Meta"],
+  "items": [
+    {
+      "title": "Kimi K3.1 Pro 开放模型权重",
+      "summary": "Moonshot AI 在 Hugging Face 发布 Kimi K3.1 Pro 权重，兑现了 10 月发布模型时的承诺。该模型为 MoE 架构，总参数 2.8 万亿、激活参数 1040 亿，支持 100 万 token 上下文，采用 Kimi 专属许可证，对开放程度仍有一定限制。",
+      "insight": "万亿级开源权重进一步拉近与闭源旗舰的距离，但部署门槛极高，多数团队更现实的路径仍是 API 或蒸馏后的小模型。",
+      "source": "RuntimeWire",
+      "source_title": "Moonshot AI releases Kimi K3.1 Pro weights for its 2.8-trillion-parameter model",
+      "url": "https://runtimewire.com/article/moonshot-ai-kimi-k3-1-pro-weights"
+    },
+    {
+      "title": "腾讯 Hy4 正式版支持电脑操作",
+      "summary": "腾讯发布 Hy4 完整版，新增细粒度图像与复杂图表理解，并能在命令行和图形界面中执行操作，已通过腾讯云、OpenRouter 及 CodeBuddy、WorkBuddy 等产品提供。正式版权重和系统卡将稍后发布，还计划推出更快更省的 Hy4 Flash。",
+      "insight": "腾讯自评在长程编程和研究级数学上仍落后顶级闭源模型；对需要 GUI 自动化的上位机、测试类场景，可先通过 API 评估其电脑操作能力。",
+      "source": "Unite.AI",
+      "source_title": "Tencent Releases Full Hy4 Model With Vision and Computer Use",
+      "url": "https://www.unite.ai/tencent-releases-full-hy4-model-with-vision-and-computer-use/"
+    },
+    {
+      "title": "Meta 收购编程 Agent 公司 Conductor",
+      "summary": "Meta 确认收购 2024 年成立的 AI 编程初创公司 Conductor，其平台可让工程师把多个 Agent 部署到并行工作区，分别处理项目的不同部分，Agent 来自 Anthropic、OpenAI 等厂商。Conductor 云服务将于 11 月 20 日关闭，核心功能保留至明年初。",
+      "insight": "多 Agent 并行开发正成为大厂争夺的能力；依赖第三方编排工具的团队需留意服务关停风险并做好数据迁移。",
+      "source": "TechCrunch",
+      "source_title": "Meta acquires AI coding startup Conductor",
+      "url": "https://techcrunch.com/2026/11/04/meta-acquires-ai-coding-startup-conductor/"
+    },
+    {
+      "title": "Claude 发现 Xen 虚拟机逃逸漏洞",
+      "summary": "Xen 项目公告 XSA-523 披露两个漏洞（CVE-2026-102703/102704），并致谢 Anthropic 借助 Claude 发现。问题出在虚拟机间数据拷贝的权限复用逻辑，恶意虚拟机可读写其他虚拟机乃至 dom0 的内存，影响 4.6 及以后版本，目前已有补丁。",
+      "insight": "AI 挖掘底层基础设施漏洞已成现实；使用 Xen、XCP-ng、Qubes 等虚拟化平台的工控与服务器环境应尽快升级并重启。",
+      "source": "The Hacker News",
+      "source_title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM's Memory",
+      "url": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html"
+    },
+    {
+      "title": "OpenAI 自研 Git 后端 Pando",
+      "summary": "OpenAI 介绍了为大量 AI Agent 并行推送分支而打造的 Git 兼容服务端 Pando，已支撑其主代码仓库。它按 ref 粒度协调更新并复用已存储的 packfile，OpenAI 称生产环境中推送延迟中位数下降约 80%。目前没有对外提供安装或定价信息。",
+      "insight": "当 Agent 成为主要“提交者”，代码托管基础设施本身也要重新设计，自建 Git 服务的团队可参考其按 ref 协调的思路。",
+      "source": "DevelopersIO",
+      "source_title": "I Looked Into \"Pando,\" OpenAI's Rebuilt Git Server",
+      "url": "https://dev.classmethod.jp/en/articles/openai-pando-git-backend/"
+    },
+    {
+      "title": "DeepMind 为 Antigravity 加入化学技能",
+      "summary": "Google DeepMind 为 Antigravity 推出化学信息学技能：大模型负责编排、检索与推理，分子计算交给基于 RDKit 的确定性工具，并连接 ChEMBL 和 PubChem。在肺癌药物案例中，整套分析与分子设计流程约一小时完成，而单轮迭代通常需要数天。",
+      "insight": "“大模型编排 + 确定性专业工具”的分工模式，同样适用于工业计算、仿真等对结果可靠性要求高的领域。",
+      "source": "Google DeepMind",
+      "source_title": "Agentic cheminformatics with Google Antigravity",
+      "url": "https://deepmind.google/blog/agentic-cheminformatics-with-google-antigravity/"
+    },
+    {
+      "title": "Uber：几乎没人用 Agent 叫车",
+      "summary": "Uber 在三季度财报会上透露，10 月最繁忙的万圣节当周，仅有 4 单乘车通过 AI Agent 预订，Uber Eats 约 500 单，而同期总订单约 3.2 亿。CEO 表示进展“非常早期且有限”，但仍看好 Agent 对需求的长期拉动。",
+      "insight": "消费级 Agent 落地远慢于宣传，App 内几十秒就能完成的操作难以被替代；Agent 更大的价值可能在流程长、步骤多的企业场景。",
+      "source": "TechCrunch",
+      "source_title": "Almost no one uses AI agents to book their Uber, company says",
+      "url": "https://techcrunch.com/2026/11/04/almost-no-one-uses-ai-agents-to-book-their-uber-company-says/"
+    }
+  ]
+}
