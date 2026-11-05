@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-06",
+  "headline": "AI 扫出近千个 Linux 内核隐患",
+  "intro": "今天的 AI 应用新闻集中在“落地”二字：OpenAI 把安全模型用在 Linux 内核漏洞挖掘上，Claude 开始帮用户理账，Dropbox 和 Airbnb 都在为 Agent 重新搭底座和界面。工业侧，DJI 新款行业无人机把机载 AI 和第三方模型部署能力带进巡检场景。",
+  "excerpt": "OpenAI 安全模型助修近千个 Linux 内核问题；Claude 推出理财功能；Dropbox 收购 Tigris 布局 Agent 存储。",
+  "tags": [
+    "AI 安全",
+    "Agent",
+    "OpenAI",
+    "Anthropic",
+    "工业无人机"
+  ],
+  "items": [
+    {
+      "title": "OpenAI 安全模型扫描 Linux 内核",
+      "summary": "OpenAI 新推出的网络安全模型面向其 Daybreak Red 项目的最高级别用户开放，用于漏洞发现与利用研究。OpenAI 称该模型扫描了 Linux 内核，并协助为 948 个潜在问题准备补丁，这次扫描的花费约 120 万美元；此外还在 Firefox 中发现 81 个新漏洞。",
+      "insight": "AI 正在成为规模化代码审计工具，但访问受限也引发防守方的不满。做嵌入式 Linux、工控网关的团队应更频繁地跟进内核补丁。",
+      "source": "TechCrunch",
+      "source_title": "OpenAI released a new cybersecurity model. Is that enough?",
+      "url": "https://techcrunch.com/2026/11/05/openai-released-a-new-cybersecurity-model-is-that-enough/"
+    },
+    {
+      "title": "Claude 推出个人财务分析工具",
+      "summary": "Anthropic 为 Claude 上线 Personal Finance 测试版，用户可通过 Plaid 连接银行卡和信用卡账户，让 Claude 按类别汇总支出、发现重复扣款和异常费用。权限为只读，Claude 无法转账或投资，相关对话不用于训练模型。本周起面向美国 Pro、Max、Ultra 订阅用户逐步开放。",
+      "insight": "这是“只读连接器 + 对话分析”模式的典型案例，同样的思路可用于设备数据、MES 报表等企业内部场景，关键是先把权限边界划清楚。",
+      "source": "TechCrunch",
+      "source_title": "Claude can now analyze your spending with its new Personal Finance tool",
+      "url": "https://techcrunch.com/2026/11/05/claude-can-now-analyze-your-spending-with-its-new-personal-finance-tool/"
+    },
+    {
+      "title": "Dropbox 收购 Tigris 做 Agent 存储",
+      "summary": "Dropbox 宣布以 3.5 亿美元收购 Tigris Data，是其迄今最大一笔收购，用于支撑新的 DBX Agent Cloud。该平台初期是兼容 Amazon S3 工具的对象存储，后续计划加入文档、图像、音视频支持，以及让 AI Agent 跨任务、跨会话管理文件的文件系统能力。",
+      "insight": "Agent 需要“长期记忆”和持久化文件空间已成共识，存储厂商开始专门为 Agent 设计接口，S3 兼容意味着现有工具链迁移成本较低。",
+      "source": "TechCrunch",
+      "source_title": "Dropbox acquires Tigris Data for $350M to bolster its AI infrastructure",
+      "url": "https://techcrunch.com/2026/11/05/dropbox-acquires-tigris-data-for-350m-to-bolster-its-ai-iinfrastructure/"
+    },
+    {
+      "title": "DJI 发布带机载 AI 的 Matrice 5T",
+      "summary": "DJI 推出行业无人机 Matrice 5T，机载 AI 可从热成像和可见光画面中识别 20 多类目标，支持用文字或图片在 FlightHub 2 中检索目标并生成自动巡逻航线。机载计算机可运行第三方 AI 模型，开发者还能为 DJI Pilot 2 编写插件；激光雷达可识别并跟随电力线进行巡检。",
+      "insight": "电力、光伏巡检团队可以把自研缺陷识别模型直接部署到机上，边缘推理加插件生态让无人机更像一个可编程的工业终端。",
+      "source": "DroneLife",
+      "source_title": "DJI Launches Matrice 5T with Advanced Thermal Imaging, AI, and Longer Flight Time",
+      "url": "https://dronelife.com/2026/11/05/dji-matrice-5t-launch-thermal-imaging-ai"
+    },
+    {
+      "title": "Airbnb AI 旅行 Agent 明年上半年上线",
+      "summary": "Airbnb 在三季度股东信中表示，其 AI Agent 将于 2027 年上半年面向消费者推出，用于规划行程、比较选项、管理预订和入住期间的支持。与普通聊天机器人不同，它会从数百个旅行组件（地图、日历、行程等）中动态拼装界面，CEO Brian Chesky 称之为类似“生成式 UI”。",
+      "insight": "“Agent 按需组装界面”值得上位机和 HMI 开发者关注：预先做好组件库，让模型负责选择与编排，比让模型直接生成整页界面更可控。",
+      "source": "TechCrunch",
+      "source_title": "Airbnb says it's launching an AI travel agent in the first half of 2027",
+      "url": "https://techcrunch.com/2026/11/05/airbnb-says-its-launching-an-ai-travel-agent-in-the-first-half-of-2027/"
+    },
+    {
+      "title": "百万美元悬赏 AI 攻克材料难题",
+      "summary": "YC 孵化的初创公司 Discovered Materials 设立总额 100 万美元的奖金池，悬赏解决五个材料科学开放问题，包括铜氧化物超导理论、硅与二氧化硅界面结构预测、改进密度泛函理论等。公司在公布前曾让前沿大模型联网自主研究数天，进展甚微。",
+      "insight": "这组题目被定位为衡量 AI 科研能力的“球门柱”，也提醒我们：在半导体材料等硬科学领域，当前大模型离独立突破仍有距离。",
+      "source": "TechCrunch",
+      "source_title": "A YC startup is putting $1M behind five unsolved materials science problems for AI",
+      "url": "https://techcrunch.com/2026/11/05/a-yc-startup-is-putting-1m-behind-five-unsolved-materials-science-problems-for-ai/"
+    }
+  ]
+}
