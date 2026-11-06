@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-07",
+  "headline": "Cursor Agent 一键部署上线应用",
+  "intro": "过去一天，AI 编程工具从“写代码”继续走向“交付应用”，Cursor 和 Mistral 都在把 Agent 做成可托管、可审批的完整平台。与此同时，开源 AI 渗透工具被大量暴露在公网，提醒企业在拥抱 Agent 的同时补齐基础安全。",
+  "excerpt": "Cursor 云端 Agent 可直接部署带数据库和登录的应用；Mistral Studio 推出托管 Agent；800 多个 AI 黑客工具实例暴露公网。",
+  "tags": [
+    "Agent",
+    "AI 编程",
+    "开源模型",
+    "AI 安全",
+    "视频生成"
+  ],
+  "items": [
+    {
+      "title": "Cursor Agent 可直接部署上线应用",
+      "summary": "Cursor 推出 Build Live Apps：在云端 Agent 中描述需求，即可自动搭建应用、按需创建 Postgres 数据库、接入 Cursor SSO 登录并完成托管，发布后获得专属域名链接。发布前会运行确定性和 Agent 式安全检查，检查通过且用户明确确认后才会上线。",
+      "insight": "对内部小工具和数据看板这类需求，从提需求到可用链接的距离被大幅缩短；团队管理员可审批、下架应用，适合企业内部治理。",
+      "source": "Cursor",
+      "source_title": "Build Live Apps in Cursor",
+      "url": "https://cursor.com/changelog/build-live-apps"
+    },
+    {
+      "title": "800 多个 AI 黑客工具实例裸露公网",
+      "summary": "Censys 发现超过 800 个开源自主渗透测试工具 Artex 的部署无需密码即可从公网访问。微软称 Artex 是一组能从侦察到数据窃取几乎全程自动执行攻击的 AI Agent，它已被关联到多起攻击，其中不少利用的是弱密码和缺少多因素认证等基础漏洞。",
+      "insight": "AI 让攻击门槛和速度都在变化，但很多入侵仍靠最基础的口令弱点；工控和企业网络的账号与 MFA 管理依然是第一道防线。",
+      "source": "TechCrunch",
+      "source_title": "Hundreds of Artex AI hacking tools found publicly exposed to the web",
+      "url": "https://techcrunch.com/2026/11/06/hundreds-of-artex-ai-hacking-tools-found-publicly-exposed-to-the-web/"
+    },
+    {
+      "title": "Inkling 2 Small 发布，将开放权重",
+      "summary": "Thinking Machines Lab 发布第二代模型 Inkling 2 Small，为 594B 总参数、17B 激活的稀疏 MoE，支持文本和图像输入、1M token 上下文，目前通过 Tinker 提供。公司计划在完成外部安全测试后，以 Apache 2.0 许可发布完整权重。",
+      "insight": "又一个大规模开源权重候选加入编程与 Agent 赛道；Apache 2.0 许可若如期落地，对需要私有化部署的企业很有吸引力。",
+      "source": "Unite.AI",
+      "source_title": "Thinking Machines Lab Launches Inkling 2 Small with Open Weights Pending",
+      "url": "https://www.unite.ai/thinking-machines-lab-launches-inkling-2-small-with-open-weights-pending/"
+    },
+    {
+      "title": "Mistral Studio 推出托管 Agent",
+      "summary": "Mistral 为 Studio 平台加入托管 Agent、自然语言工作流构建器、Apps CLI、Webhook 触发和默认开启的链路追踪等功能，多数处于公开预览。新的 mistralai-agents Python SDK 支持在进程内、客户自有服务器或 Mistral 云上运行 Agent，会话可在崩溃后从上一步恢复。",
+      "insight": "可在客户服务器上运行、支持断点续跑和人工审批的 Agent 框架，正适合对数据不出厂有要求的制造业场景，值得跟进自托管版本进展。",
+      "source": "Data Studios",
+      "source_title": "Mistral Studio adds managed agents, workflow builder and apps in public preview",
+      "url": "https://www.datastudios.org/post/mistral-studio-managed-agents-workflows-apps-public-preview"
+    },
+    {
+      "title": "Gemini Omni 1.2 Flash 正式可用",
+      "summary": "Google 将视频模型 Gemini Omni 1.2 Flash 推向正式可用，单段视频最长从 10 秒提升到 15 秒，通过 Gemini API 生成 720p 视频约每秒 0.07 美元，降价 30%。新版支持多轮对话式修改画面，并加强了人物、包装文字和品牌色在不同镜头间的一致性。",
+      "insight": "更便宜、可多轮编辑的视频生成，降低了产品演示、操作培训等短视频的制作成本，企业也可通过 Google Cloud 接入。",
+      "source": "The Next Web",
+      "source_title": "Google's Gemini Omni 1.2 Flash makes 15-second AI videos for less",
+      "url": "https://thenextweb.com/news/google-gemini-omni-1-2-flash-video-15-seconds-price-cut"
+    },
+    {
+      "title": "Perplexity 推出常驻工作 Agent",
+      "summary": "Perplexity 发布 Teammates，定位为面向工作的“常驻” AI Agent。用户可以给不同的 Teammate 分配不同任务并让它们同时执行，它们能调用用户已有的项目、技能和记忆，并与可在设备上执行任务的 Perplexity Computer 打通。",
+      "insight": "“多个并行 Agent 当同事”正成为各家标配，如何分派任务、审阅和纠偏 Agent 的工作，将成为新的协作技能。",
+      "source": "Dataconomy",
+      "source_title": "Perplexity launches always-on AI agents for work",
+      "url": "https://dataconomy.com/2026/11/06/perplexity-launches-always-on-ai-agents-for-work/"
+    },
+    {
+      "title": "Meta Muse 新增 Spaces 功能",
+      "summary": "Meta 为 Muse Agent 推出 Spaces：用户在对话中描述想法，Muse 就会生成一个围绕单一主题的追踪器、计划表或项目看板。Spaces 可连接第三方应用并在后台自动更新，例如价格变化或新的演出日期。",
+      "insight": "Agent 正从聊天窗口走向“按需生成的小应用”，与 Cursor 的方向殊途同归，轻量看板类需求越来越不必手写代码。",
+      "source": "TechCrunch",
+      "source_title": "Meta introduces Spaces, a new way to collaborate with your Muse agent",
+      "url": "https://techcrunch.com/2026/11/06/meta-introduces-spaces-a-new-way-to-collaborate-with-your-muse-agent/"
+    },
+    {
+      "title": "OpenAI 承诺数据中心更透明",
+      "summary": "OpenAI 发布“全国社区契约”，表示将公开数据中心的用水和用电数据，基本不再要求地方官员签署保密协议，并为自有园区承担全部电费和所需的电网升级费用。这些承诺仅适用于其自有站点，不覆盖 Stargate 等合作项目。",
+      "insight": "AI 算力扩张越来越受电力和社区意见约束，能源与电网侧的配套能力正在成为 AI 基建的关键变量。",
+      "source": "SupplyChainBrain",
+      "source_title": "OpenAI Promises Greater Transparency, Community Engagement on Data Centers",
+      "url": "https://www.supplychainbrain.com/home/top-stories/article/16424520/openai-promises-greater-transparency-community-engagement-on-data-centers"
+    }
+  ]
+}
