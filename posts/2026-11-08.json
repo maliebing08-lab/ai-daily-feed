@@ -1,0 +1,65 @@
+{
+  "date": "2026-11-08",
+  "headline": "Claude 误删教授一年讲义敲响警钟",
+  "intro": "过去一天，Agent 的“能力”和“风险”同时被放大：一位法学教授让 Claude 改页码，结果讲义被删，再次提醒文件写权限必须配好备份。基础设施侧，AWS 让一块 GPU 同时跑多个模型；研究侧，Ai2 开源机器人仿真环境，OpenAI 和 DeepMind 则分别用 Agent 挑战湿实验室数据和老旧 RSA 加密。",
+  "excerpt": "Claude 改页码误删教授一年讲义；SageMaker 支持 GPU 切分推理；Ai2 开源机器人仿真 ToyBlocks；AI 需求挤占芯片产能致交期拉长。",
+  "tags": ["Agent", "AI 安全", "推理部署", "机器人", "半导体"],
+  "items": [
+    {
+      "title": "Claude 改页码误删教授一年讲义",
+      "summary": "芝加哥大学法学教授 William Baude 让 Claude 在无人值守的情况下更新旧讲义的页码，午饭回来发现 2026 秋季学期教学大纲和一整年的宪法课讲义被删除。他最终通过 Dropbox 的历史版本找回了文件，Claude 事后也承认是自己的疏忽。",
+      "insight": "给 Agent 文件写权限之前，先准备一份它改不了的副本，并提前验证恢复路径；在产线配方、PLC 程序等场景尤其要坚持“先备份、再授权”。",
+      "source": "RuntimeWire",
+      "source_title": "William Baude says Claude deleted a year of law lecture notes",
+      "url": "https://runtimewire.com/article/claude-deleted-law-lecture-notes-renumbering-pages"
+    },
+    {
+      "title": "SageMaker 推理支持 GPU 切分",
+      "summary": "AWS 为 SageMaker 实时推理端点加入 NVIDIA MIG 支持，A100 和 H100 单卡最多可切成 7 个硬件隔离分区，RTX PRO Blackwell 系列可切 2 到 4 个。每个分区独享算力和显存，模型常驻内存，避免多模型端点首次调用的加载延迟。AWS 测试显示在较高负载下单位 token 成本可下降，但低流量时整卡反而更便宜。",
+      "insight": "多个小模型共享一张卡是企业私有推理的常见需求；需注意分区端点不向 CloudWatch 上报 GPU 利用率，且仍按整卡计费。",
+      "source": "Unite.AI",
+      "source_title": "AWS Adds NVIDIA GPU Partitioning to SageMaker Inference Endpoints",
+      "url": "https://www.unite.ai/aws-adds-nvidia-gpu-partitioning-to-sagemaker-inference-endpoints/"
+    },
+    {
+      "title": "Ai2 开源机器人仿真 ToyBlocks",
+      "summary": "Ai2 发布首个 FoundationWorld——ToyBlocks，一个以机械臂和桌面积木为场景的开源仿真框架，可自动生成任务、示教数据并做评测。首批数据包含 85,336 条长程示教、约 1,600 小时执行数据，单 GPU 生成速度最高达实时的 24 倍；仿真与真机上的技能成功率接近。",
+      "insight": "可控、可复现的仿真环境让人能追查机器人策略为何失败，省去大量遥操作采数，对做抓取、分拣的工业机器人团队是很好的实验平台。",
+      "source": "Ai2",
+      "source_title": "ToyBlocks: A controlled world for robot learning and evaluation",
+      "url": "https://allenai.org/blog/toyblocks"
+    },
+    {
+      "title": "OpenAI 推出湿实验室 Agent 评测",
+      "summary": "OpenAI 推出 BioBasicsBench，用 100 个由科学家编写的日常湿实验室任务，考察 AI Agent 能否读懂凝胶图、显微图像、测序读数、酶标仪导出数据等原始实验证据，并识别证据不足的情况。GPT-6 Astra 得分 66.7%，明显高于 GPT-5.6 Sol 的 43.8%。",
+      "insight": "评测重点从“答题”转向“读原始数据并判断能否下结论”，这正是质检、实验室数据分析等工业场景真正需要的能力。",
+      "source": "Unite.AI",
+      "source_title": "OpenAI Introduces BioBasicsBench to Test AI Agents on Wet-Lab Data",
+      "url": "https://www.unite.ai/openai-introduces-biobasicsbench-to-test-ai-agents-on-wet-lab-data/"
+    },
+    {
+      "title": "DeepMind Agent 找到 RSA-1024 弱点",
+      "summary": "Google DeepMind 公布两篇尚未经同行评审的工作论文：AI Agent 发现了针对 1024 位 RSA 的签名伪造和批量分解两类改进方法，并把一次 1024 位计算从约五个月缩短到 3.2 天，证明由另一个 Agent 用 Lean 4 验证。DeepMind 表示 2048 位及以上的现代密钥不受影响。",
+      "insight": "老旧工控设备和嵌入式固件中仍可能存在 1024 位 RSA 密钥，应借此盘点并尽快升级，不要把加密强度当作一成不变的假设。",
+      "source": "DEV Community",
+      "source_title": "Google DeepMind: AI agents found two weaknesses in legacy 1024-bit RSA",
+      "url": "https://dev.to/delimitter/google-deepmind-ai-agents-found-two-weaknesses-in-legacy-1024-bit-rsa-2d5d"
+    },
+    {
+      "title": "AI 需求挤占产能，芯片交期拉长",
+      "summary": "Microchip CEO Steve Sanghi 表示，AI 公司“占满了整个工厂”，外包封测产线被数据中心客户抢占，部分基板缺货。标准产品交期从过去的 4 到 8 周延长到 6 到 32 周，产能转移约需六个月，主要代工和封测厂预计明年 1 月前后再次涨价。",
+      "insight": "MCU 等通用器件交期拉长会直接影响工控和自动化设备交付，项目采购应提前备料并评估替代料号。",
+      "source": "24/7 Wall St.",
+      "source_title": "The Chip Shortage Is Back, and Microchip Says AI Customers Are Crowding Everyone Out",
+      "url": "https://247wallst.com/investing/2026/11/07/the-chip-shortage-is-back-and-microchip-says-ai-customers-are-crowding-everyone-out/"
+    },
+    {
+      "title": "猫王版权方与 Eminem 出版商起诉 Suno",
+      "summary": "猫王 Elvis Presley 的版权方在加州联邦法院起诉 AI 音乐生成平台 Suno，称用户可直接点名生成模仿其嗓音的歌曲，诉状援引田纳西州 ELVIS Act。Eminem 的出版公司 Eight Mile Style 另案起诉，指控 Suno 未经许可用其作品训练并允许生成仿作。Suno 未立即回应。",
+      "insight": "声音和风格模仿正成为生成式 AI 新的法律风险点，企业在宣传视频、语音播报中使用 AI 生成音频时应确认素材与授权来源。",
+      "source": "The Express Tribune",
+      "source_title": "Elvis Presley rights holders and Eminem's publisher sue AI music generator Suno",
+      "url": "https://tribune.com.pk/story/2639163/elvis-presley-rights-holders-and-eminems-publisher-sue-ai-music-generator-suno"
+    }
+  ]
+}
