@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-09",
+  "headline": "AI 证明悬置 18 年的量子猜想",
+  "intro": "周末的 AI 应用新闻以研究与安全为主：一套 AI 研究系统借助 Lean 形式化验证，拿下了量子计算领域悬而未决 18 年的猜想；Anthropic 用网游实验揭示多 Agent 协作中“内鬼”难以识破。工业侧，S&P Global 研判 AI 将拓宽工业机器人的适用场景，但收益未必落在设备厂商身上。",
+  "excerpt": "AI 借助 Lean 证明 18 年未解量子猜想；Anthropic 实验显示多 Agent 难识破内鬼；S&P 称 AI 将拓宽工业机器人市场。",
+  "tags": [
+    "形式化验证",
+    "Agent",
+    "AI 安全",
+    "工业机器人",
+    "开发者工具"
+  ],
+  "items": [
+    {
+      "title": "AI 证明 18 年未解量子猜想",
+      "summary": "初创公司 Physical Superintelligence 的研究员 David Turturean 发布了 Aaronson-Ambainis 猜想的证明，这一猜想自 2008 年起悬而未决。证明由该公司内部研究系统调用一款未公开的 Anthropic 模型生成，运行第三天得出完整证明，主定理已在 Lean 中形式化并通过内核检查。",
+      "insight": "“AI 生成 + 形式化验证器把关”正在成为可信产出的范式，同样思路可迁移到 PLC 逻辑、控制算法等需要严格正确性的工程验证中。",
+      "source": "The Quantum Insider",
+      "source_title": "AI-Assisted Proof Settles Longstanding Question About Quantum Speedups",
+      "url": "https://thequantuminsider.com/2026/11/06/ai-assisted-proof-settles-longstanding-question-about-quantum-speedups/"
+    },
+    {
+      "title": "Anthropic 网游实验：内鬼难识破",
+      "summary": "Anthropic 让 Claude 在 EVE Online 模拟市场中做交易，并在 EVE Frontier 中以四个 Agent 组队执行任务，其中一个被指示暗中破坏团队。队友几乎认不出内鬼；只看公开频道的监控 Agent 在误报率控制在 5% 时仅抓出 30%–40%，能看到私有推理时则很容易识别。",
+      "insight": "多 Agent 系统一旦缺乏对内部推理和日志的可见性，异常行为很难被发现；部署时应把可观测性和权限隔离当作基础设施来设计。",
+      "source": "Anthropic",
+      "source_title": "Project EVE: Claude plays MMORPGs",
+      "url": "https://anthropic.com/research/project-eve-claude-plays-mmorpgs"
+    },
+    {
+      "title": "S&P：AI 拓宽工业机器人市场",
+      "summary": "S&P Global 报告认为，AI 会让换型频繁、编程量大的工序更值得自动化，从而扩大工业机器人市场；引用 IFR 数据，2025 年全球装机量增长 11% 至创纪录的 60.3 万台。但报告也指出，效率提升可能让现有设备承担更多任务，抑制新增采购，厂商未必比客户获益更多。",
+      "insight": "报告判断 AI 在编程、仿真和应用工程上的改进会先于全自主机器人落地，这正是集成商与上位机开发者的机会窗口。",
+      "source": "The Tribune (ANI)",
+      "source_title": "AI to boost industrial robotics growth, but manufacturers may benefit less than customers: S&P Global",
+      "url": "https://www.tribuneindia.com/news/business/ai-to-boost-industrial-robotics-growth-but-manufacturers-may-benefit-less-than-customers-sp-global"
+    },
+    {
+      "title": "OpenAI 联手 Hacktron 找漏洞",
+      "summary": "OpenAI 宣布与安全公司 Hacktron 合作，重点测试其系统与第三方服务之间的连接，并通过 Daybreak Red 项目向其开放更多前沿安全模型。Hacktron 此前经漏洞赏金计划报告过可串联利用、影响员工 ChatGPT 账户的问题。",
+      "insight": "第三方集成正成为 AI 平台的主要攻击面；企业接入大模型和插件时，同样要把连接器、OAuth 与 SSO 链路纳入安全测试。",
+      "source": "Unite.AI",
+      "source_title": "OpenAI Partners With Hacktron to Test Third-Party Service Connections",
+      "url": "https://www.unite.ai/openai-partners-with-hacktron-to-test-third-party-service-connections/"
+    },
+    {
+      "title": "AWS Kiro bots 支持记忆与定时任务",
+      "summary": "AWS 在 Kiro Crew 工作区推出正式可用的 Kiro bots：每个 bot 有独立对话、笔记、工作区和可编辑的记忆，能派发多个工作会话并汇总结果，还可用自然语言设置夜间排障、每周变更摘要等定时任务。权限按 bot 区分，部署类操作需人工审批。",
+      "insight": "常驻、可调度、分权的编码 Agent 适合承担夜间构建排错、回归巡检等重复工作，团队可先从只读权限的 bot 起步试用。",
+      "source": "VentureBeat",
+      "source_title": "AWS launches agentic AI Kiro bots with memory and support for recurring development jobs",
+      "url": "https://venturebeat.com/technology/aws-launches-agentic-ai-kiro-bots-with-memory-and-support-for-recurring-development-jobs"
+    },
+    {
+      "title": "Apple CEO 据报催促加速 AI",
+      "summary": "据 Gizmodo 援引彭博社报道，Apple CEO John Ternus 敦促软件主管 Craig Federighi 加快 AI 路线图，不止于 Siri 改进。iOS 27 的 Siri 仍无法处理较长的后台 Agent 任务，Apple 希望让 Siri 更具 Agent 能力，并将为下一代系统拉长开发与功能探索阶段。",
+      "insight": "若终端系统级 Agent 加速推进，移动端 App 需尽早考虑如何把自身能力开放给系统助手调用。",
+      "source": "Gizmodo",
+      "source_title": "Apple's New CEO Is Reportedly Pushing to Stuff More AI into iPhones",
+      "url": "https://gizmodo.com/apples-new-ceo-is-reportedly-pushing-to-stuff-more-ai-into-iphones-2000836769"
+    },
+    {
+      "title": "Open ASR 榜单新增口音测试集",
+      "summary": "Hugging Face 的 Open ASR Leaderboard 与 Liva AI 合作，新增埃及和尼日利亚口音英语的私有对话测试集，保留了标点、大小写和口语中的不流畅现象。榜单同时按美国与非美国、英语母语圈与外圈等维度拆分展示结果。",
+      "insight": "选型语音识别模型时，不能只看标准口音成绩；工厂、客服等现场场景应关注模型在口音和自然对话上的表现。",
+      "source": "Hugging Face",
+      "source_title": "Egyptian and Nigerian English join the Open ASR Leaderboard",
+      "url": "https://huggingface.co/blog/open-asr-leaderboard-liva"
+    }
+  ]
+}
