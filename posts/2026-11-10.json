@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-10",
+  "headline": "Anthropic 新模型降价提速",
+  "intro": "Anthropic 更新 Mythos 与 Fable 两条模型线，Meta 推出专做 Agent 批量执行的低价模型 Muse Ember。机器人领域，NVIDIA 在 CoRL 发布 GR00T 2，MIT 展示能举一反三的机器人指令系统；Google、Cisco、Trimble 则分别在算力、安全与工程行业落地上继续加码。",
+  "excerpt": "Anthropic 发布 Fable 5.2 并降价，Meta 推出 Muse Ember，NVIDIA 发布 GR00T 2，Google 新增两款 TPU。",
+  "tags": [
+    "大模型",
+    "Agent",
+    "机器人",
+    "AI芯片",
+    "AI安全",
+    "Anthropic"
+  ],
+  "items": [
+    {
+      "title": "Anthropic 推出 Fable 5.2",
+      "summary": "Anthropic 推出 Mythos 5.2 和 Fable 5.2，称在编码、推理和视觉方面均有提升。Fable 输入价格从每百万 token 10 美元降到 8 美元，响应速度约快 30%，并可在零数据留存（ZDR）政策下使用。",
+      "insight": "降价提速对按 token 计费的企业应用直接利好；系统卡提到模型更常察觉自己在被评测，上线前的自有场景测试更显重要。",
+      "source": "TechCrunch",
+      "source_title": "Anthropic releases new Mythos and Fable models amid RSI concerns",
+      "url": "https://techcrunch.com/2026/11/09/anthropic-releases-new-mythos-and-fable-models-amid-rsi-concerns/"
+    },
+    {
+      "title": "Meta 发布低价模型 Muse Ember",
+      "summary": "Muse Ember 是 Meta 超级智能实验室迄今最轻量、最省钱的模型，输入价格每百万 token 0.1 美元，面向工具调用、编码子任务、路由、信息抽取和长文档解析，支持文本、图像和音频输入。",
+      "insight": "Meta 主张“大模型做规划、小模型跑量”的分工，适合工单分类、文档抽取等高频重复流程，可借此压低 Agent 系统的单任务成本。",
+      "source": "TechCrunch",
+      "source_title": "Meta releases Muse Ember, a new lightweight model for agent execution",
+      "url": "https://techcrunch.com/2026/11/09/meta-releases-muse-ember-a-new-lightweight-model-for-agent-execution/"
+    },
+    {
+      "title": "NVIDIA 发布机器人模型 GR00T 2",
+      "summary": "NVIDIA 在 CoRL 大会发布约 20 亿参数的 GR00T 2，一个预训练权重可覆盖平行夹爪、灵巧手和人形机器人，预训练大量使用第一人称人类视频；配套的 Isaac Lab 3.0 已于 10 月正式可用，代码计划 12 月开放。",
+      "insight": "从人类视频学习可降低示教数据采集成本，对做机械臂集成和仿真训练的团队值得跟进，但其高成功率测试任务有一定筛选，需理性看待。",
+      "source": "Unite.AI",
+      "source_title": "NVIDIA Introduces GR00T 2 for Robots Learning From Human Video",
+      "url": "https://www.unite.ai/nvidia-introduces-gr00t-2-for-robots-learning-from-human-video/"
+    },
+    {
+      "title": "Google 新增两款 TPU",
+      "summary": "Google 发布第八代 TPU 的两款新系统：TPU 8tx 提供硬件级机密计算，数据和模型权重在使用中保持隔离；TPU 8i Max 把两颗 TPU 8i 封装在一起，算力、SRAM 和 HBM 带宽翻倍，面向超长上下文的 Agent 负载。",
+      "insight": "机密计算 TPU 让敏感数据可在云端直接微调和推理，对受监管行业上云是个信号；具体上市时间和价格尚未公布。",
+      "source": "Google Blog",
+      "source_title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/"
+    },
+    {
+      "title": "Cisco 引入 Mythos 做红队",
+      "summary": "Cisco 在墨尔本 Cisco Live 宣布将 Claude Mythos 接入 AI Defense，为企业 AI 应用和 Agent 做红队测试，仅限客户登记并授权的目标；Splunk 同时推出把 Agent 花费与输出质量挂钩的 Tokenomics 工具。",
+      "insight": "Agent 上线前的攻防测试和成本-质量核算正变成标配，企业内部部署 Agent 时可参考其授权、限时、可审计的安全设计。",
+      "source": "Cisco",
+      "source_title": "Cisco Unveils Frontier AI Red Teaming and Agent Observability to Secure the Agentic Enterprise",
+      "url": "https://investor.cisco.com/news/news-details/2026/Cisco-Unveils-Frontier-AI-Red-Teaming-and-Agent-Observability-to-Secure-the-Agentic-Enterprise/default.aspx"
+    },
+    {
+      "title": "Trimble 推建筑 AI Agent",
+      "summary": "Trimble 在 Dimensions 大会为 Trimble Connect 平台推出新的 AI 能力，覆盖设计、施工和运维，包括 Trimble Assist 生成式设计和 Agent Studio 自定义 Agent，并打通设计、估算、现场与财务数据。",
+      "insight": "平台上每个 AI Agent 和模型都附有对齐 EU AI Act 与 ISO 42001 的安全标签，为工程类软件的 AI 合规提供了可借鉴的做法。",
+      "source": "Quantisnow",
+      "source_title": "Trimble Launches New Trimble Connect Platform AI Capabilities Aimed at De-Risking Construction",
+      "url": "https://www.quantisnow.com/insight/trimble-launches-new-trimble-connect-platform-ai-capabilities-aimed-at-6780879"
+    },
+    {
+      "title": "MIT FLEX 让机器人举一反三",
+      "summary": "MIT 与 NYU 研究者提出 FLEX：用户用口语下达指令后，系统先记录相关特征，再用大语言模型推导更通用的规则，最后用视觉剔除场景中已不存在的物体，全程约 5 秒。仿真中机械臂学会了避开电子产品、易燃物和易碎品。",
+      "insight": "把 LLM 用于从单条纠正中归纳规则，可减少给机器人逐条写约束的工作量；目前仍是仿真结果，离产线部署还有距离。",
+      "source": "MIT News",
+      "source_title": "AI-assisted learning platform helps robots reason beyond literal commands",
+      "url": "https://news.mit.edu/2026/ai-assisted-learning-platform-helps-robots-reason-beyond-literal-commands-1109"
+    }
+  ]
+}
