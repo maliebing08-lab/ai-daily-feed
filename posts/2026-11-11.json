@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-11",
+  "headline": "Gemini Robotics 2.5 进驻奔驰产线",
+  "intro": "今天的 AI 应用新闻集中在物理世界与企业落地：Google DeepMind 新一代机器人模型在奔驰工厂完成试点，AI Agent 被用来对 Signal 加密代码做形式化验证。云厂商继续把 Agent 能力和企业级 AI 产品搬上自家平台，而推理服务商 Fireworks AI 的数据泄露则再次提醒大家重视 AI 基础设施安全。",
+  "excerpt": "DeepMind 新机器人模型在奔驰产线试点，配料成功率 96%；AI Agent 验证 Signal 代码；医疗版 Gemini 上线。",
+  "tags": [
+    "机器人",
+    "Agent",
+    "形式化验证",
+    "AI安全",
+    "Google",
+    "AWS"
+  ],
+  "items": [
+    {
+      "title": "Gemini Robotics 2.5 进奔驰产线",
+      "summary": "Google DeepMind 发布视觉-语言-动作模型 Gemini Robotics 2.5，在 200 多项任务上测试，成功率较此前基线提升 30%–100%，完成速度快 20%–30%。在奔驰匈牙利和德国汽车产线的概念验证中，Apptronik 的 Apollo 2 人形机器人执行零件配料（kitting），成功率 96%。模型目前向 DeepMind 的机器人合作伙伴推送。",
+      "insight": "这是通用机器人模型在真实汽车产线上给出的量化结果，配料这类重复性物料作业可能最先落地；同步开源的 ASIMOV-Jailbreak 基准也说明机器人安全评测正在成为标配。",
+      "source": "Google DeepMind",
+      "source_title": "Gemini Robotics 2.5 accelerates real-world general dexterity",
+      "url": "https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/"
+    },
+    {
+      "title": "AI Agent 验证 Signal 机器码安全",
+      "summary": "DeepMind 推出 AlphaProof Code，用多组 AI Agent 为 Signal 的 libsignal 编译后机器码生成可由 Lean 检查的证明，验证了前向保密、认证等安全属性。五人团队四周完成，Agent 生成约 650 万行 Lean 证明代码；人工负责选择属性并审批规格。",
+      "insight": "形式化验证一直因成本高而难以普及，AI Agent 大幅降低了证明的人力投入，未来对 PLC、嵌入式等安全关键代码做机器码级验证的门槛可能随之下降。",
+      "source": "Unite.AI",
+      "source_title": "Google DeepMind Uses AI Agents to Verify Signal’s Core Machine Code",
+      "url": "https://www.unite.ai/google-deepmind-uses-ai-agents-to-verify-signals-core-machine-code/"
+    },
+    {
+      "title": "Google 推出医疗版 Gemini",
+      "summary": "Google Cloud 发布 Gemini for healthcare，通过连接器打通电子病历、计费平台、临床指南和 Medicare 数据，在设定的护栏和人工监督下执行病历汇总、事前授权审核等多步骤任务。首批合作方包括 HCA Healthcare、Highmark Health 和 Northwell Health，目前为预览版。",
+      "insight": "行业 Agent 的关键在于接入分散的业务系统并保留人工审核环节，这一思路同样适用于打通 MES、ERP 等割裂系统的工业场景。",
+      "source": "Google Blog",
+      "source_title": "Google Cloud launches Gemini for healthcare.",
+      "url": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/gemini-for-healthcare/"
+    },
+    {
+      "title": "AWS 上线 Agent 网页搜索 API",
+      "summary": "Amazon Bedrock AgentCore 的 Web Search API 正式可用，开发者可通过 InvokeWebSearch 一次调用完成网页搜索，结果来自亚马逊自营索引，支持按域名和发布时间过滤。调用走 IAM 授权，可经 PrivateLink 从 VPC 访问并记录到 CloudTrail，价格为每千次查询 7 美元。",
+      "insight": "以前只能作为 MCP 工具使用的搜索能力变成普通 API，企业在私有网络里给 Agent 接入联网检索更方便，也更容易审计。",
+      "source": "AWS",
+      "source_title": "Amazon Bedrock AgentCore now offers a Web Search API",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-bedrock-agentcore-web-search-api/"
+    },
+    {
+      "title": "Fireworks AI 泄露范围扩大",
+      "summary": "推理服务商 Fireworks AI 披露，托管其研发机器的第三方云服务商在 10 月 23 日被攻破，攻击者随后进入其开发系统，部分客户的未完成模型权重和数据集、计费信息等遭访问。公司怀疑是倒卖 AI 模型访问权限（LLMJacking）的犯罪团伙所为，这已是数周内第二次安全事件。",
+      "insight": "把训练数据和模型交给第三方推理平台时，供应链安全同样要纳入评估；企业应做好密钥轮换和数据最小化。",
+      "source": "The Register",
+      "source_title": "Fireworks AI gets burned twice as customer data exposure widens",
+      "url": "https://www.theregister.com/cyber-crime/2026/11/10/fireworks-ai-gets-burned-twice-as-customer-data-exposure-widens/5308722"
+    },
+    {
+      "title": "ChatGPT Enterprise 上架 AWS 市场",
+      "summary": "OpenAI 通过 AWS Marketplace 销售 ChatGPT Enterprise，由 AWS 统一计费，符合条件的支出可计入客户与 AWS 的承诺消费。套餐包含 Chat、ChatGPT Work、Codex 和 dots，无公开价格，需申请私有报价。",
+      "insight": "企业采购 AI 工具可以走现有云合同，审批流程更短，对已在 AWS 上运行业务的制造企业来说引入门槛更低。",
+      "source": "PPC Land",
+      "source_title": "AWS customers can now buy ChatGPT Enterprise against cloud commitments",
+      "url": "https://ppc.land/aws-customers-can-now-buy-chatgpt-enterprise-against-cloud-commitments/"
+    },
+    {
+      "title": "Cyanogen 创始人做 AI 桌面系统",
+      "summary": "Cyanogen 联合创始人 Kirt McMaster 领导的 Kora Systems 发布基于 Linux 和 Nix 的桌面操作系统，内置可跨应用、访问文件的 AI 模型与 Agent，预计 2027 年免费推出，支持 Intel、AMD 和高通骁龙 PC。其 Cortex 引擎优先在本地执行任务，较重负载转到云端。",
+      "insight": "Agent 正在从应用层下沉到操作系统层，本地优先、云端兜底的架构也值得边缘设备和工控软件参考。",
+      "source": "TechCrunch",
+      "source_title": "After challenging Google's Android with Cyanogen, its co-founder takes aim at Windows for AI era",
+      "url": "https://techcrunch.com/2026/11/10/after-challenging-googles-android-with-cyanogen-its-co-founder-takes-aim-at-windows-for-ai-era/"
+    }
+  ]
+}
