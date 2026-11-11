@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-12",
+  "headline": "Gemini 4 Carbon 全面开放并降价",
+  "intro": "今天的主线是大模型从“能用”走向“好接入”：Google 把 Gemini 4 Carbon 全面开放并推出专做批量判断的 Decision 1，Anthropic 和 Adobe 则把 AI 能力塞进表格、会议和创意软件里。PayPal 的案例也提醒开发者，业务知识层往往比换模型更能提升准确率。",
+  "excerpt": "Gemini 4 Carbon全面开放并推出判断模型Decision 1，Claude上线表格与会议，Adobe推本地MCP，PayPal不换模型提升准确率。",
+  "tags": [
+    "大模型",
+    "Agent",
+    "MCP",
+    "Google",
+    "Anthropic",
+    "工程实践"
+  ],
+  "items": [
+    {
+      "title": "Gemini 4 Carbon 全面开放",
+      "summary": "Google 宣布 10 月底发布的前沿模型 Gemini 4 Carbon 正式全面可用：AI Ultra 订阅用户可在 Gemini 应用、搜索 AI Mode 和 Antigravity 中使用，开发者可通过付费 Gemini API 调用。11 月 30 日前优惠价为每百万 token 输入 2 美元、输出 10 美元，之后翻倍；Antigravity 还预览了让多个 Agent 分工并互查的 /swarm 功能。",
+      "insight": "在第三方 Terminal-Bench 等 Agent 类测试上 Carbon 表现靠前且 API 价格低于同级对手，做代码与自动化工具的团队值得纳入选型对比。",
+      "source": "VentureBeat",
+      "source_title": "Google Gemini 4 Carbon is now publicly available — and it undercuts Claude Fable 5.2 and Opus 5.5 on API price",
+      "url": "https://venturebeat.com/technology/google-gemini-4-carbon-is-now-publicly-available-and-it-undercuts-claude-fable-5-2-and-opus-5-5-on-api-price"
+    },
+    {
+      "title": "Google 推出判断模型 Decision 1",
+      "summary": "Google DeepMind 发布 Gemini Decisions API，其模型 Gemini Decision 1 可针对同一份材料一次回答最多 1000 个问题，支持是非题（返回概率）、多选题和按评分标准打分，输入可为文本、图片、音视频和 PDF。定价为每百万输入 token 0.1 美元、输出免费，16K token 以内端到端延迟约 150–250 毫秒。",
+      "insight": "这类“小判断”模型适合质检判定、工单路由、合规检查，以及在 Agent 调用工具前做一道把关，比用通用大模型逐条问便宜得多。",
+      "source": "VentureBeat",
+      "source_title": "Google's Gemini Decision 1 model scores up to 1,000 questions in one API call",
+      "url": "https://venturebeat.com/technology/googles-gemini-decision-1-model-scores-up-to-1-000-questions-in-one-api-call"
+    },
+    {
+      "title": "Claude 新增表格、白板与会议",
+      "summary": "Anthropic 推出 Claude Sheets（可生成和编辑带公式、多标签页的表格，支持协作并可导出 Excel）、Claude Whiteboards 协作白板，并将 Claude Dashboards 更名为 Claude Data，可连接 CRM 直接问数。同时上线会议 Agent Claude Meetings，先在 Google Meet 面向 Team 和 Enterprise 用户测试。",
+      "insight": "AI 正从对话框走进日常办公文件本身，生产报表、会议纪要和任务分派这类重复工作可以更直接地交给 Agent 处理。",
+      "source": "Engadget",
+      "source_title": "Anthropic takes on Google and Microsoft with Claude Sheets",
+      "url": "https://www.engadget.com/2312177/anthropic-takes-on-google-and-microsoft-with-claude-sheets/"
+    },
+    {
+      "title": "Adobe 推本地 MCP 开放创意工具",
+      "summary": "Adobe 在 MAX 大会上发布一批 AI 更新，Firefly Agent 变为常驻并主动获取上下文，Photoshop、Premiere、Lightroom 也加入重新打光、视频去物体等功能。Adobe 还将推出本地 MCP，让 ChatGPT、Claude、Gemini 等外部聊天机器人调用 Illustrator、Photoshop、After Effects 和 Premiere 的功能。",
+      "insight": "又一家大型桌面软件厂商选择用 MCP 对外开放能力，工业软件和上位机厂商也可参考这条路径让 Agent 操作自家工具。",
+      "source": "TechCrunch",
+      "source_title": "Adobe brings AI agents and new creative tools to Photoshop, Premiere, and Firefly",
+      "url": "https://techcrunch.com/2026/11/10/adobe-adds-more-ai-to-its-products-and-launches-an-mcp/"
+    },
+    {
+      "title": "企业可在 ChatGPT 开设官方 Agent",
+      "summary": "OpenAI 推出 Businesses in ChatGPT 测试计划，企业可通过 Business Hub 认领认证主页，更新商品、价格与库存，并查看被 ChatGPT 提及和点击的汇总数据。符合条件的美国电商和在线服务企业还能部署 Business Agent，用户可直接与其对话，但购买和分享个人信息需用户明确同意。",
+      "insight": "ChatGPT 正在变成新的流量入口，企业需要考虑把产品资料整理成 AI 能准确引用的结构化信息。",
+      "source": "The Next Web",
+      "source_title": "OpenAI lets businesses claim ChatGPT profiles and launch their own agents",
+      "url": "https://thenextweb.com/news/openai-businesses-in-chatgpt-business-agents"
+    },
+    {
+      "title": "PayPal 不换模型提升准确率",
+      "summary": "PayPal AI 产品负责人表示，其内部 AI 助手准确率从 43% 提升到 95%，底层大模型并未更换。关键是加了一层独立于模型的业务知识层，包括定义取数方式的“黄金查询”和描述排查思路的分析手册，并在关键步骤强制查询记忆、对 Agent 动作加入人工审批。",
+      "insight": "对工业场景同样适用：把工艺知识、排查流程沉淀成与模型解耦的知识层，换模型时可以直接复用，比反复微调更划算。",
+      "source": "VentureBeat",
+      "source_title": "PayPal says its AI assistant went from 43% to 95% accuracy without changing the model",
+      "url": "https://venturebeat.com/orchestration/paypal-says-its-ai-assistant-went-from-43-to-95-accuracy-without-changing-the-model"
+    }
+  ]
+}
