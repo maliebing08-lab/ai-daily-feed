@@ -1,6 +1,6 @@
 {
   "date": "2026-11-12",
-  "headline": "Gemini 4 Carbon 全面开放并降价",
+  "headline": "Gemini 4 Carbon 全面开放",
   "intro": "今天的主线是大模型从“能用”走向“好接入”：Google 把 Gemini 4 Carbon 全面开放并推出专做批量判断的 Decision 1，Anthropic 和 Adobe 则把 AI 能力塞进表格、会议和创意软件里。PayPal 的案例也提醒开发者，业务知识层往往比换模型更能提升准确率。",
   "excerpt": "Gemini 4 Carbon全面开放并推出判断模型Decision 1，Claude上线表格与会议，Adobe推本地MCP，PayPal不换模型提升准确率。",
   "tags": [
