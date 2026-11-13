@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-13",
+  "headline": "Gemini 4 Hydrogen 上线",
+  "intro": "今天的主线是把更强的模型能力铺到日常工作流里：Google 推出面向编码和 Agent 循环的 Gemini 4 Hydrogen，并在搜索和消费级眼镜上同步铺开。开源一侧，Inkling 2 Small 放出权重，Perplexity 的决策模型也补上了原文定位能力。",
+  "excerpt": "Google发布Gemini 4 Hydrogen并开放眼镜预购，Inkling 2 Small放出权重，Perplexity决策模型可抽取原文。",
+  "tags": [
+    "大模型",
+    "Agent",
+    "开源",
+    "Google",
+    "工程实践",
+    "安全"
+  ],
+  "items": [
+    {
+      "title": "Gemini 4 Hydrogen 面向日常 Agent",
+      "summary": "Google 发布 Gemini 4 Hydrogen，面向日常编码和 Agent 工作流，100 万上下文按每百万输入 1.50 美元、输出 7.50 美元计价。相对 Gemini 3.8 Flash，默认档约快 2.5 倍，Terminal-Bench 4.1 从 18.2% 升至 57%。Antigravity 的 Orchestrator 可在同一会话切换 Carbon 与 Hydrogen，平均少耗 24% 配额、快 19%。该模型已在 API、AI Studio、企业版和 Search 上线。",
+      "insight": "可以把 Carbon 留给架构判断和长程推理，把 Hydrogen 当作循环执行和验证的默认引擎，现场巡检这类高频 Agent 也适合按这个方式拆成本。",
+      "source": "Google",
+      "source_title": "Introducing Gemini 4 Hydrogen",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/"
+    },
+    {
+      "title": "Inkling 2 Small 开放权重",
+      "summary": "Thinking Machines Lab 宣布，Inkling 2 Small 的权重已可在 Hugging Face 下载，并按 Apache 2.0 许可开放。这是一个总参数 5940 亿、激活 170 亿的混合专家模型，支持文本和图像输入，但不支持音频。该模型已接入 Unsloth、SGLang、vLLM 等推理栈，也可用 Miles、SkyRL 做后训练，并可通过 NVIDIA、Fireworks、Together 等平台的 API 调用。",
+      "insight": "开源权重加上现成的推理和后训练栈，意味着团队可以先在自有数据上微调，再决定是否把同一模型接到云端 API。",
+      "source": "Thinking Machines Lab",
+      "source_title": "Introducing Inkling 2 Small",
+      "url": "https://thinkingmachines.ai/news/inkling-2-small/"
+    },
+    {
+      "title": "Decider v1.3 可抽取原文",
+      "summary": "Perplexity 发布开源决策模型 Decider v1.3 与更小的 Decider Flash v1.3，并按 Apache 2.0 提供可下载权重。新版本加入 locate 能力，能抽出匹配原文及其起止字符位置，适用于实体识别、个人信息检测和抽取式问答。官方称较大模型在 63 项查询分类任务上的平均准确率为 91.6%，比其线上分类器高 6.54 个百分点。两款模型已接入 OpenRouter 和 Decisions API，用来对选项打出概率，而不是生成长文。",
+      "insight": "把判断从生成模型里拆出来，更适合做路由、审核和抽取，但阈值仍需按自己的业务样本校准，不宜直接套用官方分数。",
+      "source": "Perplexity",
+      "source_title": "Perplexity Decider v1.3: Training, eval, and use cases",
+      "url": "https://www.perplexity.ai/hub/blog/perplexity-decider"
+    },
+    {
+      "title": "AgentCore 新运行时成默认",
+      "summary": "亚马逊云科技宣布，Amazon Bedrock AgentCore 的新建运行时默认改用下一代版本。新运行时从已初始化的智能体快照恢复会话，按工作量伸缩计算和内存，空闲可缩至零，会话仍运行在独立的 Firecracker 微虚拟机中。会话最高 8 个 vCPU 和 32 GB 内存，并支持最大 10 GB 容器镜像；在 2 GB 镜像上，启动时间的 P75 从 29.7 秒降到 2 秒以内，多轮智能体计费内存最多可减少 68%。现有运行时仍留在当前版本，需将 platformVersion 设为 V2 才会迁移。",
+      "insight": "对要在会话里编译代码、驱动浏览器或加载本地模型的工业 Agent 来说，启动时延和空闲缩容会直接反映到账单和响应速度上。",
+      "source": "AWS",
+      "source_title": "The next generation AgentCore runtime is now the default",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/new-agentcore-runtime-default/"
+    },
+    {
+      "title": "Gemini 智能眼镜开放预购",
+      "summary": "Google 宣布与 Warby Parker、Gentle Monster 以及三星合作的智能眼镜开始预购，将于 12 月 10 日在美国和韩国开售。Warby Parker 系列起价 395 美元，Gentle Monster 系列起价 449 美元；镜框约 41 克，官方称电池最长约 9 小时。眼镜可配合 Pixel、三星手机和 iPhone 使用，通过 Gemini 提供免提帮助，包括地图语音导航、覆盖 70 多种语言的实时翻译，以及面向视障用户的 Guided Vision。",
+      "insight": "这更像消费级入口，但对需要抬头作业的现场人员，免提导航和实时翻译仍值得关注；目前仅面向美国和韩国账号，且需年满 18 岁。",
+      "source": "Google",
+      "source_title": "See our intelligent eyewear lineup and pre-order your pair",
+      "url": "https://blog.google/innovation-and-ai/technology/xr-ar/google-intelligent-eyewear-collections-pre-order/"
+    },
+    {
+      "title": "IBM 发布 LLMON 试验模型",
+      "summary": "IBM 发布两款实验预览模型 granite-4.1-3b-LLMON-preview 与 granite-4.1-8b-LLMON-preview，让模型读写一种名为 LLMON 的标记语言。该格式用保留的特殊词把指令、数据和执行绑定分开标注，以降低藏在检索文档或工具返回里的间接提示注入风险。官方称其在 OPI 等基准上几乎不再执行注入指令，同时通用能力与 Granite 4.1 Instruct 相当。IBM 同时开源了转换工具，并提醒这仍是实验预览，尚不适合直接用于生产。",
+      "insight": "把指令和数据在结构上分开，比只靠提示词约束更靠谱，适合先在内部助手和检索问答里做小规模验证。",
+      "source": "IBM",
+      "source_title": "LLMON: An LLM-Native Markup Language, now in Granite 4.1 3B and 8B",
+      "url": "https://huggingface.co/blog/ibm-granite/llmon-an-llm-native-markup-language-now-in-granite"
+    }
+  ]
+}
