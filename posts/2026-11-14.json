@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-14",
+  "headline": "ChatGPT Wallet 上线代付",
+  "intro": "今天的主线是把 Agent 从“会查、会写”推进到“能办事”：OpenAI 推出需用户逐笔授权的 ChatGPT Wallet，Yandex 的 Alice AI 也能代打电话和填表。开发者一侧，llama.cpp 与 ggml 迎来首个稳定大版本，Google DeepMind 则公开了支撑天气预报模型的数据集。",
+  "excerpt": "OpenAI推出需逐笔授权的ChatGPT Wallet，DeepMind公开气象数据集，llama.cpp迎来1.0，Yandex上线办事Agent。",
+  "tags": [
+    "Agent",
+    "开源",
+    "安全",
+    "OpenAI",
+    "开发者工具",
+    "气象"
+  ],
+  "items": [
+    {
+      "title": "ChatGPT Wallet 支持代付",
+      "summary": "OpenAI 推出 ChatGPT Wallet，让 Agent（dots）在用户授权后代为完成购物支付。用户预先绑定卡片，每笔交易需核对商品、金额和所用卡片，并用 Face ID 或指纹等完成安全校验；系统使用支付令牌扣款，不会把真实卡号提供给商户或 Agent。该功能先向美国年满 18 岁、持有符合条件的美国发卡的 ChatGPT Pro 订阅用户开放，并与 American Express、Mastercard 和 Visa 合作，用户仍可享受卡片奖励和符合条件的争议保护。",
+      "insight": "Agent 开始进入真实交易环节，但目前仍是“人审一笔、付一笔”；商家需要检查防火墙和风控，避免误拦或误拒这类代付请求。",
+      "source": "OpenAI",
+      "source_title": "Introducing ChatGPT Wallet",
+      "url": "https://openai.com/index/introducing-chatgpt-wallet/"
+    },
+    {
+      "title": "DeepMind 公开气象训练数据",
+      "summary": "Google DeepMind 发布 SatWeave 与 PARDIG 两套数据集，并提供历史归档和实时数据流，供研究与开发者搭建气象、水文和气候应用。SatWeave 把多颗地球静止卫星影像拼接成全球拼图并每小时更新，含超过十年历史数据。PARDIG 是基于 AI 的全球降水数据集，时间分辨率 15 分钟、空间约 10 公里，平均延迟约 5 小时；官方称其对小到中雨的小时级探测能力比 NASA 的 IMERG-Final 高出 30% 以上。数据已放在 Google Cloud Storage。",
+      "insight": "对能源和防灾更有用的是云图与降水数据可直接取用；官方也提到可探索光伏出力和野火监测等下游应用。",
+      "source": "Google DeepMind",
+      "source_title": "Opening the datasets behind our AI weather models",
+      "url": "https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/"
+    },
+    {
+      "title": "llama.cpp 发布 1.0 稳定版",
+      "summary": "llama.cpp 与底层张量库 ggml 同步发布 v1.0.0。项目表示，此后公共 C API 或 ABI 不兼容的改动会提升主版本号，以便下游应用更稳定地依赖本地推理接口。发行渠道包括 Docker、Debian、Homebrew、conda-forge、MacPorts、Winget 和面向苹果平台的 XCFramework 等。官方称目前已支持 150 多种模型架构变体，以及主流的推测解码方法。",
+      "insight": "对要在工控机或边缘设备上部署本地模型的团队来说，有了可预期的版本约定，集成和维护会比跟 nightly 接口变化更省事。",
+      "source": "Hugging Face",
+      "source_title": "llama.cpp v1.0.0 : A stronger foundation for the local AI ecosystem",
+      "url": "https://huggingface.co/blog/ggml-org/llama-cpp-v1"
+    },
+    {
+      "title": "Yandex 推出 Do it! 办事 Agent",
+      "summary": "Yandex 为 Alice AI 上线名为 Do it! 的个人 Agent，可将用户请求拆成步骤并选用相应工具，例如代打电话预约、从邮件中汇总票据并保存到 Yandex Disk。打电话时聊天窗口会显示实时转写；浏览网页和填表则在远程服务器上的云端 Yandex Browser 中进行，登录个人账号时会把页面交还用户操作。它还支持插件和自定义 MCP 服务，重要操作需用户批准。该功能先向部分开通 Alice Plus 的活跃用户开放，再扩展到全部订阅用户。",
+      "insight": "这是又一个把通话、浏览器和业务插件串起来的办事 Agent；若要做类似的现场助手，关键操作同样应留在人工确认这一步。",
+      "source": "Yandex",
+      "source_title": "Alice AI Learns to Do it: New Agent Makes Calls and Handles Everyday Tasks",
+      "url": "https://yandex.com/company/news/2026-11-13"
+    },
+    {
+      "title": "Darktrace 上线安全 MCP 服务",
+      "summary": "网络安全公司 Darktrace 宣布，其 MCP Server 已在 Platform Portal 正式可用。兼容的 AI 助手可以查询安全数据、读取 Cyber AI Analyst 的调查结论，并在已授权产品范围内执行允许的处置动作，例如给告警添加评论、标签和状态，或发起一次调查；也提供只读接入。能力范围取决于客户已许可的产品，还可涉及影子 AI、云配置和邮件威胁等信息。",
+      "insight": "SOC 可以把现有安全平台接到自己的助手里做排查和初步分诊，但仍应按权限最小化配置可写操作。",
+      "source": "Darktrace",
+      "source_title": "Introducing Darktrace MCP: Connect your AI assistants to the Darktrace Behavioral Defense Platform",
+      "url": "https://www.darktrace.com/blog/introducing-darktrace-mcp-connect-your-ai-assistants-to-the-darktrace-behavioral-defense-platform"
+    },
+    {
+      "title": "AgentCore 支持 OAuth 2.0 发现",
+      "summary": "亚马逊云科技宣布，Amazon Bedrock AgentCore Identity 现已支持 OAuth 2.0 授权服务器的发现地址，可用于入站 JWT 鉴权和出站 OAuth 凭据提供方。此前只接受 OpenID Connect（OIDC）发现地址，因此未实现 OIDC、只提供 OAuth 2.0 元数据的授权服务器无法接入。该功能在所有已推出 AgentCore 的区域提供，不额外收费。",
+      "insight": "不少企业内部身份系统只实现了 OAuth 而没有完整 OIDC，这次改动能减少为接入 Agent 而改造登录系统的工作。",
+      "source": "AWS",
+      "source_title": "Amazon Bedrock AgentCore Identity now supports OAuth 2.0 discovery URLs",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/bedrock-agentcore-oauth2-discovery/"
+    },
+    {
+      "title": "Octen 推出毫秒级页面检索",
+      "summary": "创业公司 Octen 扩大面向 AI Agent 的搜索服务，其 Pulse 模型用生成式检索直接给出已有网页标识，官方给出的 lite 模式服务端中位处理时延约为 10 毫秒，standard 模式约为 20 毫秒。VentureBeat 指出，该时延不含网络传输和后续读页、作答的时间。个人标准套餐为每月 20 美元、不限次数网页搜索，并含 1000 次图像搜索；可下载的 Pulse 权重采用 CC BY-NC 4.0 许可，商业使用需另行授权。",
+      "insight": "高频查资料的 Agent 会受搜索成本和时延制约，但选型时要分清“找到页面”和“拿到可用证据”，并核对他家的商用条款。",
+      "source": "VentureBeat",
+      "source_title": "Ex-Alibaba engineer's new startup Octen pairs 10-millisecond AI search with a $20 unlimited plan",
+      "url": "https://venturebeat.com/orchestration/ex-alibaba-engineers-new-startup-octen-pairs-10-millisecond-ai-search-with-a-20-unlimited-plan"
+    }
+  ]
+}
