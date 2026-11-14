@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-15",
+  "headline": "Cursor 公布安全事件调查",
+  "intro": "周末的主线是安全和工程实践：Cursor 公布了此前扩展市场被植入后门的调查结果，Cloudflare 则开源了面向 Agent 的轻量浏览器 Kitesurf，并提醒 AI 自动化渗透框架正在快速扩散。消费与出行一侧，Gemini 可连接 Google Wallet 做只读理财分析，Tesla 也向部分用户开放了无人驾驶 Cybercab 预购。",
+  "excerpt": "Cursor公布扩展后门调查，Cloudflare开源Agent浏览器并警示AI渗透框架扩散，Gemini可连接Wallet，Cybercab开放预购。",
+  "tags": [
+    "安全",
+    "Agent",
+    "开源",
+    "开发者工具",
+    "Google",
+    "自动驾驶"
+  ],
+  "items": [
+    {
+      "title": "Cursor 公布扩展后门调查",
+      "summary": "Cursor 公布了 10 月 29 日安全事件的调查结果。攻击者利用该公司签发给 Fireworks 的密钥，从只读存储桶复制未开启 Privacy Mode 的历史编码 Agent 记录；其中不到 0.01% 的客户有未脱敏 API 凭据被暴露。攻击者随后把未经授权的 Claude Code 扩展写入扩展市场缓存，版本为 2.1.312 和 2.1.313，约 11 小时内最多可能有 5000 名用户拿到被篡改构建。官方称最后一次攻击活动出现在 11 月 1 日且已被阻断，并已将推理迁离 Fireworks。",
+      "insight": "若曾在暴露窗口安装上述版本，仅卸载扩展可能不够，应按官方安全通告检查；日常开发也要避免把密钥写进未开 Privacy Mode 的会话。",
+      "source": "Cursor",
+      "source_title": "An update on our recent security incident",
+      "url": "https://cursor.com/blog/security-incident-update"
+    },
+    {
+      "title": "Cloudflare 开源 Agent 浏览器",
+      "summary": "Cloudflare 按 Apache 2.0 许可开源了面向 AI Agent 的无状态浏览器 Kitesurf。它运行在 Cloudflare Workers 上，可解析 HTML、应用 CSS、执行页面 JavaScript 并截图，无需完整的 Chromium 容器，同时支持 Chrome DevTools Protocol，因而能接入 Puppeteer 等客户端。开发者可在本地运行，或部署到自己的账号；因使用 Dynamic Workers 做页面隔离，云端部署需要 Workers Paid 套餐。",
+      "insight": "要给 Agent 一个可伸缩、比完整浏览器更省资源的页面执行环境时，可以把开源引擎放在自己的账号里跑，而不必绑定托管 API。",
+      "source": "Cloudflare",
+      "source_title": "Kitesurf is now open source",
+      "url": "https://blog.cloudflare.com/kitesurf-open-source/"
+    },
+    {
+      "title": "AI 渗透框架正在快速扩散",
+      "summary": "Cloudflare 的 Cloudforce One 团队指出，开源的 Agent 渗透测试系统 ARTEX 在 10 月 8 日被作者下架后，生态反而迅速碎片化：带有原仓库血缘的独特 fork 已有数百个，相关仓库超过 1.2 万个，此外还出现了数百个类似的编排框架。官方称，仅最近三天就有超过 50 个框架家族尝试扫描其全球客户，运行这类工具的 IP 已达数千个；自 10 月 1 日以来，这类渗透与利用工具的每日请求量增长了 30 倍，部分更复杂的攻击已开始把失窃的客户凭据串起来做横向移动。",
+      "insight": "面向公网的控制台和接口要按身份门禁和异常检测来收紧暴露面，并假设攻击者会用 Agent 并行探测，而不是只防单个扫描器。",
+      "source": "Cloudflare",
+      "source_title": "Adapting to AI penetration testing orchestrators: The Modern Security Model",
+      "url": "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/"
+    },
+    {
+      "title": "Gemini 可连接 Google Wallet",
+      "summary": "Google 宣布，美国的 Gemini 应用用户可以把 Google Wallet 加入 Personal Intelligence 的已连接应用，以便根据消费习惯获得理财相关回答，也可通过 Plaid 把银行和信用卡账户连到 Wallet 以获得更细的分析。用户可在对话中用 @Google Wallet 查看支出、找出仍在扣款的订阅并标记涨价，或根据往年花费做节日预算。官方强调连接是只读的，Gemini 不能划转、管理或投资资金，用户可随时在设置中开关。该功能正在网页端以及 Android 和 iOS 上推出。",
+      "insight": "助手开始接触真实账单数据，但目前仍停在分析而非代付；若要做类似的企业助手，同样应把查询和转账权限分开，并默认只读。",
+      "source": "Google",
+      "source_title": "Connect Google Wallet to Gemini for personal finance insights",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/google-wallet-gemini-app/"
+    },
+    {
+      "title": "Tesla 开放 Cybercab 个人预购",
+      "summary": "Tesla 表示，部分选定客户可预购供个人使用的无人驾驶 Cybercab。TechCrunch 根据订购页报道，买家须在得克萨斯州少数城市接受交付，车辆只在特定地理围栏内运行，预计 2026 年 12 月交付。车辆标价 29990 美元，另需每月付 299 美元才能使用。Elon Musk 称该车会随监管批准推向全美，并认为月费偏高，应接近其他车型 Full Self-Driving 加联网约 115 美元的水平。Ashok Elluswamy 称，它将在与 Robotaxi 相同范围内无监督运行，服务车主出行。",
+      "insight": "这更像在已开放 Robotaxi 的区域内，把无人驾驶能力卖给个人车主；落地仍受交付城市、围栏范围和月费约束。",
+      "source": "TechCrunch",
+      "source_title": "Tesla opens Cybercab pre-orders ‘for personal use,’ with geo restrictions and a $299 monthly fee",
+      "url": "https://techcrunch.com/2026/11/14/tesla-opens-cybercab-pre-orders-for-personal-use-with-geo-restrictions-and-a-299-monthly-fee/"
+    }
+  ]
+}
