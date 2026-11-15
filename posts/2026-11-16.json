@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-16",
+  "headline": "OpenAI 发布格点标准模型进展",
+  "intro": "周日可写的消费级发布不多，重点落在科学研究和工程实践。OpenAI 开设科学博客，并由物理学家介绍与 GPT-6 Astra 合作提出的格点标准模型候选定义；Agnes AI 则按 Apache 2.0 放出约 1878 亿参数的多模态权重。与此同时，有文章提醒 MCP 服务被攻陷后可能连带误用其他工具，Doosan Enerbility 也向电厂同行分享了预测诊断等运维能力。",
+  "excerpt": "OpenAI开设科学博客并介绍格点标准模型进展，Agnes放出开源多模态权重，另有文章警示MCP连带风险，斗山分享电厂AI运维。",
+  "tags": [
+    "OpenAI",
+    "开源",
+    "安全",
+    "能源",
+    "大模型",
+    "开发者工具"
+  ],
+  "items": [
+    {
+      "title": "OpenAI 开科学博客谈格点理论",
+      "summary": "OpenAI 于 11 月 15 日开设科学博客，供科研人员分享用 AI 做科学发现的方法和结果。首篇客座文章由加州大学圣塔芭芭拉分校粒子理论学者 Nathaniel Craig 撰写。他介绍了与 GPT-6 Astra 合作、在 10 月预印本中提出的标准模型格点候选定义：他已有思路，但尚未在所需情形下完成证明，Astra 帮助把思路落实为构造，并主导了详细证明。文中也指出，连续时空中相互作用理论如何定义仍是未决问题。",
+      "insight": "模型可以协助推进高度形式化的证明，但这类结果仍需领域专家审读和后续检验，不宜直接当成已经完成的定义。",
+      "source": "OpenAI",
+      "source_title": "A step toward defining the Standard Model on a lattice",
+      "url": "https://openai.com/index/step-toward-defining-the-standard-model/"
+    },
+    {
+      "title": "Agnes 放出多模态开源权重",
+      "summary": "Agnes AI 在 Hugging Face 按 Apache 2.0 许可发布了 Agnes 2.5 Pro Theta 的开放权重。模型卡显示，这是一个总参数约 1878 亿的多模态混合专家模型，可处理文本、图像和视频输入并输出文本，配置的上下文上限为 262,144 个 token。官方评测快照给出 GPQA Diamond 92.9、SWE-bench Pro 64.1，但写明分数来自发布方图表，未附可复现评测包。未量化权重约 349.7 GiB，模型卡建议以 4 张 H200 级 GPU 作为容量起点。",
+      "insight": "许可较宽松，但体量很大，加载还需启用 trust_remote_code；若要本地部署，应先检查自定义代码，并用自己的任务复核官方分数。",
+      "source": "Hugging Face",
+      "source_title": "Agnes 2.5 Pro Theta",
+      "url": "https://huggingface.co/Agnes-AI/Agnes-2.5-Pro-Theta"
+    },
+    {
+      "title": "文章提醒 MCP 联动风险",
+      "summary": "VentureBeat 11 月 15 日的文章指出，MCP 起初没有统一鉴权要求，此后多次修订才逐步靠向 OAuth。文章援引 Palo Alto Networks Unit 42 的测试称，把 5 个 MCP 服务接到同一个 Agent 时，攻击成功率为 78.3%。机制是信任传导：一旦 Agent 把某个服务的输出当作可信上下文，被攻陷的服务就可能把指令带进后续工具调用，包括从未被攻破的服务。文章还提到，微软即便在内网也发放短时、最小权限令牌，并建议用网关和工具注册表防止依赖被悄悄改掉。",
+      "insight": "给 Agent 接 MCP 时，不要默认“内网就安全”；应把身份、权限范围和审计放到统一入口，并为每个服务发放短时、窄范围的令牌。",
+      "source": "VentureBeat",
+      "source_title": "One compromised MCP server can trick an AI agent into misusing tools you already trust",
+      "url": "https://venturebeat.com/orchestration/one-compromised-mcp-server-can-trick-an-ai-agent-into-misusing-tools-you-already-trust"
+    },
+    {
+      "title": "斗山分享电厂 AI 运维技术",
+      "summary": "据 Seoul Economic Daily 11 月 15 日报道，Doosan Enerbility 宣布已于 11 月 12 日至 13 日在昌原总部举办发电运行技术交流会，约 100 名发电企业和学界人士参加。会上介绍了基于 AI 的远程监测与诊断、微裂纹检测和电力数据建设案例，并展示了自研预测诊断方案 PreVision、AI 无损检测，以及利用设备技术资料辅助运维的技术。电力服务事业部长 Son Seung-woo 表示，把制造和维修经验与运行数据、AI 技术结合起来已越来越重要。",
+      "insight": "对电厂和同类流程工业来说，预测诊断和无损检测更贴近现场运维；不过这篇报道主要是交流会上的能力展示，并未给出新的可公开指标。",
+      "source": "Seoul Economic Daily",
+      "source_title": "Doosan Enerbility Shares AI-Based Plant Operation Technology With Power Firms",
+      "url": "https://en.sedaily.com/business/2026/11/15/doosan-enerbility-shares-ai-based-plant-operation"
+    },
+    {
+      "title": "微软在科威特开设创新中心",
+      "summary": "微软 11 月 15 日宣布，在科威特开设 Microsoft Digital Innovation Center（MDIC），与科威特政府合作，服务该国 New Kuwait Vision 2035 下的数字化与 AI 目标。官方称，该中心面向政府机构、客户、初创公司、开发者和学生，提供体验微软 AI、云、网络安全和数字化能力、讨论用例、培养技能并从想法走向落地的协作环境，并将举办工作坊、演示、开放日、开发者活动和面向学生的项目。",
+      "insight": "这更像区域落地和人才培养的据点，而不是新的模型或产品发布；对本地团队的意义取决于后续具体项目，目前官方尚未给出可量化的能力指标。",
+      "source": "Microsoft",
+      "source_title": "Microsoft opens its Digital Innovation Center (MDIC) in Kuwait to accelerate AI innovation and advance Vision 2035",
+      "url": "https://news.microsoft.com/source/emea/2026/11/microsoft-opens-its-digital-innovation-center-mdic-in-kuwait-to-accelerate-ai-innovation-and-advance-vision-2035/"
+    }
+  ]
+}
