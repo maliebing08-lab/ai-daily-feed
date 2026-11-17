@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-18",
+  "headline": "OpenAI 发布 GPT-6.2 模型",
+  "intro": "今天的重点落在新模型发布和工业现场落地。OpenAI 推出 GPT-6.2 Astra 与 Sol，微软在 Ignite 发布一批强调性价比的自研模型，谷歌则把 Gemini Tasks 免费开放给更多地区。与此同时，横河电机把 AI 控制与软测量写入 CENTUM 新版本，Rockwell 也为产线侧增加了带 GPU 的工控机；Anthropic 和 AWS 则分别更新了应用计费与数据准备工具。",
+  "excerpt": "OpenAI发布GPT-6.2，微软推出自研模型，Gemini Tasks免费开放，横河与Rockwell更新工业AI，开发者计费和数据准备工具同步上线。",
+  "tags": [
+    "OpenAI",
+    "大模型",
+    "工业AI",
+    "开发者工具",
+    "Google",
+    "Microsoft"
+  ],
+  "items": [
+    {
+      "title": "OpenAI 发布 GPT-6.2",
+      "summary": "OpenAI 11 月 17 日发布 GPT-6.2 Astra 与 Sol。Astra 面向高难度任务，在 Agents’ Last Exam 上比 GPT-6 Astra 高 5.2 分，成本不到三分之一；Sol 面向日常工作，API 价格仍与 GPT-6.1 Sol 相同。Astra 的 API 输入和输出价低 20%，缓存输入优惠 60%，每百万 token 输入 8 美元、缓存 0.40 美元、输出 40 美元。两者已在 ChatGPT Work、Codex 和 API 提供，并支持 Ultrafast。",
+      "insight": "对要跑长流程又在意用量的团队，Astra 更适合难任务，Sol 适合作为日常默认模型；接入前应核对模型名、缓存折扣，以及套餐中的 Ultrafast 资格。",
+      "source": "OpenAI",
+      "source_title": "Introducing GPT-6.2 Astra and Sol",
+      "url": "https://openai.com/index/introducing-gpt-6-2-astra-sol/"
+    },
+    {
+      "title": "微软 Ignite 推出自研模型",
+      "summary": "微软 11 月 17 日在 Ignite 发布七款新模型。MAI Code 2 在四项编程评测上达到 GPT-6.1 Sol 约 98% 水平、约 40% 价格，已可在 GitHub Copilot 使用；MAI Cyber 2 Flash 在 CyberGymE2E 上称与 GPT-6 Astra 质量相当，成本不到 2%。同期发布 MAI Image 2.7、Realtime 1、Transcribe 2、Decision 1.1，以及可在 Azure 中定制运行的 Licensed Weights。",
+      "insight": "这类专用模型适合把高频编程、安全监测等任务从高价通用模型里拆出来；若要把权重放到自有环境，需要走 Azure 和 Licensed Weights 路径。",
+      "source": "Microsoft",
+      "source_title": "Seven new world class models at scalable price-performance",
+      "url": "https://microsoft.ai/news/microsoft-ignite-2026/"
+    },
+    {
+      "title": "Gemini Tasks 向更多地区免费开放",
+      "summary": "Google 11 月 17 日宣布，Gemini 应用中的 Tasks 开始向美国、日本、韩国、加拿大、澳大利亚和印度的数亿用户免费推出，并使用 Gemini 4 Hydrogen。用户把首页开关从 Chat 拨到 Task 即可交办任务。美国还先开放代为致电商家、用 Google Pay 购物，以及通过 Google Password Manager 登录等能力，也可转发邮件到 gemini@google.com。官方称任务在账户专用的硬件隔离虚拟机中执行，购买等关键步骤会先确认，部分美国州暂不支持打电话。",
+      "insight": "助手开始代打电话和付款，权限边界比聊天更重要；上线类似能力时应默认关键动作需确认，并允许随时断开应用授权。",
+      "source": "Google",
+      "source_title": "How to use Tasks in Gemini for personal assistance",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/"
+    },
+    {
+      "title": "横河 CENTUM 将标配 AI 控制",
+      "summary": "横河电机 11 月 17 日宣布，将于 11 月 19 日发布 CENTUM R7.02，把 AI Control 和 AI Estimation 作为标准功能，产品名也由 CENTUM VP 改为 CENTUM。AI Control 可把自主控制 AI 生成的模型放到 CENTUM 的高可靠环境中运行，操作人员仍用原有监控画面。AI Estimation 能根据温度、流量、压力等数据估计组分浓度等难以连续直测的量。官方称，该自主控制 AI 曾在 2022 年连续 35 天控制一座化工厂，此后已稳定运行四年以上。",
+      "insight": "对流程工业来说，把 AI 控制放进现有 DCS，比单独外挂系统更容易进入日常操作；投用前仍应在仿真中验证，并保留安全联锁。",
+      "source": "Yokogawa",
+      "source_title": "Yokogawa to Release CENTUM R7.02 with AI Control and AI Estimation",
+      "url": "https://www.yokogawa.com/news/press-releases/2026/2026-11-17/"
+    },
+    {
+      "title": "Anthropic 上线关联计费",
+      "summary": "Anthropic 11 月 17 日在 Claude Platform 以测试版推出 Linked billing。客户把本组织关联到第三方应用后，Anthropic 可直接向该组织收取 API 用量，不必再把 API 密钥交给应用；开发者可在每次请求上选择由客户还是由平台付费。客户能设置月度支出上限，也可随时取消关联。该功能只适用于直接向 Anthropic 支付 API 费用的组织，通过云市场结算或只有订阅的组织不能使用。请求运行在平台组织内，客户自己的零数据保留、HIPAA 等安排不会自动生效。",
+      "insight": "适合不想经手客户密钥的应用接入；但若客户有合规或数据留存要求，需要先确认这些保护不会随关联计费一起带过来。",
+      "source": "Anthropic",
+      "source_title": "Linked billing on the Claude Platform",
+      "url": "https://claude.com/resources/articles/linked-billing-on-claude-platform"
+    },
+    {
+      "title": "Rockwell 推出带 GPU 的工控机",
+      "summary": "Rockwell Automation 11 月 17 日发布两款带 NVIDIA GPU 的工业计算机，用于在靠近产线处运行更重的 AI 负载：EdgeAI 4000 配备 RTX PRO 4000 Blackwell，EdgeAI 2000 配备 RTX 2000E Ada Generation。官方称可用于监控层的机器视觉、模型预测控制、预测维护和小语言模型建议，并可与 FactoryTalk Optix 集成、在云连接有限时本地运行。这是对现有能力的补充，并不取代不必依赖独立 GPU 的方案。",
+      "insight": "适合已经要在现场做视觉或预测维护、又希望把小模型放在工控机上的产线；选型时仍应按负载和环境决定是否需要 GPU。",
+      "source": "Rockwell Automation",
+      "source_title": "Rockwell Automation Expands Edge Computing Options for Industrial AI with NVIDIA GPUs",
+      "url": "https://www.rockwellautomation.com/en-us/company/news/press-releases/Rockwell-Automation-Expands-Edge-Computing-Options-for-Industrial-AI-with-NVIDIA-GPUs.html"
+    },
+    {
+      "title": "SageMaker 增加数据准备能力",
+      "summary": "AWS 11 月 17 日宣布，Amazon SageMaker AI 新增数据准备能力，已在美国东部（弗吉尼亚北部）和美国西部（俄勒冈）正式可用。开发者可用 Python SDK 或 AI-ML agent skill 生成合成样本、自动标注、评估数据质量并做转换，低置信度样本可送到 SageMaker Studio 人工复核。自动标注支持分类、命名实体识别、抽取式问答等任务；对答案集合固定的任务，会由多个模型共同标注并给出置信度。数据仍保存在用户指定区域的自有 S3 存储桶中。",
+      "insight": "对要做微调或评测、却缺少干净任务数据的团队更实用；先写清任务说明并抽查生成或标注结果，再把它接到训练流程里。",
+      "source": "AWS",
+      "source_title": "Announcing AI data preparation capabilities in Amazon SageMaker: Build high-quality datasets for model development workflows",
+      "url": "https://aws.amazon.com/blogs/machine-learning/announcing-ai-data-preparation-capabilities-in-amazon-sagemaker-build-high-quality-datasets-for-model-development-workflows/"
+    }
+  ]
+}
