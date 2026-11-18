@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-19",
+  "headline": "谷歌发布 Gemini 4 Neon",
+  "intro": "今天的重点是新模型和开发者工具同步落地。谷歌发布面向复杂工程与知识工作的 Gemini 4 Neon，OpenAI 则公布了用模型改进自研芯片和 AMD 硬件的进展，并与 Synopsys 合作。与此同时，Google Labs 推出可持续优化已上线产品的 Stitch Loop，AWS 让 Agent 记忆和 GPU 推理更容易接入现有服务；开源语音模型和本地 AI 小型主机也同步出现。",
+  "excerpt": "谷歌发布 Gemini 4 Neon，OpenAI 公布芯片设计进展，Stitch Loop 与 AWS 工具上线，开源语音模型和本地 AI 主机同步推出。",
+  "tags": [
+    "Google",
+    "大模型",
+    "开发者工具",
+    "开源",
+    "OpenAI",
+    "AWS"
+  ],
+  "items": [
+    {
+      "title": "谷歌发布 Gemini 4 Neon",
+      "summary": "谷歌 11 月 18 日发布 Gemini 4 Neon。每百万 token 输入 3 美元、缓存输入 0.15 美元、输出 15 美元，上下文为 100 万 token。它在 Artificial Analysis Intelligence Index 的 xhigh 档得到 61 分、总排名第 3，Vals Index 排名第 2。已在 Gemini API、Gemini for business 以及 Google AI Pro 和 Ultra 的 Antigravity 与 Gemini 应用中推出。",
+      "insight": "Neon 被放在 Carbon 和 Hydrogen 之间，更适合高频、有一定难度的生产任务；接入前应对照工作负载选择思考档，并核对套餐和 API 是否已经放量。",
+      "source": "Google",
+      "source_title": "Introducing Gemini 4 Neon",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/"
+    },
+    {
+      "title": "OpenAI 模型助力芯片设计",
+      "summary": "OpenAI 11 月 18 日介绍了用前沿模型改进芯片设计的进展。官方称，模型建议的改动使自研推理芯片 Jalapeño 的向量单元标准单元面积约降 13%、矩阵单元约降 10%，并已在硅片上得到验证。与 AMD 合作后，旗舰 GPU IP 相对已充分优化的基准最多提升约 14%，部分改动已送制造。OpenAI 还宣布与 Synopsys 合作训练 GPT-Synopsys，以便模型使用现有的 EDA 工具。",
+      "insight": "这更接近把模型嵌进现有芯片设计流程，而不是另起一套工具；真正可用的前提仍是仿真、时序和物理综合等既有验证不能少。",
+      "source": "OpenAI",
+      "source_title": "Advancing chip design with OpenAI models",
+      "url": "https://openai.com/index/advancing-chip-design-with-our-models/"
+    },
+    {
+      "title": "Google Labs 推出 Stitch Loop",
+      "summary": "Google Labs 11 月 18 日推出实验项目 Stitch Loop。这是一个可长期运行的产品 Agent，连接代码库和线上指标，持续寻找改进点，并在目标达成后继续监测。官方称可接入 GitHub 及 180 多种集成、自定义 MCP 或本地 CLI。默认提供安全、延迟和可访问性循环；选定方案后会在隔离沙箱中写代码并提交 GitHub 拉取请求，合并前须人工审批。全球候补名单即日开放，Google AI Ultra 用户可优先使用。",
+      "insight": "适合人手有限、但仍要持续修漏洞和看指标的团队；它目前还是实验和候补制，上线前应先明确审批权和可接入的数据范围。",
+      "source": "Google",
+      "source_title": "Introducing Stitch Loop: A new way to build and evolve products",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/"
+    },
+    {
+      "title": "Lambda 事件函数支持 GPU",
+      "summary": "AWS 11 月 18 日宣布，Lambda Managed Instances 上的 Event Functions 已可使用 EC2 G 系列 GPU 实例，正式可用，首发支持 G4dn、G5、G6、G6f、Gr6、Gr6f 和 G6e。函数以 OCI 容器镜像部署，由 Lambda 负责供给、扩缩容和事件集成。官方称更适合推理和自研模型，而不是已在 Bedrock 提供的大模型。计费为 EC2 实例费用，外加 GPU 实例 9.75% 管理费，以及每百万次请求 0.20 美元。",
+      "insight": "适合被对象上传、队列等事件触发的视觉、语音或中小模型推理；上线前仍应观察 GPU 利用率和冷启动，避免为低频任务独占加速卡。",
+      "source": "AWS",
+      "source_title": "AWS Lambda now supports GPU instances for Event Functions on Lambda Managed Instances",
+      "url": "https://aws.amazon.com/blogs/aws/aws-lambda-now-supports-gpu-instances-for-event-functions-on-lambda-managed-instances/"
+    },
+    {
+      "title": "OpenSearch Memory 正式可用",
+      "summary": "AWS 11 月 18 日宣布 Amazon OpenSearch Memory 正式可用。这是 OpenSearch Service 中的无服务器能力，可为 Agent 保存可检索的交互事件并提取结构化记忆，从而在会话之间取回先前决策和偏好，而不必回放完整对话。原始事件按原文保存，数秒内可检索；支持关键词、语义和混合检索，也可用 IAM 及行为者、会话范围控制访问，并设置过期时间。目前已在弗吉尼亚北部、俄亥俄、俄勒冈、法兰克福和东京区域提供。",
+      "insight": "适合需要跨会话记住偏好和既有结论的 Agent；使用时应划清记忆范围和保留期限，避免把过期或越权的上下文再次注入模型。",
+      "source": "AWS",
+      "source_title": "Amazon OpenSearch Memory is now generally available",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-opensearch-memory-generally-available/"
+    },
+    {
+      "title": "开源 5 亿参数语音识别模型",
+      "summary": "Hugging Face 博客 11 月 18 日介绍，Reson8 按 Apache 2.0 开源了约 5 亿参数的语音识别模型 Rumble-2-Flash，覆盖 40 多种语言，可直接在 Transformers 和 vLLM 中运行。官方称批次较满时吞吐量可超过 7,000 RTFx，约半秒处理一小时音频。多语言赛道平均错误率 6.96%；在 AppTek 302 小时呼叫中心评测中词错误率 7.86%，与 300 亿参数的 Nemotron 3.5 Transcribe（7.78%）接近。",
+      "insight": "体积小、许可宽松，适合呼叫录音或现场语音转写的本地部署；上线前仍应用自己的口音和噪声数据复核官方分数。",
+      "source": "Hugging Face",
+      "source_title": "Rumble-2-Flash: an open 0.5B speech model for 40+ languages",
+      "url": "https://huggingface.co/blog/rumble-2-flash"
+    },
+    {
+      "title": "首批 RTX Spark 迷你主机上市",
+      "summary": "据 The Verge 11 月 18 日报道，Asus、Dell 和 MSI 推出首批采用 Nvidia RTX Spark N1X 的迷你台式机；Acer、Gigabyte、HP 将稍后跟进。机器配备 6144 核 Blackwell RTX GPU、20 核 Grace CPU，内存最高 128GB。Asus ProArt GR1X 起售价 4499 美元，配置为 64GB 内存和 1TB 存储。Nvidia 称其可用于本地模型和常驻 Agent，AI 性能最高可达 1 petaflop，支持原生 CUDA。",
+      "insight": "适合需要在本地跑模型和常驻 Agent、又不想依赖云端 GPU 的开发或试验环境；选型时要同时看内存容量和价格，它并不取代产线侧的工控机。",
+      "source": "The Verge",
+      "source_title": "The first Nvidia RTX Spark mini PCs launch today from Asus, Dell, and MSI",
+      "url": "https://www.theverge.com/tech/1036880/nvidia-rtx-spark-ai-mini-pc-desktops"
+    }
+  ]
+}
