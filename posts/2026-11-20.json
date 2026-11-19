@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-20",
+  "headline": "谷歌推出工具按需检索功能",
+  "intro": "今天的重点集中在开发者工具和推理、运营落地。谷歌在 Gemini API 推出按需加载工具参数的 Tool Retrieval，把 Genie 4 开放给开发者，并让 Gemini 能在 Mac 上代为操作应用。微软展示了用 USB4 把多台电脑连成小集群、在本地跑更大模型的预览。AWS 则让运营流程 Agent、推理端点监测、提示词热更新和语音克隆同期上线。",
+  "excerpt": "谷歌推出工具按需检索并开放 Genie 4，Gemini 可在 Mac 代为操作；微软预览 USB4 多机推理，AWS 上线运营 Agent 与语音克隆。",
+  "tags": [
+    "Google",
+    "开发者工具",
+    "Agent",
+    "AWS",
+    "Microsoft",
+    "大模型"
+  ],
+  "items": [
+    {
+      "title": "Gemini API 推出工具按需检索",
+      "summary": "谷歌 11 月 19 日宣布，Gemini API 的 Interactions API 预览推出 Tool Retrieval。当 Agent 接入几十甚至上百个工具时，不必每次请求都把全部参数 schema 送进上下文；模型仍能看到每个暂缓加载工具的名称和描述，需要时再在同一次请求中加载完整 schema 并调用。该能力无需自建索引，也适用于远程 MCP 服务器，可与前缀缓存配合。它适用于 Gemini 3.6 及之后的模型，包括全部 Gemini 4 模型，且不另收费。",
+      "insight": "适合工具库已经很长的 Agent；接入时可把常用工具保持预加载，把长尾工具设为按需加载，并用自己的流量核对是否真能省 token。",
+      "source": "Google",
+      "source_title": "Introducing Tool Retrieval in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/"
+    },
+    {
+      "title": "Connect 上线运营 Agent",
+      "summary": "AWS 11 月 19 日宣布，Amazon Connect 的 Resolutions 正式可用。它面向退款、交易争议、欺诈调查和保险理赔等高频操作，把 AI Agent 的推理与确定性流程结合起来，按业务策略处理请求。管理人员可用自然语言描述流程或上传标准作业程序，由系统在数分钟内生成 Work plan，并追问例外、决策规则和审批门槛。随后为每条请求打开 Case，由预置、配置或自有 Agent 收集信息并跨应用执行，人工专家处理审批和例外。官方称每项操作和决策都会被记录，便于审计并查看进度与服务水平风险。",
+      "insight": "适合已经有明确 SOP、但请求量大且要跨多个系统处理的运营流程；上线前应把审批门槛和例外规则写清楚，并核对审计记录是否完整。",
+      "source": "AWS",
+      "source_title": "Amazon Connect launches Resolutions, an agentic solution for high-volume operational work",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-connect-resolutions/"
+    },
+    {
+      "title": "Gemini 可在 Mac 上代为操作",
+      "summary": "谷歌 11 月 19 日宣布，Gemini 应用在 Mac 上推出 computer use。用户可用自然语言描述跨本地文件、桌面应用和网页的多步任务，由 Gemini 负责点击、输入和填写表单。它在隔离的后台窗口中运行，聊天里可看实时预览，主屏幕和光标不受占用；用户可选择允许访问的应用，随时暂停，并在关键操作前确认。该功能先以英语在美国推出，需 Apple Silicon 且系统为 macOS Sequoia 15.0 及以上，面向 Google AI Plus、Pro 和 Ultra 用户。",
+      "insight": "适合把跨应用的重复操作交给助手，但目前范围有限；使用时应收紧应用授权，并对写入、提交类动作保持人工确认。",
+      "source": "Google",
+      "source_title": "Let Gemini tackle repetitive chores on your Mac",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/"
+    },
+    {
+      "title": "Windows 预览 USB4 跑大模型",
+      "summary": "微软 11 月 19 日宣布，Windows 上的 RDMA over USB4 进入开发者预览。用 USB4 线连接两台及以上支持 USB4 的 Windows 电脑，即可把同一个模型拆到多台机器上，合用内存和 GPU。应用走 Windows 已有的 NetworkDirect API，不必另购 RDMA 网卡或交换机。官方还开源了 USB4 的 NetworkDirect 提供程序，以及基于 llama.cpp 的试验环境。该预览即将面向 Windows Insider 的 Experimental 频道提供。",
+      "insight": "适合想在本地跑单机装不下的开源模型、又不想立刻上云的开发或试验环境；目前仍是预览，需专用测试机，并按官方要求用直连全网状布线。",
+      "source": "Microsoft",
+      "source_title": "Introducing RDMA over USB4 on Windows: run larger local AI models across PCs",
+      "url": "https://techcommunity.microsoft.com/blog/microsoftusbblog/introducing-rdma-over-usb4%C2%AE-on-windows-run-larger-local-ai-models-across-pcs/4574602"
+    },
+    {
+      "title": "Genie 4 登陆 Gemini API",
+      "summary": "谷歌 11 月 19 日宣布，继前一天面向用户发布后，Genie 4 已通过 Interactions API 在 Gemini API 和 Google AI Studio 向开发者开放。开发者可用文本提示、参考图或两者生成连续的 720p、24fps 世界，并带同步原生音频。可用实时键盘和即时文本提示改变天气、光线、物体或事件，由 Gemini 推理保持世界状态一致。官方提到可用于交互体验原型、空间概念可视化和机器人或 Agent 训练，输出带有不可感知的 SynthID 水印。",
+      "insight": "对要做机器人仿真或交互原型的团队更直接；接入前应查看定价和文档，并意识到生成内容带有水印。",
+      "source": "Google",
+      "source_title": "Genie 4 is now available on the Gemini API.",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/genie-4-in-gemini-api/"
+    },
+    {
+      "title": "SageMaker 监测推理端点",
+      "summary": "AWS 11 月 19 日宣布，Amazon SageMaker AI 默认监测推理端点的响应时间和 GPU 使用情况，并在响应变慢、GPU 闲置或配置落后时通知客户。监测不读取客户请求和响应。发现包括延迟上升、GPU 利用率不足，以及服务容器偏旧、缺少推测解码或 kernel 调优等配置缺口。若变化持续一周或发现配置缺口，每个端点会在控制台收到一条 AWS Health 通知，并可在不改动生产环境的前提下运行推理配置建议。该能力已在弗吉尼亚北部、俄亥俄、俄勒冈、爱尔兰、法兰克福、新加坡和东京提供，监测不另收费。",
+      "insight": "适合已经在 SageMaker 上跑推理、却难以及时发现延迟和空转的团队；收到建议后仍应先看对比结果，再决定是否改生产配置。",
+      "source": "AWS",
+      "source_title": "Amazon SageMaker AI now detects rising response times, idle GPUs, and missed optimizations on your generative AI inference endpoints",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/sagemaker-monitors-endpoints/"
+    },
+    {
+      "title": "AppConfig 可热更新模型配置",
+      "summary": "AWS 11 月 19 日宣布，AWS AppConfig 新增两类配置：AI model invocation 和 AI prompt。前者保存模型标识、温度和最大 token 等推理参数，以及系统提示和示例对话；后者把提示词作为独立版本管理，可在不改模型配置的情况下更新，并可在多个应用间复用。变更可按流量逐步放量，若 Amazon CloudWatch、Datadog、New Relic 等监控告警触发，AppConfig 可自动回滚。该能力在所有已提供 AppConfig 的区域推出，不另收费。",
+      "insight": "适合需要频繁调整模型和提示词、又不想为此重新发布应用的团队；上线时应先设定可触发回滚的业务和用量指标。",
+      "source": "AWS",
+      "source_title": "AWS AppConfig launches support for managing native AI model and AI prompt configuration",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-appconfig-native-ai-model-invocation-prompt-configurations/"
+    },
+    {
+      "title": "Amazon Polly 上线语音克隆",
+      "summary": "AWS 11 月 19 日宣布，Amazon Polly 的语音克隆作为受限开放的正式功能上线。使用经本人同意的说话人几分钟录音，即可生成接近其音色的克隆语音，运行在 Polly 的 generative engine 上。首发支持英语、西班牙语、德语、法语、意大利语、葡萄牙语和印地语，克隆语音只说录音所用语言。克隆语音会加密并做访问控制，仅创建者可使用；官方称语音创建完成后不会保留录音副本，也不用其训练 Polly 模型。目前已对部分客户开放，其他客户需向客户团队申请。创建克隆语音免费，合成按用量计费。",
+      "insight": "适合希望在 IVR、语音 Agent 或内容制作中保持统一音色的团队；上线前必须落实说话人同意，并限制克隆语音的访问范围。",
+      "source": "AWS",
+      "source_title": "Amazon Polly now supports voice cloning",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-polly-now-supports-voice-cloning/"
+    }
+  ]
+}
