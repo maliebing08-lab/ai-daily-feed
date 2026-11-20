@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-21",
+  "headline": "微软托管开源模型正式可用",
+  "intro": "今天的重点是开源模型更好用，也更容易进入生产环境。微软把 Foundry Managed Compute 推进到正式可用，Thinking Machines Lab 发布了面向本地部署的 Inkling 2 Mini。AWS 为大规模训练补充了诊断能力，OpenAI 和 Signal 则分别从模型防护和应用隐私两侧回应 Agent 带来的新风险。",
+  "excerpt": "微软托管开源模型正式可用，Inkling 2 Mini 发布，AWS 增强训练诊断，OpenAI 与 Signal 分别加强模型防护和应用隐私。",
+  "tags": [
+    "微软",
+    "开源",
+    "开发者工具",
+    "安全",
+    "AWS",
+    "OpenAI"
+  ],
+  "items": [
+    {
+      "title": "微软托管开源模型正式可用",
+      "summary": "微软 11 月 20 日宣布，Microsoft Foundry 中的 Managed Compute 正式可用。该能力曾在 6 月的 Build 上以预览推出，用于在托管的专用 GPU 上部署开源模型：开发者选择模型和部署模板，微软负责准备 GPU、维护容器并运行推理服务。目录已扩展到 150 余个开源模型，可选用 NVIDIA A100、H100、H200 或 AMD MI300X，并支持美国和欧盟 Data Zone。模型权重经校验后暂存在 Azure，部署时不必再连接 Hugging Face Hub。",
+      "insight": "适合想在自有开源模型上做生产推理、又不想自己运维 GPU 和推理栈的团队；上线前应核对部署模板、GPU 配额和按小时计费，并确认数据区域是否满足合规要求。",
+      "source": "Microsoft",
+      "source_title": "Serve open models in production with Foundry Managed Compute",
+      "url": "https://devblogs.microsoft.com/foundry/managed-compute-ga/"
+    },
+    {
+      "title": "开源本地模型 Inkling 2 Mini",
+      "summary": "Hugging Face 11 月 20 日介绍了 Thinking Machines Lab 发布的 Inkling 2 Mini。它是面向本地部署的多模态 Mixture-of-Experts 模型，物理参数约 260 亿，每个 token 激活 30 亿参数，支持 100 万 token 上下文，可接受图像和文本输入。24 层解码器中的中间 12 层会循环执行三次，使逻辑层数达到 48 层。官方提供 transformers、llama.cpp 和 MLX 支持，SGLang 也在发布当天提供推理支持。",
+      "insight": "体积更小、上下文更长，适合在本地或现场试跑多模态任务；目前公开评价仍有限，接入前应在自己的任务上先做验证，并确认推理框架是否已经适配。",
+      "source": "Hugging Face",
+      "source_title": "Welcome Inkling 2 Mini, Cutting-edge Performance for your Local Setup",
+      "url": "https://huggingface.co/blog/inkling2mini"
+    },
+    {
+      "title": "HyperPod 增强训练诊断",
+      "summary": "AWS 11 月 20 日宣布，Amazon SageMaker HyperPod 新增增强可观测性，用于更快定位大规模 GPU 训练问题，支持 Amazon EKS 和 Slurm。诊断摘要用 CloudWatch 的 DetectGroupOutliers 比较同一作业中各 GPU 的利用率、显存、温度、功耗和 SM 时钟，并标出异常卡；同时用静态规则识别 ECC、XID 等硬件故障，以及 EFA 吞吐下降、降频和过热。默认指标会自动采集，高级指标可按需开启。指标存储新增 CloudWatch 并作为默认选项。",
+      "insight": "对已经在 HyperPod 上跑分布式训练的团队更实用，能减少在日志里排查坏卡或网络问题的时间；长任务再按需打开高级指标，并注意额外遥测带来的费用。",
+      "source": "AWS",
+      "source_title": "Introducing enhanced infrastructure observability in Amazon SageMaker HyperPod",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-enhanced-observability-in-amazon-sagemaker-hyperpod-to-diagnose-gpu-training-issues/"
+    },
+    {
+      "title": "OpenAI 加强蒸馏防护",
+      "summary": "OpenAI 11 月 20 日介绍了应对对抗性蒸馏的做法。这类行为会在未获授权的情况下，用前沿模型的输出来训练另一套模型，并在缺少同等安全措施时加以部署。官方尤其关注受保护推理内容，也就是模型内部思维链被提取的风险。在内部自适应评测中，针对 GPT-6 Astra 原有防护提取受保护推理的平均攻击成功率为 54.0%，在 GPT-6.2 Astra 的更新防护下降至 0.2%。相关防护已加强到 GPT-6.2 Astra 和 Sol，方法包括对抗测试、模型训练、分类器和 API 层保护。",
+      "insight": "如果业务依赖模型拒绝危险请求，不能假定被蒸馏出的模型仍有同样约束；调用 GPT-6.2 时也应避免把思维链日志当作可外传的训练数据。",
+      "source": "OpenAI",
+      "source_title": "Combatting adversarial distillation",
+      "url": "https://openai.com/index/combatting-adversarial-distillation/"
+    },
+    {
+      "title": "Signal 拦截系统 AI 截屏",
+      "summary": "Signal 11 月 20 日宣布，将限制内置于移动操作系统的 AI Agent 捕获 Signal 数据。在 iOS 27 上，应用会阻止截屏；在可检测到 AI 助手试图读取屏幕的 Android 设备上，也会启用类似的屏幕保护。用户可在设置中关闭该保护，但官方提醒这可能把对话内容暴露给这些 Agent，并破坏其隐私保证。官方称这一办法并不完整，也无法覆盖通过文件系统读取等途径，目前还无法在 macOS 上实现同样保护，并呼吁操作系统厂商提供明确的退出机制和文档。",
+      "insight": "开发涉及敏感数据的应用时，不能再默认屏幕内容只留在本应用内；上线前应评估系统级 Agent 的读取路径，并向用户说明关闭截屏保护的后果。",
+      "source": "Signal",
+      "source_title": "Signal is Serious About Protecting Your Privacy",
+      "url": "https://signal.org/blog/protecting-your-privacy/"
+    },
+    {
+      "title": "Windows ML 增加 MLIR 推理",
+      "summary": "微软 11 月 20 日发布 Windows ML 2.9.42 Experimental，开始支持基于 MLIR 的新后端 DirectX Compute Graph Compiler（DX CGC）。这是对 10 月宣布的 Windows 原生推理路径的扩展，此前主要依赖 ONNX Runtime。该后端由微软与 AMD、Intel、NVIDIA 和 Qualcomm 共同开发。官方强调这是早期版本，用于收集 API 形态和质量反馈。CLI 也可把模型转为 CGC 使用的 Compute Graph IR。",
+      "insight": "适合在 Windows 设备上做本地推理试验的团队先做验证和反馈；因其仍是实验版本，生产环境应继续以现有稳定路径为主。",
+      "source": "Microsoft",
+      "source_title": "Embracing MLIR in Windows ML: Windows-native inferencing built on DX CGC",
+      "url": "https://devblogs.microsoft.com/foundry-on-windows/winml-cgc/"
+    },
+    {
+      "title": "OpenAI 发布药物化学评测",
+      "summary": "OpenAI 11 月 20 日发布 MedChemBench，用于评估模型在药物化学研究中的推理能力，检验其能否根据分子结构和实验证据解释结果、比较化合物并预测性质。该基准包含 99 道来自已发表研究的题目，取材于 117 篇论文和专利，涵盖 761 种不同分子结构。在 xhigh 推理设置下，GPT-6.2 Astra 获得 84.5% 的可用分数，高于 GPT-6 Astra 的 83.3%、GPT-6.1 Sol 的 82.0%，以及 GPT-5.6 Sol 的 58.2%。",
+      "insight": "做化合物筛选或实验规划的团队，可用这类任务检验模型是否真能把结构与实验证据对应起来，而不能只看总榜分数。",
+      "source": "OpenAI",
+      "source_title": "Can AI help scientists identify promising drug candidates?",
+      "url": "https://openai.com/index/introducing-medchembench/"
+    },
+    {
+      "title": "Muse Code 可生成三维模型",
+      "summary": "Meta 11 月 20 日宣布，Muse Code 订阅用户可以用文本或图像生成带纹理的三维模型，用于做游戏、送去 3D 打印或预览场景。Everyday Usage 方案可使用更快的 Nano 模型，并在约 5 小时的用量周期内大约可生成 30 个三维模型；更高档套餐还可使用质量更高的 Pro 设置。Muse Wonder、Muse Spark 和 Muse Ember 都可以在合适时调用这些三维工具。官方同时说明，目前没有内置的角色绑定和动画工具。",
+      "insight": "适合已经在用 Muse Code 做原型的团队快速得到可用网格；若还需要绑定或动画，仍要另接专门工具，并留意套餐用量上限。",
+      "source": "Meta",
+      "source_title": "Build 3D models with Muse Code",
+      "url": "https://dev.meta.ai/resources/blog/build-3d-models-with-muse-code"
+    }
+  ]
+}
