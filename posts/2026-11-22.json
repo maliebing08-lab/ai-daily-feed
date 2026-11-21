@@ -1,0 +1,56 @@
+{
+  "date": "2026-11-22",
+  "headline": "特斯拉开始推送 FSD v15",
+  "intro": "今天的重点是自动驾驶和开发者工具同时落地。特斯拉开始向用户推送 FSD v15，升级端到端驾驶网络，并加入 Reality View 可视化。AWS 则让 Quick 可以在浏览器和 Microsoft 365 中使用，还为 Agent 的联网检索增加了多语言和按国家筛选的能力；联合国关于自主武器规则的谈判未能达成有约束力的结果。",
+  "excerpt": "特斯拉开始推送 FSD v15，AWS Quick 上线网页版和插件，Bedrock 联网检索支持多语言，联合国未能就自主武器规则达成约束性协议。",
+  "tags": [
+    "特斯拉",
+    "自动驾驶",
+    "AWS",
+    "Agent",
+    "开发者工具",
+    "政策"
+  ],
+  "items": [
+    {
+      "title": "特斯拉开始推送 FSD v15",
+      "summary": "特斯拉 11 月 21 日在 X 上宣布，FSD（Supervised）v15 开始推送。官方发布说明称，升级覆盖端到端驾驶网络，共用的视觉编码器还用于 Robotaxi 和 Optimus，并称关键介入率改善 25 倍。新的 Reality View 用端到端可视化替代原先分项模型信号，并称驾驶者可看到并干预系统规划。更新还改进路标、坑洼和校区车速等识别与控制，可在测速摄像头前减速，并加入 Bike Rack Mode。导航学习只覆盖行程起止点。这仍是 Supervised 版本，驾驶者需随时接管。",
+      "insight": "这是一次针对现有弱项的能力更新，但 25 倍改善是特斯拉自行统计的关键介入率，并不等于系统已安全 25 倍；规划可视化仍需人工监督。",
+      "source": "Electrek",
+      "source_title": "Tesla launches FSD v15, targets its biggest weaknesses, from signs to potholes",
+      "url": "https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/"
+    },
+    {
+      "title": "AWS Quick 上线网页版体验",
+      "summary": "AWS 11 月 21 日宣布，Quick 网页应用已把桌面端体验带到浏览器。用户可以创建、共享并使用与桌面相同的 Agent、技能和连接器，每天从每日简报和待处理消息开始工作。会话、Agent 和文件会在网页、桌面和移动端同步；在网页上启动或调度的 Agent，关闭浏览器后仍会继续运行，Mission Control 用来查看进度和需人工介入的步骤。浏览器扩展以及 Word、Excel、PowerPoint 和 Outlook 的 Microsoft 365 加载项也同步更新，并已在美国、欧洲和亚太多个区域提供。",
+      "insight": "对已经在用 Quick 的团队，网页版降低了必须打开桌面客户端才能调度 Agent 的限制，也更方便在现场和办公室之间交接任务。",
+      "source": "AWS",
+      "source_title": "AWS Quick launches a new web experience with updated browser extension and Microsoft 365 add-ins",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-launches-new-web-experience-updated-browser-extension-microsoft-365-add-ins/"
+    },
+    {
+      "title": "AWS Quick 支持打包插件",
+      "summary": "AWS 同日宣布 Quick 支持插件。插件把完成某项工作所需的连接器、技能、Agent 和流程打包在一起，用户可以一次安装。目前可浏览并安装 AWS 官方插件，例如帮助安排休假并把会议记录变成待办的 Calendar and Meetings Assistant，以及从线索研究做到触达和方案的 Sales Development 插件。官方称已有超过 100 个技能和插件，覆盖日常办公及财务、营销、法务等岗位。开发者也可以在对话里描述任务，让 Quick 组装自定义插件并分享给同事。",
+      "insight": "把 Agent、技能和连接器按岗位打包，减少了逐个配置的成本，也更方便在团队里复用同一套工作流。",
+      "source": "AWS",
+      "source_title": "AWS Quick now supports plugins to bundle agents, skills, connectors and flows",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/aws-quick-plugins-bundle-agents-skills-connectors-flows/"
+    },
+    {
+      "title": "Bedrock 联网检索支持多语言",
+      "summary": "AWS 11 月 21 日宣布，Amazon Bedrock 上的 Web Search 在 AgentCore 和 Amazon Bedrock 中新增西班牙语、法语、德语、意大利语和日语，并支持非美国英语，以便 Agent 能更多引用当地语言来源。同时还增加可选的国家字段，传入 ISO 3166-1 alpha-2 代码（如 JP、DE）即可偏向该国来源，适用于答案依赖当地法规、价格或公共信息的问题。现有客户自动获得新语言能力，无需改代码，各语言定价相同，查询在调用所在区域处理。",
+      "insight": "做多地区业务的 Agent 不必再为检索语言和国家偏好自建一层过滤，也有助于满足数据驻留要求。",
+      "source": "AWS",
+      "source_title": "Web Search on Amazon Bedrock expands language support and country-aware search",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/web-search-amazon-bedrock/"
+    },
+    {
+      "title": "联合国未就自主武器规则达成协议",
+      "summary": "据 The Verge 报道，各国代表本周在日内瓦讨论自主武器规则，会谈结束时未能达成一致，只同意“开始讨论可选方案”。红十字国际委员会、联合国秘书长等此前呼吁在一年内起草具有法律约束力的规则；最终妥协是各国用两年时间提出监管建议，后续就采用和执行方式的谈判可能还会更久，且为部分规则保留“自愿”空间。",
+      "insight": "具有约束力的国际规则被推迟，相关技术在一段时间内仍缺少统一标准，企业和开发者需要继续按现有法规和内部治理来约束自主系统。",
+      "source": "The Verge",
+      "source_title": "The UN fails to agree on rules regulating ‘killer robots’",
+      "url": "https://www.theverge.com/tech/1039554/un-regulations-killer-robots"
+    }
+  ]
+}
