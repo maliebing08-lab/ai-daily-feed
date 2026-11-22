@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-23",
+  "headline": "OpenAI 提议用困惑度限制研发",
+  "intro": "今天的重点是大模型服务的安全边界，以及开放模型如何以更低成本进入生产环境。OpenAI 建议把 perplexity 作为行业共用指标，为后续研发设置共同上限；OpenRouter 则因部分推理服务商出现数据处理问题，下架三家并收紧零数据保留资格。与此同时，Sarvam 发布了面向客服和 Agent 场景的新开源 checkpoint，AMD 也提供了可在 EPYC CPU 上运行的量化模型。",
+  "excerpt": "OpenAI 提议用 perplexity 为研发设限，OpenRouter 下架三家问题服务商，Sarvam 与 AMD 推出更易部署的开源模型。",
+  "tags": [
+    "OpenAI",
+    "安全",
+    "开源",
+    "开发者工具",
+    "大模型"
+  ],
+  "items": [
+    {
+      "title": "OpenAI 提议用困惑度设限",
+      "summary": "OpenAI 首席科学家 Jakub Pachocki 11 月 22 日发文，建议把 perplexity 作为比较各家预训练进展、并讨论共同安全标准的指标。文章公布了 OpenAI 内部测量：GPT-4 约 0.91 时已能有效利用思维链，损失降到 0.8 以下后，模型在网络安全和数学等领域出现了作者所称的变革性能力。他提议先就评估和红队规范达成共识，并基于 perplexity 等指标设定共同上限，在理解和监测模型行为达到具体里程碑（例如接替思维链监测的方法）之前不要越过。",
+      "insight": "若这一提议被接受，行业将更有机会用可跨实验室追踪的指标约束研发节奏；但测量口径尚未统一，它也覆盖不了推理阶段放大等预训练之外的能力提升，能否落地仍取决于各实验室是否愿意对齐。",
+      "source": "OpenAI",
+      "source_title": "Perplexity and Intelligence",
+      "url": "https://openai.com/index/perplexity-and-intelligence/"
+    },
+    {
+      "title": "OpenRouter 下架三家服务商",
+      "summary": "OpenRouter 11 月 22 日称，安全研究者发现部分推理服务商出现数据泄露，或未能遵守其数据政策，但 OpenRouter 自身未遭入侵。该公司已下架三家服务商，将 125 个端点移出 Zero Data Retention（零数据保留）资格，并通知可能受影响的客户。其正在把检测方法纳入持续检查，并要求恢复该资格前提供保证。公告列出了 Atlas Cloud、Novita、Phala 和 Together 的说明，其中 Together 披露 2026 年 6 月至 7 月的请求出现过提示词泄露。",
+      "insight": "经路由转发的推理请求，实际数据政策取决于下游服务商；零数据保留承诺并不能代替对供应商路径的核查。若生产环境用过相关端点，应轮换可能暴露的密钥并收紧供应商名单。",
+      "source": "OpenRouter",
+      "source_title": "Data Processing Incidents on Inference Providers",
+      "url": "https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/"
+    },
+    {
+      "title": "Sarvam 发布新的 105B 模型",
+      "summary": "印度公司 Sarvam AI 11 月 22 日发布开源权重 checkpoint Sarvam-105B-1711，面向客服、语音 Agent 和高并发任务。官方称与 2 月版本相比，八项对话式 Agent 基准平均分从 42.6 升至 73.9，接近 Gemini 3.5 Flash-Lite 的 74.0，混合单价从每百万 token 0.44 美元降至 0.15 美元。权重提供 BF16 和约 65 GB 的 NVFP4 版本，可在单张 RTX PRO 6000 上运行，上下文为 160K tokens。",
+      "insight": "适合需要在本地或单卡上跑高并发客服和工具调用的团队，尤其是印度语言场景；接入前仍应在自己的任务上复核效果，并确认推理框架和量化格式是否匹配。",
+      "source": "Sarvam AI",
+      "source_title": "Sarvam-105B-1711: a new Sarvam 105B checkpoint",
+      "url": "https://www.sarvam.ai/blogs/sarvam-105b-1711"
+    },
+    {
+      "title": "AMD 推出 EPYC 版量化模型",
+      "summary": "AMD 11 月 22 日在 Hugging Face 发布 IBM Granite 4.2 8B 的量化模型，面向 EPYC 的 CPU 推理，采用 4-bit 权重量化（W4A16）。官方称磁盘权重从 16.4 GiB 降到 5.4 GiB；在 GSM8K（5-shot）上，量化后准确率为 88.17%，对照 BF16 基线 91.43%。模型卡写明仅适用于 EPYC CPU，需搭配指定版本的 vLLM 和 ZenDNN，不面向 GPU。",
+      "insight": "为已有 EPYC 服务器、希望在无 GPU 条件下试用 Granite 的团队提供了更小的现成权重；上线前应在自己的任务上核实精度损失，并按模型卡锁定软件版本。",
+      "source": "Hugging Face",
+      "source_title": "amd/granite-4.2-8b-w4a16-llmcompressor",
+      "url": "https://huggingface.co/amd/granite-4.2-8b-w4a16-llmcompressor"
+    },
+    {
+      "title": "游戏更新移除 AI 生成音乐",
+      "summary": "据 The Verge 11 月 22 日报道，《The Binding of Isaac: Repentance Plus》因关卡中使用了带有 Suno 元数据的生成式音乐，在 Steam 上遭到大量差评。创作者 Edmund McMillen 道歉，并称自己并不知道该段落用了 AI 音乐。Valve 要求开发者披露如何及何时使用生成式 AI，而发行方 Nicalis 似乎未作说明。发现后数小时内，Nicalis 表示已更新并移除这些文件；截至报道时，该作在 Steam 上仍为压倒性差评。",
+      "insight": "即使团队公开反对滥用生成式 AI，外包或中间环节仍可能把生成内容带进成品；上线前需要检查素材来源，并按平台规则完成披露。",
+      "source": "The Verge",
+      "source_title": "Binding of Isaac developer removes AI music from Repentance Plus",
+      "url": "https://www.theverge.com/games/1039770/binding-of-isaac-ai-music"
+    }
+  ]
+}
