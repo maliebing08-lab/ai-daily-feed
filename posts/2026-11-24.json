@@ -1,0 +1,71 @@
+{
+  "date": "2026-11-24",
+  "headline": "Claude Ship 上线代码审批",
+  "intro": "今天开发工具和系统安全都有实质进展。Anthropic 发布 Claude Ship，把拉取请求的评审、修复和按仓库策略批准串到一起；OpenAI 与 Cisco 开源了基于 eBPF 的 Shirudo，便于在正式补丁上线前为仍在运行的 Linux 服务加上临时防护。决策模型也在加速落地：AWS 更新了开源权重的 Strands Decider，John Snow Labs 则推出可私有部署的医疗决策模型；Google 同时为 Gemini API 增加了按页、按单元格和按时间段读取文件的能力。",
+  "excerpt": "Anthropic 推出可审批代码的 Claude Ship，OpenAI 与 Cisco 开源 Shirudo，决策模型和 Gemini 文件切片同期上线。",
+  "tags": [
+    "Claude",
+    "开发者工具",
+    "安全",
+    "开源",
+    "大模型"
+  ],
+  "items": [
+    {
+      "title": "Claude Ship 可审改批准代码",
+      "summary": "Anthropic 11 月 23 日发布 Claude Ship（测试版）。它把已正式可用的 Code Review，与两个新的测试版代理 PR Steward、Claude Approvals 组合在一起：前者处理失败的 CI、合并冲突和评审意见，后者按仓库中的策略文件决定是否批准。开发者可在 Claude Code 里用 /ship 命令推进自己的拉取请求；管理员也可按仓库开启，并先以观察模式运行批准策略。该功能面向 Claude Team 和 Enterprise 方案，且目前只支持 GitHub 仓库。",
+      "insight": "当代理已经承担大量编码时，评审和批准会成为新的瓶颈；把批准权交给模型前，应先在观察模式里核对策略，并继续保留分支保护等原有门禁。",
+      "source": "Anthropic",
+      "source_title": "Introducing Claude Ship",
+      "url": "https://claude.com/resources/articles/introducing-claude-ship"
+    },
+    {
+      "title": "OpenAI 与 Cisco 开源 Shirudo",
+      "summary": "OpenAI 与 Cisco 11 月 23 日开源 Shirudo（日语“盾”之意），这是一个基于 eBPF 的运行时，用于在正式补丁部署前为正在运行的 Linux 系统提供临时防护。团队可先测试“盾”能否挡住利用漏洞的行为、同时放行正常请求，再经人工批准后在不停机的情况下加载。官方举出的受控测试中，由 Codex 生成的防护在无需重启的情况下挡住了针对运行中 Elasticsearch 的 Java4Shell 利用尝试。项目采用 BSD 2-Clause 许可，加载前需签名验证。",
+      "insight": "对需要持续在线的生产服务，这类可热加载的临时防护提供了补丁窗口内的缓冲；但盾仍须由安全团队审核后再执行，不能代替完整修复。",
+      "source": "OpenAI",
+      "source_title": "OpenAI and Cisco introduce Shirudo",
+      "url": "https://openai.com/index/introducing-shirudo"
+    },
+    {
+      "title": "AWS 发布 Decider 第二代模型",
+      "summary": "AWS 旗下 Strands Labs 发布 Strands Decider v2，共五个基于 Gemma 4 的开源权重决策模型（E2B 至 31B），采用 Apache-2.0 许可。与生成文本的大模型不同，这类模型针对一段状态一次回答多道题，题型包括二至 255 项的选择题、是否判断和量表打分，并为每个选项返回概率。官方给出的最小 E2B 模型在 Decision Index 0.3 上得分为 57.1，比同尺寸的 v1 高出 27.8 分；权重已在 Hugging Face 提供。",
+      "insight": "适合路由、工具选择、工单分类等答案集合事先可写清的环节；可按置信度把低把握的请求交给更大模型或人工，而不必让生成式模型承担全部判断。",
+      "source": "Hugging Face",
+      "source_title": "strands-decider-E2B-gemma4-v2-2611",
+      "url": "https://huggingface.co/StrandsAgents/strands-decider-E2B-gemma4-v2-2611"
+    },
+    {
+      "title": "Gemini API 支持按段读取文件",
+      "summary": "Google 11 月 23 日在 Gemini API 中推出原生文件切片控制，并可直接上传 Microsoft Office 和 OpenDocument 格式。开发者上传一次文件后，即可指定 PDF 或文稿的页码范围、电子表格的工作表和单元格区域，以及音视频的时间片段和内容层，模型只加载被指定的部分，也只按实际检查的部分计费。该能力适用于所有 Gemini 4 模型，可在 Google AI Studio 和 Gemini 平台使用。",
+      "insight": "处理长文档或录像时，不必再在本地用转换工具先切文件，有助于降低 token 成本，也减少代理运行环境里的解析负担。",
+      "source": "Google",
+      "source_title": "Introducing file slicing controls in the Gemini API",
+      "url": "https://blog.google/innovation-and-ai/technology/developers-tools/file-slicing-controls/"
+    },
+    {
+      "title": "医疗决策模型可私有部署",
+      "summary": "John Snow Labs 11 月 23 日发布 Medical Decision Models，面向临床文本中的固定选择题，返回预定义答案及其概率，而不是生成长文。Medical DM Small 在九类临床任务上的综合分为 0.917，官方称在单张 24 GB 显存的 GPU 上处理一份病历约 40 毫秒；更小的 Nano 约为 24 毫秒，也可在 CPU 上运行。模型部署在机构自有环境，不把患者数据发到外部 API，并配套用于检查去标识化残留的 PHI Guard v0.7。目前向现有客户提供私有部署。",
+      "insight": "对病历编码、试验入组或质控这类需要稳定、可抽检的判断，决策模型比通用生成式模型更容易接入现有审核流程；上线前仍应在自己的语料和规则上复核效果。",
+      "source": "John Snow Labs",
+      "source_title": "John Snow Labs Launches First Commercially Available Decision Models for Healthcare",
+      "url": "https://www.johnsnowlabs.com/john-snow-labs-launches-first-commercially-available-decision-models-for-healthcare/"
+    },
+    {
+      "title": "Z.ai 发布循环架构 GLM-5.4",
+      "summary": "Z.ai 11 月 23 日发布旗舰模型 GLM-5.4，这是其首个采用 Loop Transformer 的型号：在约 750B 规模上，将 GLM-5 基座中的 28 层循环运行两次，希望在不增加参数量的前提下加深推理。官方称其智能水平可与 2T 至 3T 参数规模的模型相比，并展示了用代码完成视频、游戏和 FreeCAD 机械设计等任务的例子。该模型目前可在 Z.ai Chat 和 ZCode 使用，API 尚未开放；官方表示将在完成安全加固后计划开源权重。文章也提到它有时会陷入过长的“马拉松式”思考。",
+      "insight": "循环深度提供了另一条提升推理的路径，但开放接口和权重仍待发布，团队若要接入，需要等到 API 或权重真正可用后再做评估。",
+      "source": "Z.ai",
+      "source_title": "GLM-5.4: Toward Generalized Coding with Our First Loop Transformer",
+      "url": "https://z.ai/blog/glm-5.4"
+    },
+    {
+      "title": "Ai2 发布机器人点跟踪基准",
+      "summary": "Allen Institute for AI 11 月 23 日发布 RoboTrack，用于真实机器人操作中的点跟踪。其中 RoboTrack-Bench 包含 307 段人工标注视频、共 2,522 条轨迹，覆盖多种机器人、人手和视角。官方测试显示，主流跟踪器在该基准上的得分低于既有基准，例如 CoWTracker 从 RoboTAP 的 70.5 AJ 降到 63.9。同期还发布了仿真训练数据 RoboTrack-15M，以及 RoboTracker 和 RoboTracker-Warp 两个新模型。",
+      "insight": "对要在真实产线或实验室里靠视觉闭环做抓取、移液的团队，这说明通用跟踪器的公开成绩不能直接外推，需要在更接近现场的数据上重新验证。",
+      "source": "Hugging Face",
+      "source_title": "RoboTrack: Point tracking for real-world robotic manipulation",
+      "url": "https://huggingface.co/blog/allenai/robotrack"
+    }
+  ]
+}
