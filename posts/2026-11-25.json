@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-25",
+  "headline": "GPT-6 设计蛋白获实验验证",
+  "intro": "今天的重点是通用模型正在进入专业科研与开发工具。OpenAI 发布研究，显示 GPT-6 系列可仅靠推理和代码设计蛋白质结构，其中 GPT-6.2 的设计在实验室检测中对五个靶点都出现了结合信号；Anthropic 则把 Artifact 变成可安装的 Mac 和 Windows 应用，并让 MCP 服务器能下发技能、处理后台任务。与此同时，英国网络安全机构警告，人工智能驱动的网络攻击正在更快地利用长期未修复的基础漏洞。",
+  "excerpt": "OpenAI 称 GPT-6 可设计蛋白质并获实验室验证，Anthropic 推出可安装的 Artifact 应用，英国警告人工智能网络攻击正在加快。",
+  "tags": [
+    "OpenAI",
+    "Claude",
+    "开发者工具",
+    "安全",
+    "开源",
+    "大模型"
+  ],
+  "items": [
+    {
+      "title": "GPT-6 设计蛋白获实验验证",
+      "summary": "OpenAI 11 月 24 日发布研究称，GPT-6 系列模型可以只靠推理和通用编程工具设计蛋白质的三维结构和氨基酸序列，而不再调用专门的生物学模型来生成这些设计。研究伙伴 Onava 把 GPT-6.2 给出的三维设计做成小蛋白，在五个靶点上共测试 322 个 minibinder，其中 35 个（10.9%）检测到结合，且每个靶点至少有一例。筛选序列和候选时仍使用了 SolubleMPNN 等专用模型；完整结构预测仍是明显短板。",
+      "insight": "这说明通用模型开始能承担部分蛋白质设计工作，但实验室转化仍依赖专用模型筛选，完整结构预测也尚未过关，还不能替代现有专业工具链。",
+      "source": "OpenAI",
+      "source_title": "GPT-6 models demonstrate intrinsic protein-design capabilities",
+      "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/"
+    },
+    {
+      "title": "Artifact 可安装为桌面应用",
+      "summary": "Anthropic 11 月 24 日起在 Claude for Mac 和 Windows 中以测试版推出 “Install as app”。把常用 Artifact 安装后，会拥有独立图标和窗口，并可使用 Claude 与已有连接器，源内容更新后应用会自动同步。权限分三档：默认仅相当于浏览器能力，应用权限可申请通知和全局快捷键等，完全访问则可读写文件和运行程序。该功能向所有方案灰度，但 HIPAA 就绪组织和混合部署不可用；Enterprise 需由所有者开启。",
+      "insight": "这降低了把对话里的小工具变成日常桌面应用的门槛，但完全访问不会在每次更新后自动延续，且官方不预审应用，只应把该权限授予可信来源。",
+      "source": "Anthropic",
+      "source_title": "Turn artifacts into Mac and Windows apps",
+      "url": "https://claude.com/resources/articles/install-as-app"
+    },
+    {
+      "title": "Claude 支持 MCP 技能与后台任务",
+      "summary": "Anthropic 同期宣布，Skills over MCP 在 Claude 和 Claude Code 进入公开测试，MCP 服务器可以把技能与工具一并发布，Claude 只在需要时加载。Tasks 和 Elicitation 已正式可用：前者让服务器在后台执行耗时操作或代理循环，后者可在中途通过表单或链接征求用户确认，例如删除仓库或执行破坏性操作前暂停。这两项先向 Pro、Max 和 Ultra 开放，并向 Team、Enterprise 推送。文件上传扩展仍在准备中。",
+      "insight": "开发者可以把操作规范随服务器分发，而不必让用户单独安装技能；把耗时任务和高风险操作做成可恢复、需确认的步骤，也更接近生产环境的用法。",
+      "source": "Anthropic",
+      "source_title": "MCP servers can now ship skills, run tasks, and more with Claude",
+      "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more"
+    },
+    {
+      "title": "英国警告 AI 加速网络攻击",
+      "summary": "据 TechCrunch 11 月 24 日报道，英国国家网络安全中心（NCSC）称近几个月观察到人工智能驱动的网络攻击明显增多，自 9 月以来已发生多起涉及自主渗透测试类工具的入侵，并造成业务中断。NCSC 指出，被利用的往往不是新的内存损坏漏洞，甚至也不是已知但未修补的漏洞，而是多年技术债留下的薄弱环节，例如暴露在公网的系统、弱口令和可被滥用的开发者 API。官方强调，既有安全控制并未过时，基础防护比以往更加重要。",
+      "insight": "对工控和在线服务团队来说，攻击窗口被压缩后，暴露面收敛、口令和接口治理不能再往后排；自治攻击工具降低了利用旧问题的门槛，但不能作为放松补丁和访问控制的理由。",
+      "source": "TechCrunch",
+      "source_title": "UK warns AI-driven cyberattacks are exposing years of weak security",
+      "url": "https://techcrunch.com/2026/11/24/uk-warns-ai-driven-cyberattacks-are-exposing-years-of-weak-security/"
+    },
+    {
+      "title": "开源模型经训练后胜任法律代理",
+      "summary": "Harvey Research 11 月 24 日与 Baseten 合作，把 Harvey Tenet 的训练方法用到四个美国开源权重模型上，包括 Muse Spark Open、Nemotron 3.5 Super VL、Beam 1.0 和 Inkling 2 Small。其中 Muse Spark Open 在 Legal Agent Benchmark 上的全部通过率为 30.3%，首次整体超过 30%；另外三个模型也都超过 20%，并在未参与训练的其他法律任务上有提升。这些检查点不会用于处理客户数据。",
+      "insight": "对需要私有部署法律或知识型代理的团队，这说明用针对性的后训练即可明显提升开源模型在长流程任务上的完成率，但仍应在自己的任务和评测标准上复核。",
+      "source": "Harvey",
+      "source_title": "Pushing the US Open-Weight Frontier",
+      "url": "https://www.harvey.ai/blog/applying-the-harvey-tenet-training-recipe-to-us-open-weight-models"
+    },
+    {
+      "title": "日常代理基准显示失败率仍高",
+      "summary": "TechCrunch 11 月 24 日介绍了新基准 ShellBench，由 The OpenClaw Foundation、Hugging Face 和 Red Hat 等合作，基于超过 1000 万条匿名真实代理交互，评估处理邮件、日程和账单等日常事务的能力。即便 OpenAI、Anthropic 和 Meta 的先进模型，失败率也超过三分之一；全部模型中有 15.7% 的尝试至少未满足一项安全要求。得分最高的 GPT-6 Astra 在相同条件下连续三次都做对的比例仍不到一半。该研究未在原生产品环境中测试。",
+      "insight": "把代理交给后台自动处理个人或业务事务前，需要单独检查安全约束和结果稳定性，而不能只看单次成功或通用基准分数。",
+      "source": "TechCrunch",
+      "source_title": "Even the best AI agents struggle with everyday life",
+      "url": "https://techcrunch.com/2026/11/24/even-the-best-ai-agents-struggle-with-everyday-life/"
+    },
+    {
+      "title": "业余研究者用 Astra 搜寻系外行星",
+      "summary": "OpenAI 11 月 24 日介绍，工程师 Kevin Bond 用 Codex 检索开普勒望远镜约 10 万颗恒星的公开观测，Ethan Byrd 则用 Astra 分析来自 TESS 等档案、约 1900 万颗恒星的数据。Bond 的程序标出 200 多个信号，其中 10 个对应已知行星；SETI 研究所的天文学家独立复核了 KIC 5689121（约每 13.8 天变暗一次）和 KIC 6691030 的信号。Byrd 第一轮得到 49 个候选，已将其中一个提交 TESS 团队。这些信号仍待后续观测确认。",
+      "insight": "通用编程代理降低了检索海量公开科学数据的门槛，但发现的仍是候选信号，最终确认还需要专业观测和同行评议。",
+      "source": "OpenAI",
+      "source_title": "Searching for distant planets with Astra",
+      "url": "https://openai.com/index/searching-for-distant-planets-with-astra/"
+    },
+    {
+      "title": "Tidal 将下架纯 AI 生成音乐",
+      "summary": "据 The Verge 11 月 24 日报道，流媒体平台 Tidal 将从 12 月 9 日起禁止纯人工智能生成的音乐，并预计删除约 2900 万首相关曲目，同时每天拒绝约 8 万至 8.5 万首新投稿。音乐业务负责人 Robert Andersen 表示，过去 90 天分发到该平台的曲目中，有 43% 被识别为 AI 音乐，且 96% 的 AI 生成歌曲播放量为零。平台将使用 Ircam Amplify 检测和元数据检查拦截投稿，但不会禁止仅把 AI 作为辅助、而非唯一产出的作品。",
+      "insight": "内容平台正从标签和降权转向直接拦截纯生成作品；如果产品里使用了生成式音频，需要保留可核验的制作记录，并确认是否属于“唯一产出”。",
+      "source": "The Verge",
+      "source_title": "Tidal will start banning AI-generated music next month",
+      "url": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban"
+    }
+  ]
+}
