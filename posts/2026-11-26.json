@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-26",
+  "headline": "DeepMind 发布质谱解析技能",
+  "intro": "今天的重点是人工智能正在进入专业实验分析，同时企业也在加强推理过程中的数据保护。Google DeepMind 为 Antigravity 发布了 Mass Spec Skills，可把质谱信号整理成可供化学家复核的分子结构线索；Anthropic 则介绍了把 Messages API 从 Python 迁到 Rust 的做法，称每请求 CPU 约降低 70%。与此同时，美国联邦通信委员会有条件批准了 SpaceX 的轨道数据中心卫星计划，多州检察长也在阻止一家聊天机器人公司拍卖用户对话。",
+  "excerpt": "DeepMind 发布质谱解析技能，Anthropic 将核心 API 迁至 Rust 并降低算力开销，美国同时推进轨道算力和聊天数据保护。",
+  "tags": [
+    "DeepMind",
+    "Anthropic",
+    "OpenAI",
+    "安全",
+    "机器人",
+    "开发者工具"
+  ],
+  "items": [
+    {
+      "title": "DeepMind 发布质谱解析技能",
+      "summary": "Google DeepMind 11 月 25 日发布 Mass Spec Skills，供科学家在 Google Antigravity 中解读串联质谱。官方称，仅对照已有参考库，平均大约只能标注 5% 的测得谱图，人体样本约 10%。该技能把 Gemini 的化学推理与开源质谱工具、公共数据库结合起来，并给出可供复核的证据。在 100 张已有公开参考谱的基准上，加入技能后三种模型都在约 97% 的尝试中准确识别并核验了分子；不用技能且不联网时准确率低于 4%。技能已可在 Antigravity 中安装使用。",
+      "insight": "对制药、代谢组和环境检测团队，这意味着常见已知物的谱图解读可以明显加快，但全新分子和部分同分异构体仍需其他实验，最终判断还得留在化学家手里。",
+      "source": "Google DeepMind",
+      "source_title": "From spectrum to structure: Identifying molecules with Mass Spec Skills for Google Antigravity",
+      "url": "https://deepmind.google/blog/interpreting-mass-spectra-with-google-antigravity/"
+    },
+    {
+      "title": "Anthropic 将 API 迁至 Rust",
+      "summary": "Anthropic 11 月 25 日发文，介绍将核心 Messages API 从 Python 迁到 Rust。该 API 是客户及 Claude Code、Cowork 调用 Claude 的主要入口；官方称自 2024 年初至 2026 年秋，流量大约增长了 1,800 倍。Claude 约用一周写出首个版本，团队再用影子流量对照生产 API 并修复差异。迁移在不停机的情况下完成，公开流量于 2026 年 9 月切到 Rust。官方称每请求 CPU 约减少 70%，中位首 token 时延约降低 20%。",
+      "insight": "对要在生产系统里用模型做大规模改写的团队，关键不在于换语言，而在于先建立可自动校验的闭环，否则生成代码的速度会超过验证能力。",
+      "source": "Anthropic",
+      "source_title": "Migrating our Messages API to Rust",
+      "url": "https://www.anthropic.com/research/migrating-api-to-rust"
+    },
+    {
+      "title": "OpenAI 测试私有推理",
+      "summary": "据 The Next Web 11 月 25 日报道，OpenAI 首席执行官 Sam Altman 当天宣布，公司已开始与一小部分企业客户测试 Private Inference。这是一项 Alpha 功能，用机密计算在隔离的芯片上处理请求，并配合官方所称的“严格、可验证的控制”，以保护推理过程中的提示词和回复。它属于 OpenAI Private Intelligence 方案的一部分。负责该工作的 Shekar 称，此次测试只是第一步，公司正在准备更多算力以支持更大规模推广，但未给出时间表。",
+      "insight": "对不能把提示词明文交给服务商处理的团队，这提供了把前沿模型用于敏感工作的一条新路径；不过目前仍是小范围 Alpha，接入前需要确认它实际覆盖哪些环节。",
+      "source": "The Next Web",
+      "source_title": "OpenAI is testing a way to shield business prompts while its models run",
+      "url": "https://thenextweb.com/news/openai-private-inference-testing-customers"
+    },
+    {
+      "title": "FCC 批准轨道数据中心",
+      "summary": "据 TechCrunch 11 月 25 日报道，美国联邦通信委员会（FCC）周三有条件批准 SpaceX 部署并运营最多 100 万颗卫星，用于其轨道数据中心业务。这批卫星名为 Starmind，计划运行在 500 至 1,002 公里高度，主要通过激光与包括 Starlink 在内的其他卫星通信。Amazon、Viasat 和美国天文学会曾提出轨道碎片和无线电干扰等问题。批准并不等于马上能用：600 公里以上的碎片处理方案尚未获批，且公司需在 7 年内将首颗业务卫星送入轨道，14 年内完成整个星座部署。",
+      "insight": "这只是频谱和卫星运营层面的许可，冷却、制造成本和碎片规则仍未解决；对算力规划而言，轨道数据中心仍是中长期选项，还不能当作近期产能。",
+      "source": "TechCrunch",
+      "source_title": "FCC approves SpaceX plan to put AI data centers in space",
+      "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"
+    },
+    {
+      "title": "多州反对拍卖用户对话",
+      "summary": "据 TechCrunch 11 月 25 日报道，美国 42 个州的检察长介入 Character.ai 的破产程序，试图阻止该公司拍卖包括私人对话在内的用户敏感数据。检察长们称，数据集覆盖超过 2,100 万个美国账户的聊天记录，其中超过 210 万个属于未成年人。该公司已于 10 月申请破产，此前曾表示不会出售个人信息。已披露的匿名竞买方为 11 月 13 日在特拉华州成立的 Smirks and Pangs Acquisition LLC，拍卖定于 12 月 1 日。",
+      "insight": "聊天机器人公司一旦破产，用户对话可能被当作资产出售；选择产品时需要看清数据在停服或易主后的处理安排，而不能只看上线时的隐私政策。",
+      "source": "TechCrunch",
+      "source_title": "Character.AI’s plan to auction off users’ private chats challenged by state AGs",
+      "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/"
+    },
+    {
+      "title": "Chat 与 Work 合并用量限制",
+      "summary": "据 TechCrunch 11 月 25 日报道，OpenAI 已开始向一小部分 ChatGPT Pro 订阅用户推送统一的 Chat 与 Work 界面。公司发言人表示，新的体系下 Chat 与 Work 将共用一个用量计数；Instant 模型的对话仍不限量，也不计入这份额度，用尽额度后仍可继续使用 Instant。发言人还称，大多数用户不必更频繁地等待用量重置，但极少数用量最大的用户可能会更早触达上限。该改动计划在 12 月更广泛推行。",
+      "insight": "把聊天和工作任务放到同一额度后，重度使用高级推理模型的人需要重新估算配额；若生产流程依赖这些模型，应在 12 月全面切换前先做用量评估。",
+      "source": "TechCrunch",
+      "source_title": "OpenAI says heavy ChatGPT users may hit limits sooner as it merges Chat and Work",
+      "url": "https://techcrunch.com/2026/11/25/openai-says-heavy-chatgpt-users-may-hit-limits-sooner-as-it-merges-chat-and-work/"
+    },
+    {
+      "title": "开源模型可审查机器人动作",
+      "summary": "SenseNova 11 月 25 日在 Hugging Face 介绍开源模型 SenseNova-RoboRSI-27B。它可检查 VLA 提出的运动并按需执行，或用代码定位夹爪、协调后续动作（Code as Policy）。在 RoboDojo Agent 评测的 seed 0、layout 0 下，平均进度分为 34.7，高于 Preview 重测的 10.0，也高于 GPT-6 Astra 的 27.6。该权重在 Piper 10 次试验中有 6 次把物体放入碟中，Piper X 有 9 次完成搭积木。",
+      "insight": "对产线或实验室里的操作型机器人，把通用视觉-语言-动作（VLA）轨迹和可审查的代码动作结合起来，更便于在仿真里学会何时改用精确控制，并再转到真机上验证。",
+      "source": "Hugging Face",
+      "source_title": "SenseNova-RoboRSI: Integrating VLA and Code as Policy Through Model–Harness Co-Evolution",
+      "url": "https://huggingface.co/blog/sensenova/roborsi"
+    }
+  ]
+}
