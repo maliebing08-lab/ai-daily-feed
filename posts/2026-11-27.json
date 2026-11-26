@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-27",
+  "headline": "GigaChat 4 开源百万上下文",
+  "intro": "今天开源模型与文档工具都有实质更新。GigaChat 发布 GigaChat 4，两款混合专家模型都支持原生 100 万 token 上下文，其中 708B 权重以 MIT 许可开放；NVIDIA 则为 Nemotron 3.5 Parse 公开训练数据、微调方法和更快的推测解码。与此同时，有报道称 Nvidia 已停止向部分东南亚国家出货，此举发生在更严格的美国出口限制生效之后。",
+  "excerpt": "GigaChat 4 开放百万上下文旗舰权重，NVIDIA 公开文档解析训练数据与加速方法，Nvidia 同时暂停部分东南亚服务器出货。",
+  "tags": [
+    "开源",
+    "大模型",
+    "开发者工具",
+    "Nvidia",
+    "安全"
+  ],
+  "items": [
+    {
+      "title": "GigaChat 4 开放百万上下文",
+      "summary": "GigaChat 11 月 26 日发布 GigaChat 4，含 708B（每 token 约 41B 激活）和 37B（每 token 约 4B 激活）两款混合专家模型，均支持原生 100 万 token 上下文，并在同一权重中提供 Instant 与 Reasoning 模式。官方称在 Terminal-Bench 2.1 推理模式下，708B 为 69.66%，37B 为 39.33%。708B 以 MIT 许可在 Hugging Face 开放，37B 为面向个人的非商业许可。",
+      "insight": "对要处理长文档或在现有编码代理里换开源模型的团队，708B 的开放权重降低了试用门槛；但 37B 并非同样许可，部署前需要先分清商用边界，并在自己的任务上复核官方成绩。",
+      "source": "GigaChat",
+      "source_title": "GigaChat 4: Two Powerful Models, a Million-Token Context, and New Agentic Skills",
+      "url": "https://giga.chat/blog/posts/gigachat-4"
+    },
+    {
+      "title": "Parse 3.5 开放数据与加速",
+      "summary": "NVIDIA 11 月 26 日为文档解析模型 Nemotron 3.5 Parse 公开三份训练数据：约 998 万条合成图表、100 万张合成表格和 790 万页多语种 OCR 样本，并给出监督微调与可验证奖励强化学习的配方。可选的 DFlash2 推测解码一次最多提出 32 个 token，所测配置下平均约接受 14 个。在单张 H200、BF16 的原生单次解析中，与关闭推测解码时相比，并发 1 的吞吐量提高到 7.62 倍，并发 512 时提高到 1.52 倍。",
+      "insight": "对要做 RAG 或单据结构化的团队，这些公开数据和配方便于按自己的版式继续微调；更快的解析也让对表格、图表做二次精读更可行，但仍应按自己的文档复核抽取质量。",
+      "source": "Hugging Face",
+      "source_title": "Building on Nemotron 3.5 Parse: Open Data, Fine-Tuning, and Faster Inference",
+      "url": "https://huggingface.co/blog/nvidia/building-on-nemotron-35-parse-open-data-fine-tunin"
+    },
+    {
+      "title": "Nvidia 暂停东南亚服务器出货",
+      "summary": "据 The Verge 11 月 26 日报道，Financial Times 称 Nvidia 已停止向马来西亚、新加坡、泰国和印度尼西亚出货。文章指出，该公司早前已停止向中国销售人工智能芯片；此次举措施于上周生效的更严格美国限制，目的是减少经由海外数据中心获得人工智能算力的途径。",
+      "insight": "对在东南亚规划或租赁训练、推理算力的团队，短期供货可能出现空档；在规则与执行细节进一步明确前，不宜把当地产能视为可立刻兑现的算力。",
+      "source": "The Verge",
+      "source_title": "Now Nvidia’s stopped sending chips to Southeast Asia too.",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/1043079/now-nvidias-stopped-sending-chips-to-southeast-asia-too"
+    },
+    {
+      "title": "Apple 下架 Talkie 聊天应用",
+      "summary": "据 AppleInsider 报道，Apple 于 11 月 25 日将 MiniMax 的人工智能角色聊天应用 Talkie 从 App Store 下架，并表示原因是色情内容。该决定出现在 The Bureau of Investigative Journalism 与 ABC News 等调查报道之后，这些报道称应用中的角色会与未成年人进行不当互动。AppleInsider 写道，该应用仍可通过网页和 Google Play 使用；Talkie 由总部位于香港的 MiniMax 运营，公司对此拒绝置评。",
+      "insight": "应用商店下架只能切断一条分发渠道。开发和采购面向公众的对话产品时，仍需要自身的安全与年龄限制措施，而不能只依赖某一个平台的审核结果。",
+      "source": "AppleInsider",
+      "source_title": "AI chatbot companion app Talkie pulled from Apple App Store after investigation",
+      "url": "https://appleinsider.com/articles/26/11/26/ai-chatbot-companion-app-talkie-pulled-from-apple-app-store-after-investigation"
+    },
+    {
+      "title": "llama.cpp 上线 AMD 性能看板",
+      "summary": "llama.cpp 项目 11 月 26 日在 Hugging Face 上线面向 AMD Ryzen 与 Radeon 的公开基准看板，可比较不同构建、模型和量化下的提示处理与文本生成速度。当前硬件为 Radeon 8060S（gfx1151）和 Radeon AI Pro R9700S（gfx1201），主要指标是处理 512 个输入 token 的 PP512 和生成 128 个 token 的 TG128。基准按周用公开预编译二进制和 llama-bench 运行，原始结果也一并公开。",
+      "insight": "在 AMD 消费级或工作站显卡上部署本地模型时，可以用同一套公开数据比较量化与构建，而不必只看一次性的自行压测，也便于跟踪后续内核更新是否带来变化。",
+      "source": "Hugging Face",
+      "source_title": "Introducing the llama.cpp benchmark dashboard for AMD Ryzen and Radeon",
+      "url": "https://huggingface.co/blog/ggml-org/llamacpp-amd-bench"
+    }
+  ]
+}
