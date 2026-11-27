@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-28",
+  "headline": "Neptune 推出会话级图谱",
+  "intro": "今天的重点是云端代理基础设施和开源生成工具都有更新。Amazon Neptune 推出面向代理的 Graph Sessions，可按会话建图并在空闲时自动缩至零；Kandinsky Lab 则开源了音频、图像和视频分词器 KVAE-3.0。与此同时，Kimi 向科研项目提供 API 积分，波兰也签署了用于军事决策支持的软件采购协议。",
+  "excerpt": "Neptune 推出可缩至零的会话图谱，KVAE-3.0 开源音视频分词器，Kimi 向科研项目提供 API 积分，波兰采购决策软件。",
+  "tags": [
+    "AWS",
+    "开源",
+    "Agent",
+    "Kimi",
+    "开发者工具"
+  ],
+  "items": [
+    {
+      "title": "Neptune 推出会话级图谱",
+      "summary": "Amazon Neptune 于 11 月 27 日推出 Neptune Graph Sessions。该计算模式面向代理场景，内存和 CPU 会自动伸缩，空闲 15 分钟后缩至零，下一次查询到来时可在数秒内恢复，图和数据会保留。创建时可选择 4 或 8 个 s-NCU 作为起始工作内存，并提供最多两倍的内存余量；计费按实际使用的内存，而不再受预置图 16 m-NCU 的最低规格限制。可通过控制台、CLI 或 SDK 创建，并用 openCypher 查询，与其他 Neptune Analytics 图相同。",
+      "insight": "对要给每个对话或任务单独建图的 GraphRAG 或代理应用，按实际内存计费并在空闲时缩至零，可避免为大量小图一直支付预置最低规格；仍需按自己的查询延迟和数据规模做验证。",
+      "source": "AWS",
+      "source_title": "Amazon Neptune introduces Neptune Graph Sessions, smaller graphs designed for agents that scale to zero and resume automatically",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/11/amazon-neptune-graph-sessions-generally-available/"
+    },
+    {
+      "title": "KVAE-3.0 开源多模态分词器",
+      "summary": "Kandinsky Lab 11 月 27 日发布 KVAE-3.0，提供面向音频、图像和视频的分词器，并公开推理代码与模型权重。官方称，48 kHz 立体声音频 VAE 在生成质量对比中，相对开源的 Stable Audio 3 和 LTX-2.5 胜率超过 70%。图像模型 KVAE-2D-3.0 与 FLUX.2-VAE 潜在尺寸相同，参数量由上一版的 218.4M 降至 85.6M；视频分词器 KVAE-3D-3.0 的空间压缩为 32 倍、时间压缩为 4 倍。",
+      "insight": "做图像或视频生成管线的团队，可以用更小的图像分词器和更高压缩比的视频分词器做对比实验；官方数字来自其评测设置，接入前仍应在自己的数据上复核重建质量和生成效果。",
+      "source": "Hugging Face",
+      "source_title": "KVAE-3.0: Extending Tokenizers Capabilities with Latent Alignment",
+      "url": "https://huggingface.co/blog/kandinskylab/kvae-3"
+    },
+    {
+      "title": "Kimi 向科研项目提供额度",
+      "summary": "Kimi 于 11 月 27 日开放 Kimi for Science 计划，面向自然科学、工程及相关交叉领域的研究者。入选者最多可获得价值 2 万美元的 Kimi API 积分（约 70 亿 token），具体额度根据研究需求和评审结果确定；积分仅用于模型调用，不是现金资助，并可获得 Kimi 团队的技术支持以及新模型的优先体验。第一轮申请截止于 12 月 8 日，后续还将开放更多批次。",
+      "insight": "能源、材料或工程方向的研究团队如果要用大模型做文献和数据分析，可以用该计划降低 API 成本；但官方未说明本轮名额和积分有效期，申请前应看清评审和额度规则。",
+      "source": "Kimi",
+      "source_title": "Kimi for Science | More scientific ideas, made possible",
+      "url": "https://www.kimi.ai/news/kimi-for-science-program"
+    },
+    {
+      "title": "波兰采购 Palantir 指挥软件",
+      "summary": "据 Reuters 11 月 27 日报道，波兰当天与 Palantir Technologies 签署约 5 年、价值约 3 亿美元的协议，采购用于支持军队指挥官决策的人工智能软件。波兰国防部长表示，所有密钥、服务器和信息现在和将来都仍归波兰武装部队独家所有。波兰自 2025 年起已与 Palantir 在人工智能、信息技术和网络安全方面开展合作。",
+      "insight": "这是国防决策支持软件的实际采购案例。对同类系统而言，数据与密钥的归属需要在合同中单独约定，而不能默认由供应商托管。",
+      "source": "Reuters",
+      "source_title": "Poland signs contract with Palantir worth $300 mln over 5 years",
+      "url": "https://www.reuters.com/5f374b32b07b/technology/poland-signs-contract-with-palantir-worth-300-mln-over-5-years-2026-11-27/"
+    },
+    {
+      "title": "Gemini 可生成手机组件",
+      "summary": "The Verge 11 月 27 日发文介绍 Android 的 Create My Widget。该功能属于 Gemini Intelligence，目前处于测试阶段，本月开始向 Pixel 手机推送；作者在 Pixel 11 Pro 上试用。用户可以用自然语言描述需求来生成主屏组件，也可从模板开始。评测称许多组件实际上是 Gemini 的提示快捷方式，或套用倒计时、比赛赛程等固定模板；作者未能得到可用的实时公交到站列表。该功能在今年春季的 Google I/O 上已经宣布。",
+      "insight": "对想在终端设备上做轻量个性化界面的团队，这类生成组件目前更适合展示和快捷调用，还不宜承担实时数据和复杂交互。",
+      "source": "The Verge",
+      "source_title": "Android’s DIY widgets are a bit of vibe-coding fun",
+      "url": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini"
+    }
+  ]
+}
